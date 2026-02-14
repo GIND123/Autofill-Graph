@@ -1,0 +1,20 @@
+{
+  "name": "autofill-graph",
+  "version": "1.0.0",
+  "description": "Privacy-Preserving Adaptive Knowledge Graph Autofill System",
+  "type": "module",
+  "scripts": {
+    "test": "jest --config=jest.config.cjs",
+    "test:watch": "jest --config=jest.config.cjs --watch",
+    "test:coverage": "jest --config=jest.config.cjs --coverage",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --config=jest.config.cjs --runInBand"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "@testing-library/dom": "^9.3.0"
+  },
+  "dependencies": {}
+}

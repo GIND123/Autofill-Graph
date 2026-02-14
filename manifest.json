@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Graph Autofill",
+  "version": "1.0",
+  "description": "Privacy-preserving knowledge graph autofill system using local inference",
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "aiLanguageModelOriginTrial"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Privacy Graph Autofill"
+  },
+  
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
