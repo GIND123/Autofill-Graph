@@ -170,9 +170,6 @@ Autofill-Graph/
 │   ├── Prototype.ipynb        # Initial concept (Jupyter notebook)
 │   └── Prototype2.ipynb       # Refined implementation with LLM
 │
-├── .github/                   # GitHub configuration
-│   └── CODEOWNERS             # Repository ownership declaration
-│
 ├── Documentation files (in root):
 ├── README.md                  # This file (complete user & dev guide)
 ├── FIX_VERIFICATION.md        # Step-by-step testing procedures
