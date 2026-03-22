@@ -81,8 +81,13 @@ class PopupUI {
    */
   async checkApiKeyStatus() {
     chrome.runtime.sendMessage({ type: "GET_API_KEY_STATUS" }, (response) => {
+      if (chrome.runtime.lastError) {
+        console.error("Runtime error:", chrome.runtime.lastError);
+        return;
+      }
+
       const statusEl = document.getElementById("statusText");
-      if (response.hasApiKey) {
+      if (response && response.hasApiKey) {
         statusEl.textContent = "Connected";
         statusEl.className = "status connected";
       } else {
@@ -140,76 +145,137 @@ class PopupUI {
    * Detect forms on the current page
    */
   async detectForms() {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    try {
+      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    chrome.tabs.sendMessage(
-      tab.id,
-      { type: "DETECT_FORMS" },
-      (response) => {
-        if (response.error) {
-          this.showMessage("Error detecting forms: " + response.error, "error");
-          return;
-        }
-
-        const { stats } = response;
-        const message =
-          stats.forms > 0
-            ? `Found ${stats.forms} forms with ${stats.inputs} input fields`
-            : "No forms found on this page";
-
-        this.showMessage(message, stats.forms > 0 ? "success" : "info");
+      if (!tab) {
+        this.showMessage("No active tab found", "error");
+        return;
       }
-    );
+
+      chrome.tabs.sendMessage(
+        tab.id,
+        { type: "DETECT_FORMS" },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            console.error("Runtime error:", chrome.runtime.lastError);
+            this.showMessage(
+              "Content script not loaded. Try refreshing the page.",
+              "error"
+            );
+            return;
+          }
+
+          if (!response || response.error) {
+            this.showMessage("Error detecting forms: " + (response?.error || "Unknown error"), "error");
+            return;
+          }
+
+          const { stats } = response;
+          const message =
+            stats.forms > 0
+              ? `Found ${stats.forms} forms with ${stats.inputs} input fields`
+              : "No forms found on this page";
+
+          this.showMessage(message, stats.forms > 0 ? "success" : "info");
+        }
+      );
+    } catch (error) {
+      console.error("Error in detectForms:", error);
+      this.showMessage("Error: " + error.message, "error");
+    }
   }
 
   /**
    * Autofill the current form
    */
   async autofillForm() {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    try {
+      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    this.showMessage("Autofilling form...", "info");
-
-    chrome.tabs.sendMessage(
-      tab.id,
-      { type: "AUTOFILL_CURRENT_FORM" },
-      (response) => {
-        if (response.error) {
-          this.showMessage("Error autofilling: " + response.error, "error");
-          return;
-        }
-
-        if (response.success) {
-          this.showMessage("Form autofilled successfully!", "success");
-          setTimeout(() => this.updateGraphStats(), 500);
-        }
+      if (!tab) {
+        this.showMessage("No active tab found", "error");
+        return;
       }
-    );
+
+      this.showMessage("Autofilling form...", "info");
+
+      chrome.tabs.sendMessage(
+        tab.id,
+        { type: "AUTOFILL_CURRENT_FORM" },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            console.error("Runtime error:", chrome.runtime.lastError);
+            this.showMessage(
+              "Content script not loaded. Try refreshing the page.",
+              "error"
+            );
+            return;
+          }
+
+          if (!response || response.error) {
+            this.showMessage("Error autofilling: " + (response?.error || "Unknown error"), "error");
+            return;
+          }
+
+          if (response.success) {
+            this.showMessage("Form autofilled successfully!", "success");
+            setTimeout(() => this.updateGraphStats(), 500);
+          } else {
+            this.showMessage("Autofill completed with some errors", "warning");
+          }
+        }
+      );
+    } catch (error) {
+      console.error("Error in autofillForm:", error);
+      this.showMessage("Error: " + error.message, "error");
+    }
   }
 
   /**
    * Learn from current form and update graph
    */
   async learnFromForm() {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    try {
+      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    this.showMessage("Learning from this form...", "info");
-
-    chrome.tabs.sendMessage(
-      tab.id,
-      { type: "LEARN_FROM_CURRENT_FORM" },
-      (response) => {
-        if (response.error) {
-          this.showMessage("Error learning from form: " + response.error, "error");
-          return;
-        }
-
-        if (response.success) {
-          this.showMessage("Successfully learned from form!", "success");
-          setTimeout(() => this.updateGraphStats(), 1000);
-        }
+      if (!tab) {
+        this.showMessage("No active tab found", "error");
+        return;
       }
-    );
+
+      this.showMessage("Learning from this form...", "info");
+
+      chrome.tabs.sendMessage(
+        tab.id,
+        { type: "LEARN_FROM_CURRENT_FORM" },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            console.error("Runtime error:", chrome.runtime.lastError);
+            this.showMessage(
+              "Content script not loaded. Try refreshing the page.",
+              "error"
+            );
+            return;
+          }
+
+          if (!response || response.error) {
+            this.showMessage("Error learning from form: " + (response?.error || "Unknown error"), "error");
+            return;
+          }
+
+          if (response.success) {
+            this.showMessage("Successfully learned from form!", "success");
+            setTimeout(() => this.updateGraphStats(), 1000);
+          } else {
+            this.showMessage("Learning completed with some errors", "warning");
+          }
+        }
+      );
+    } catch (error) {
+      console.error("Error in learnFromForm:", error);
+      this.showMessage("Error: " + error.message, "error");
+    }
   }
 
   /**
@@ -219,9 +285,14 @@ class PopupUI {
     chrome.runtime.sendMessage(
       { type: "GET_GRAPH_STATS" },
       (response) => {
+        if (chrome.runtime.lastError) {
+          console.error("Runtime error:", chrome.runtime.lastError);
+          return;
+        }
+
         const statsEl = document.getElementById("graphStats");
 
-        if (!response.stats) {
+        if (!response || !response.stats) {
           statsEl.innerHTML =
             '<div class="stat-row"><span class="stat-label">Status</span><span class="stat-value">No data</span></div>';
           return;
@@ -256,11 +327,16 @@ class PopupUI {
     chrome.runtime.sendMessage(
       { type: "GET_GRAPH_STATS" },
       (response) => {
+        if (chrome.runtime.lastError) {
+          console.error("Runtime error:", chrome.runtime.lastError);
+          return;
+        }
+
         const previewEl = document.getElementById("graphPreview");
 
-        if (!response.stats || response.stats.nodeCount === 0) {
+        if (!response || !response.stats || response.stats.nodeCount === 0) {
           previewEl.innerHTML =
-            '<div style="text-align: center; color: #999; padding: 20px;">Graph is empty</div>';
+            '<div style="text-align: center; color: #999; padding: 20px;">Graph is empty. Fill a form and click "Learn This Form" to add data.</div>';
           return;
         }
 
@@ -269,7 +345,7 @@ class PopupUI {
         let html = "<div>";
 
         // Display nodes
-        if (nodes.length > 0) {
+        if (nodes && nodes.length > 0) {
           html += '<div style="margin-bottom: 10px; font-weight: 600; color: #667eea;">Entities:</div>';
           nodes.forEach((node) => {
             html += `<div class="node-item">• ${node}</div>`;
@@ -277,7 +353,7 @@ class PopupUI {
         }
 
         // Display edges
-        if (edges.length > 0) {
+        if (edges && edges.length > 0) {
           html += '<div style="margin: 10px 0; font-weight: 600; color: #667eea;">Relationships:</div>';
           edges.slice(0, 10).forEach((edge) => {
             html += `<div class="edge-item">→ (${edge.head}) -[${edge.relation}]-> (${edge.tail})</div>`;

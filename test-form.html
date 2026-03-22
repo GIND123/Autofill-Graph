@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form - Autofill Graph</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Autofill Graph Test Form</h1>
+
+    <div class="info">
+        <strong>Instructions:</strong>
+        <ol>
+            <li>Fill this form manually with your information</li>
+            <li>Click the extension icon and select "Learn This Form"</li>
+            <li>Refresh the page</li>
+            <li>Click "Detect Forms" then "Autofill" to test</li>
+        </ol>
+    </div>
+
+    <form id="testForm">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="company">Company/Organization</label>
+            <input type="text" id="company" name="company" placeholder="Your company name">
+        </div>
+
+        <div class="form-group">
+            <label for="position">Job Title/Position</label>
+            <input type="text" id="position" name="position" placeholder="Your job title">
+        </div>
+
+        <div class="form-group">
+            <label for="skills">Skills (comma separated)</label>
+            <input type="text" id="skills" name="skills" placeholder="Python, JavaScript, Machine Learning">
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="City, State/Country">
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <button type="submit">Submit (Test)</button>
+    </form>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submission prevented (this is a test form)');
+        });
+    </script>
+</body>
+</html>

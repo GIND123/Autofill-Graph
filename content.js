@@ -134,6 +134,12 @@ function init() {
 
           case "AUTOFILL_CURRENT_FORM":
             const formFields = formDetector.extractFormFieldInfo();
+
+            if (formFields.length === 0) {
+              sendResponse({ success: false, error: "No form fields detected" });
+              break;
+            }
+
             const fieldNames = formFields.map((f) => f.label || f.placeholder || f.name);
 
             // Send to background script for ML processing
@@ -143,8 +149,20 @@ function init() {
                 formFields: fieldNames
               },
               (response) => {
+                if (chrome.runtime.lastError) {
+                  console.error("Runtime error:", chrome.runtime.lastError);
+                  sendResponse({ success: false, error: chrome.runtime.lastError.message });
+                  return;
+                }
+
+                if (!response || response.error) {
+                  sendResponse({ success: false, error: response?.error || "Autofill failed" });
+                  return;
+                }
+
                 if (response.success) {
                   // Fill in the form
+                  let filledCount = 0;
                   for (const field of formFields) {
                     const fieldKey = field.label || field.placeholder || field.name;
                     const value = response.filled[fieldKey];
@@ -152,22 +170,42 @@ function init() {
                       field.element.value = value;
                       field.element.style.backgroundColor = "#e8f5e9"; // Light green
                       field.element.dispatchEvent(new Event("change", { bubbles: true }));
+                      filledCount++;
                     }
                   }
+                  console.log(`Autofilled ${filledCount} fields`);
+                  sendResponse({ success: true, filledCount });
+                } else {
+                  sendResponse({ success: false, error: "Unexpected response format" });
                 }
-                sendResponse({ success: response.success });
               }
             );
             return true;
 
           case "LEARN_FROM_CURRENT_FORM":
             const currentFields = formDetector.extractFormFieldInfo();
+
+            if (currentFields.length === 0) {
+              sendResponse({ success: false, error: "No form fields detected" });
+              break;
+            }
+
             const formData = {};
             for (const field of currentFields) {
               if (field.value) {
-                formData[field.label || field.name] = field.value;
+                const key = field.label || field.name || field.placeholder;
+                if (key) {
+                  formData[key] = field.value;
+                }
               }
             }
+
+            if (Object.keys(formData).length === 0) {
+              sendResponse({ success: false, error: "No field values found. Please fill the form first." });
+              break;
+            }
+
+            console.log("Learning from form data:", formData);
 
             chrome.runtime.sendMessage(
               {
@@ -176,7 +214,18 @@ function init() {
                 context: "Web Form"
               },
               (response) => {
-                sendResponse({ success: response.success });
+                if (chrome.runtime.lastError) {
+                  console.error("Runtime error:", chrome.runtime.lastError);
+                  sendResponse({ success: false, error: chrome.runtime.lastError.message });
+                  return;
+                }
+
+                if (!response) {
+                  sendResponse({ success: false, error: "No response from background script" });
+                  return;
+                }
+
+                sendResponse({ success: response.success, error: response.error });
               }
             );
             return true;
