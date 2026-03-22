@@ -1,0 +1,15 @@
+{
+  "name": "autofill-graph-extension",
+  "version": "1.0.0",
+  "description": "Privacy-Preserving Adaptive Knowledge Graph Autofill System",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/init-sample-data.js",
+    "build": "echo 'Extension ready for loading in Chrome'"
+  },
+  "dependencies": {
+    "mistralai": "^0.0.11",
+    "js-base64": "^3.7.5"
+  },
+  "devDependencies": {}
+}
