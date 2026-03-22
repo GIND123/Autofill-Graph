@@ -10,6 +10,16 @@ Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form 
 
 ## Recent Updates
 
+**v1.0.2 (March 2026)** - Major Learning System Fixes
+- **CRITICAL:** Fixed Mistral API 404 error (v0 → v1 endpoint)
+- **CRITICAL:** Removed hardcoded fallback data pollution
+- **NEW:** Extension now starts with empty graph (learns from real forms only)
+- **NEW:** Enhanced autofill with pattern matching fallback (works without API)
+- **NEW:** Added comprehensive debugging tools (debug.js, clear-graph.js)
+- **NEW:** Created verification guides (FIX_VERIFICATION.md, TROUBLESHOOTING.md)
+- **SECURITY:** Removed .env from version control, added .gitignore
+- Repository structure cleaned up and documentation updated
+
 **v1.0.1 (March 2026)** - Stability & Bug Fixes
 - Fixed JavaScript `.strip()` method error (changed to `.trim()`)
 - Fixed graph data loss on API key updates (now preserves learned data)
@@ -23,7 +33,7 @@ Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form 
 - **Continuous Learning**: Learns from every form you fill and improves accuracy over time
 - **Privacy-First**: All processing happens locally. Only API calls to Mistral (optional)
 - **Fast & Lightweight**: Completes autofill in under 2 seconds
-- **No Setup Required**: Works out of the box with pre-loaded sample data
+- **Start Clean**: Begins with empty graph, learns from YOUR real form data only
 - **Data Ownership**: Export your knowledge graph anytime as JSON
 - **Professional UI**: Clean, intuitive interface with Settings, Quick Actions, and Graph Visualization tabs
 
@@ -138,36 +148,64 @@ User Fills Form → Extract Data → Create Triples → Add to Graph → Improve
 
 ```
 Autofill-Graph/
-├── manifest.json              # Chrome extension config (Manifest V3)
-├── background.js              # Service worker (graph lifecycle, messaging)
-├── content.js                 # Content script (form detection, autofill)
-├── package.json               # Project metadata
-├── .env                       # Mistral API key (create this file)
+├── manifest.json              # Chrome extension configuration (Manifest V3)
+├── background.js              # Service worker (handles graph lifecycle & messaging)
+├── content.js                 # Content script (form detection & autofill injection)
+├── package.json               # Project metadata and dependencies
+├── test-form.html             # Test page for debugging and verification
 ├── test-extension.sh          # Automated validation script
+├── debug.js                   # Diagnostic script for troubleshooting
+├── clear-graph.js             # Script to reset graph data
+├── Prototype.ipynb            # Research prototype (duplicate of Baseline version)
 │
-├── lib/                       # Core libraries
-│   ├── knowledgeGraphManager.js    # Main ML engine
-│   │   ├── Graph operations (nodes, edges)
-│   │   ├── Vector embeddings (384-dimensional)
-│   │   ├── Cosine similarity matching
-│   │   └── Mistral API integration
-│   │
-│   └── sampleDataLoader.js    # Pre-loaded sample data
-│       ├── 14+ sample entities
-│       └── 10+ sample relationships
+├── lib/                       # Core ML libraries (2 files)
+│   ├── knowledgeGraphManager.js    # Main ML engine & graph operations
+│   └── sampleDataLoader.js         # Sample data definitions for testing
 │
-├── popup/                     # Extension UI
-│   ├── popup.html             # Popup interface
-│   └── popup.js               # UI logic & event handlers
+├── popup/                     # Extension popup UI (2 files)
+│   ├── popup.html             # Popup interface & styling
+│   └── popup.js               # UI logic, event handlers & messaging
 │
-├── Baseline/                  # Original prototypes
+├── Baseline/                  # Original research prototypes
 │   ├── Prototype.ipynb        # Initial concept (Jupyter notebook)
-│   └── Prototype2.ipynb       # Refined prototype
+│   └── Prototype2.ipynb       # Refined implementation with LLM
 │
-├── LICENSE                    # MIT License
-├── .github/CODEOWNERS         # Ownership declaration
-└── README.md                  # This file
+├── .github/                   # GitHub configuration
+│   └── CODEOWNERS             # Repository ownership declaration
+│
+├── Documentation files (in root):
+├── README.md                  # This file (complete user & dev guide)
+├── FIX_VERIFICATION.md        # Step-by-step testing procedures
+├── TESTING_VERIFICATION.md    # Verification guide for fixes
+├── TROUBLESHOOTING.md         # Common issues & solutions
+├── PROJECT_STRUCTURE.txt      # File structure reference
+│
+├── Configuration files (in root):
+├── .env                       # Local file: Mistral API key (create yourself)
+├── .gitignore                 # Git ignore rules (excludes .env)
+├── .gitattributes             # Git line ending configuration
+└── LICENSE                    # MIT License
 ```
+
+### Key Files Explained
+
+**Core Extension Files:**
+- `manifest.json` - Chrome extension configuration with Manifest V3 compliance
+- `background.js` - Service worker managing graph persistence and message routing
+- `content.js` - Injected into web pages for form detection and autofill
+
+**ML Engine (`lib/`):**
+- `knowledgeGraphManager.js` - Complete ML pipeline: graph ops, embeddings, Mistral API
+- `sampleDataLoader.js` - Predefined sample entities for testing (optional)
+
+**User Interface (`popup/`):**
+- `popup.html` - Extension popup with tabs (Quick Actions, Settings, Graph View)
+- `popup.js` - UI interactions, settings management, real-time graph stats
+
+**Development Tools:**
+- `test-form.html` - Self-contained test form for debugging
+- `debug.js` - Console diagnostics for extension health checks
+- `clear-graph.js` - Utility to reset graph data completely
 
 ## Usage Guide
 
@@ -205,26 +243,18 @@ Autofill-Graph/
 - View relationships and connections
 - Understand what the system knows about you
 
-## Sample Data
+## Getting Started
 
-Extension comes pre-loaded with sample data:
+The extension starts with a **clean, empty graph**. You build your knowledge graph by learning from forms you actually fill out. This ensures your autofill data is 100% accurate to your real information.
 
-**Entities (14+)**
-- User, Govind, gov.grad@umd.edu, College Park MD
-- University of Maryland, Computer Science
-- Master of Science in Machine Learning
-- Knowledge Graphs, LLMs, Machine Learning, NLP
-- Privacy-First Autofill System
-- AI Research Lab, Research Engineer
+### First Steps:
+1. **Install & configure** following the installation guide below
+2. **Fill out a form** with your real information (use test-form.html for testing)
+3. **Click "Learn This Form"** to add your data to the knowledge graph
+4. **Test autofill** on the same or different forms
+5. **Your graph grows** with each form you learn from
 
-**Relationships (10+)**
-- User HAS_NAME Govind
-- User HAS_EMAIL gov.grad@umd.edu
-- User STUDIES_AT University of Maryland
-- User EXPERT_IN Machine Learning
-- User WORKED_AT AI Research Lab
-
-Ready for testing on any website with forms!
+The more forms you learn from, the better the autofill becomes!
 
 ## API Integration
 
@@ -326,10 +356,11 @@ Open the browser console to debug:
 - Check console for JavaScript errors
 
 ### Autofill Returns Empty Values
-- Check Graph Status (should show 14+ entities)
+- Check Graph Status (should show entities from forms you've learned)
 - Verify API key is saved correctly
 - Try forms with clearer field labels (name, email, etc.)
 - Check browser console for API errors
+- If graph is empty, learn from a form first using "Learn This Form"
 
 ### Learning Fails
 - Form fields need visible labels or placeholders
@@ -414,14 +445,15 @@ Modify in `knowledgeGraphManager.js`:
 this.vectorDimensions = 384; // Change this value
 ```
 
-**Customize Sample Data:**
-Edit `lib/sampleDataLoader.js`:
+**Reset Graph Data:**
 ```javascript
-const sampleGraph = {
-  nodes: { /* your data */ },
-  edges: [ /* your relationships */ ]
-};
+// Clear all learned data and start fresh
+chrome.storage.local.set({graph: null})
+// Or use clear-graph.js script
 ```
+
+**Load Test Data:**
+Use the "Load Sample Data" button in Settings tab to add demo entities for testing the extension without entering real personal information.
 
 ## Testing
 
@@ -519,11 +551,18 @@ Potential future enhancements:
 ## Contact & Support
 
 For issues, questions, or feedback:
-1. Check the Troubleshooting section above
+1. **Check troubleshooting guides:**
+   - `TROUBLESHOOTING.md` - Common issues & solutions
+   - `FIX_VERIFICATION.md` - Complete testing procedures
+   - `TESTING_VERIFICATION.md` - Verification guides
 2. Review browser console logs (F12)
 3. Ensure API key is correctly configured
-4. Test on different websites (start with simple forms)
+4. Test on different websites (start with test-form.html)
 5. Verify extension is up to date (reload at chrome://extensions/)
+
+**Debugging tools:**
+- Run `debug.js` in popup console for diagnostics
+- Use `clear-graph.js` to reset graph data
 
 GitHub Issues: https://github.com/GIND123/Autofill-Graph/issues
 
@@ -545,7 +584,7 @@ A: Entity extraction requires Mistral API, so no. But form filling works offline
 A: Improves with use. Starts at ~70% for standard fields, improves to >90% after learning from 5+ forms.
 
 **Q: Can I use without API key?**
-A: Yes, with pre-loaded sample data. But learning new information requires API.
+A: Yes, for basic autofill using pattern matching. But learning new information and advanced AI features require the API.
 
 **Q: How is performance?**
 A: Fast. Autofill completes in 1-3 seconds including network latency.
@@ -559,5 +598,5 @@ Built with privacy first. By Mitali Raj.
 
 **Repository:** https://github.com/GIND123/Autofill-Graph
 **Last Updated:** March 22, 2026
-**Version:** 1.0.1
-**Status:** Production Ready
+**Version:** 1.0.2
+**Status:** Production Ready - Major Learning System Fixes Complete
