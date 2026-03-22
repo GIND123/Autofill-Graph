@@ -59,14 +59,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       switch (request.type) {
         case "LEARN_FROM_FORM":
           if (!graphManager) {
+            console.error("Graph manager not initialized");
             sendResponse({ error: "Graph manager not initialized" });
             return;
           }
+          console.log("Learning from form with data:", request.formData);
           const triples = await graphManager.learnFromForm(
             request.formData,
             request.context
           );
+          console.log("Saving graph after learning...");
           await saveGraph();
+          console.log("Graph saved successfully");
           sendResponse({ success: true, triples });
           break;
 
@@ -92,6 +96,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           apiKey = request.apiKey;
           await chrome.storage.local.set({ apiKey });
           graphManager = new KnowledgeGraphManager(apiKey);
+
+          // Reload existing graph if it exists
+          const existingGraph = await chrome.storage.local.get("graph");
+          if (existingGraph.graph) {
+            await graphManager.deserialize(existingGraph.graph);
+            console.log("Reloaded existing graph after API key change");
+          }
+
           sendResponse({ success: true });
           break;
 
