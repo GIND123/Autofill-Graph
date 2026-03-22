@@ -38,6 +38,9 @@ class PopupUI {
     document.getElementById("saveApiKeyBtn").addEventListener("click", () =>
       this.saveApiKey()
     );
+    document.getElementById("loadSampleDataBtn").addEventListener("click", () =>
+      this.loadSampleData()
+    );
     document.getElementById("clearGraphBtn").addEventListener("click", () =>
       this.clearGraph()
     );
@@ -368,6 +371,45 @@ class PopupUI {
         previewEl.innerHTML = html;
       }
     );
+  }
+
+  /**
+   * Load sample data into the graph
+   */
+  async loadSampleData() {
+    try {
+      this.showMessage("Loading sample data...", "info");
+
+      chrome.runtime.sendMessage(
+        { type: "LOAD_SAMPLE_DATA" },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            console.error("Runtime error:", chrome.runtime.lastError);
+            this.showMessage(
+              "Error loading sample data: " + chrome.runtime.lastError.message,
+              "error"
+            );
+            return;
+          }
+
+          if (!response || response.error) {
+            this.showMessage(
+              "Error loading sample data: " + (response?.error || "Unknown error"),
+              "error"
+            );
+            return;
+          }
+
+          if (response.success) {
+            this.showMessage("Sample data loaded successfully!", "success");
+            setTimeout(() => this.updateGraphStats(), 1000);
+          }
+        }
+      );
+    } catch (error) {
+      console.error("Error in loadSampleData:", error);
+      this.showMessage("Error: " + error.message, "error");
+    }
   }
 
   /**
