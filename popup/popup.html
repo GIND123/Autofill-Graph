@@ -295,6 +295,7 @@
 
     <div class="tabs">
       <button class="tab active" data-tab="quick">Quick Actions</button>
+      <button class="tab" data-tab="insights">Insights</button>
       <button class="tab" data-tab="settings">Settings</button>
       <button class="tab" data-tab="graph">Graph View</button>
     </div>
@@ -313,6 +314,30 @@
       <div class="section">
         <div class="section-title">Graph Status</div>
         <div class="stats" id="graphStats">
+          <div class="loading"><span class="spinner"></span>Loading...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Insights Tab -->
+    <div id="insights" class="tab-content">
+      <div class="section">
+        <div class="section-title">Inferred Facts</div>
+        <div id="inferredFacts" class="graph-preview">
+          <div style="text-align: center; color: #999; padding: 20px;">No inferences yet</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Temporal History</div>
+        <div id="temporalHistory" class="graph-preview">
+          <div style="text-align: center; color: #999; padding: 20px;">No history available</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Privacy Breakdown</div>
+        <div class="stats" id="privacyStats">
           <div class="loading"><span class="spinner"></span>Loading...</div>
         </div>
       </div>

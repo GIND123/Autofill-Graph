@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Autofill Graph - Privacy-First Knowledge Assistant",
-  "version": "1.0.0",
-  "description": "Local-first Chrome extension for intelligent form autofilling using knowledge graphs",
+  "version": "2.0.0",
+  "description": "Temporal knowledge graph autofill with privacy-aware multi-layer architecture and intelligent inference",
   "permissions": [
     "storage",
     "scripting",

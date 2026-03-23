@@ -3,6 +3,7 @@
  * Manages knowledge graph persistence and message handling
  */
 
+importScripts("config.js");
 importScripts("lib/knowledgeGraphManager.js");
 importScripts("lib/sampleDataLoader.js");
 
@@ -14,12 +15,23 @@ let apiKey = null;
  */
 async function initializeExtension() {
   try {
-    // Get API key from storage
-    const result = await chrome.storage.local.get("apiKey");
-    apiKey = result.apiKey;
+    // Priority 1: Check config.js for hardcoded API key
+    if (CONFIG.MISTRAL_API_KEY && CONFIG.MISTRAL_API_KEY !== "YOUR_API_KEY_HERE") {
+      apiKey = CONFIG.MISTRAL_API_KEY;
+      console.log("API key loaded from config.js");
+      // Save to storage for consistency
+      await chrome.storage.local.set({ apiKey });
+    } else {
+      // Priority 2: Get API key from storage (Settings tab)
+      const result = await chrome.storage.local.get("apiKey");
+      apiKey = result.apiKey;
+    }
 
     if (!apiKey) {
       console.warn("API key not found. Extension will work with limited functionality.");
+      console.log("Set API key in config.js or use Settings tab in popup.");
+    } else {
+      console.log("API key configured ✓");
     }
 
     // Initialize graph manager (always, even without API key)
@@ -27,16 +39,16 @@ async function initializeExtension() {
 
     // Load existing graph from storage
     const graphData = await chrome.storage.local.get("graph");
-    if (graphData.graph && graphData.graph.nodes && Object.keys(graphData.graph.nodes).length > 0) {
+    if (graphData.graph && graphData.graph.entities && graphData.graph.entities.length > 0) {
       await graphManager.deserialize(graphData.graph);
-      console.log(`Loaded existing knowledge graph with ${Object.keys(graphData.graph.nodes).length} nodes`);
+      console.log(`Loaded existing knowledge graph with ${graphData.graph.entities.length} entities`);
     } else {
       // Start with completely empty graph - no sample data
       console.log("Starting with empty graph. Use 'Learn This Form' to add your data.");
     }
 
     console.log("Extension initialized successfully");
-    console.log(`Graph status: ${graphManager.graph.size} nodes, ${graphManager.edges.length} edges`);
+    console.log(`Graph status: ${graphManager.entities.size} entities, ${graphManager.relations.length} relations`);
   } catch (error) {
     console.error("Error initializing extension:", error);
   }
@@ -80,7 +92,7 @@ async function loadSampleData() {
       // Save the populated graph
       await saveGraph();
 
-      console.log(`Sample data loaded successfully via API. Graph now has ${graphManager.graph.size} nodes and ${graphManager.edges.length} edges`);
+      console.log(`Sample data loaded successfully via API. Graph now has ${graphManager.entities.size} entities and ${graphManager.relations.length} relations`);
 
     } catch (apiError) {
       console.warn("API call failed, falling back to static graph:", apiError.message);
@@ -94,50 +106,38 @@ async function loadSampleData() {
 }
 
 /**
- * Create fallback graph without API calls
+ * Create fallback graph without API calls (Prototype2 structure)
  */
 async function createFallbackGraph() {
   try {
     console.log("Creating comprehensive fallback graph...");
 
     // Clear any existing data
-    graphManager.graph.clear();
-    graphManager.edges = [];
+    graphManager.entities.clear();
+    graphManager.attributes.clear();
+    graphManager.relations = [];
+    graphManager.inferences = [];
 
-    // Add core entities
-    await graphManager.addNode("User", { type: "person", source: "system" });
-    await graphManager.addNode("Govind", { type: "name", source: "system" });
-    await graphManager.addNode("gov.grad@umd.edu", { type: "email", source: "system" });
-    await graphManager.addNode("+1-301-555-0199", { type: "phone", source: "system" });
-    await graphManager.addNode("College Park, MD 20740", { type: "address", source: "system" });
-    await graphManager.addNode("University of Maryland", { type: "organization", source: "system" });
-    await graphManager.addNode("Computer Science", { type: "field", source: "system" });
-    await graphManager.addNode("Master of Science in Machine Learning", { type: "degree", source: "system" });
-    await graphManager.addNode("Knowledge Graphs", { type: "skill", source: "system" });
-    await graphManager.addNode("Machine Learning", { type: "skill", source: "system" });
-    await graphManager.addNode("JavaScript", { type: "skill", source: "system" });
-    await graphManager.addNode("Privacy-First Autofill System", { type: "project", source: "system" });
-    await graphManager.addNode("AI Research Lab", { type: "organization", source: "system" });
-    await graphManager.addNode("Research Engineer", { type: "position", source: "system" });
+    // Add attributes using Prototype2 structure
+    graphManager.storeAttribute("user", "full_name", "Govind", { source: "system" });
+    graphManager.storeAttribute("user", "email", "gov.grad@umd.edu", { source: "system" });
+    graphManager.storeAttribute("user", "phone", "+1-301-555-0199", { source: "system" });
+    graphManager.storeAttribute("user", "address", "College Park, MD 20740", { source: "system" });
+    graphManager.storeAttribute("user", "university", "University of Maryland", { source: "system" });
+    graphManager.storeAttribute("user", "degree", "Master of Science in Machine Learning", { source: "system" });
+    graphManager.storeAttribute("user", "skills", "Knowledge Graphs", { source: "system" });
+    graphManager.storeAttribute("user", "skills", "Machine Learning", { source: "system" });
+    graphManager.storeAttribute("user", "skills", "JavaScript", { source: "system" });
 
-    // Add relationships
-    graphManager.addEdge("User", "Govind", "HAS_NAME");
-    graphManager.addEdge("User", "gov.grad@umd.edu", "HAS_EMAIL");
-    graphManager.addEdge("User", "+1-301-555-0199", "HAS_PHONE");
-    graphManager.addEdge("User", "College Park, MD 20740", "LIVES_AT");
-    graphManager.addEdge("User", "University of Maryland", "STUDIES_AT");
-    graphManager.addEdge("User", "Computer Science", "STUDIES");
-    graphManager.addEdge("User", "Master of Science in Machine Learning", "PURSUING");
-    graphManager.addEdge("User", "Knowledge Graphs", "EXPERT_IN");
-    graphManager.addEdge("User", "Machine Learning", "EXPERT_IN");
-    graphManager.addEdge("User", "JavaScript", "SKILLED_IN");
-    graphManager.addEdge("User", "Privacy-First Autofill System", "DEVELOPED");
-    graphManager.addEdge("User", "AI Research Lab", "WORKED_AT");
-    graphManager.addEdge("User", "Research Engineer", "WORKED_AS");
+    // Add inferred facts
+    graphManager.storeInference("city", "College Park", "address_parsing", ["College Park, MD 20740"], 0.8);
+    graphManager.storeInference("state", "MD", "address_parsing", ["College Park, MD 20740"], 0.8);
+    graphManager.storeInference("zip", "20740", "address_parsing", ["College Park, MD 20740"], 0.95);
+    graphManager.storeInference("country", "USA", "phone_prefix", ["+1-301-555-0199"], 0.9);
 
     await saveGraph();
 
-    console.log(`Fallback graph created with ${graphManager.graph.size} nodes and ${graphManager.edges.length} edges`);
+    console.log(`Fallback graph created with ${graphManager.entities.size} entities and ${graphManager.stats.facts_stored} facts`);
   } catch (error) {
     console.error("Error creating fallback graph:", error);
   }
@@ -195,6 +195,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           sendResponse({ stats });
           break;
 
+        case "GET_INSIGHTS":
+          if (!graphManager) {
+            sendResponse({ insights: null });
+            return;
+          }
+          const insights = {
+            inferences: graphManager.getInferences(),
+            history: graphManager.getTemporalHistory(),
+            privacy: graphManager.getPrivacyBreakdown()
+          };
+          sendResponse({ insights });
+          break;
+
         case "SET_API_KEY":
           apiKey = request.apiKey;
           await chrome.storage.local.set({ apiKey });
@@ -202,7 +215,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
           // Reload existing graph if it exists
           const existingGraph = await chrome.storage.local.get("graph");
-          if (existingGraph.graph && existingGraph.graph.nodes && Object.keys(existingGraph.graph.nodes).length > 0) {
+          if (existingGraph.graph && existingGraph.graph.entities && existingGraph.graph.entities.length > 0) {
             await graphManager.deserialize(existingGraph.graph);
             console.log("Reloaded existing graph after API key change");
           } else {

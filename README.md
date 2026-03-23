@@ -10,6 +10,21 @@ Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form 
 
 ## Recent Updates
 
+**v2.0.0 (March 2026)** - Prototype2 Full Implementation 🚀
+- **NEW:** Typed temporal knowledge graph with validity periods (valid_from, valid_until)
+- **NEW:** Multi-layer architecture (identity, contact, academic, professional, medical)
+- **NEW:** Comprehensive field mapping with 100+ aliases via FieldMapper class
+- **NEW:** Deterministic resolvers for email domains, phone countries, address parsing
+- **NEW:** Privacy-aware with three sensitivity levels (PUBLIC, RESTRICTED, ENCRYPTED)
+- **NEW:** Inference registry tracking derived vs stored facts
+- **NEW:** Two-phase autofill (local pattern matching first, then LLM fallback)
+- **NEW:** Comprehensive stats tracking (facts_stored, facts_inferred, local_fills, api_fills)
+- **NEW:** Temporal history viewer showing changes over time
+- **NEW:** Privacy breakdown showing data sensitivity distribution
+- **NEW:** Insights tab with inferred facts and historical data visualization
+- **ENHANCED:** AttributeValue class with full temporal and provenance metadata
+- **ENHANCED:** Enhanced statistics and debugging capabilities
+
 **v1.0.2 (March 2026)** - Major Learning System Fixes
 - **CRITICAL:** Fixed Mistral API 404 error (v0 → v1 endpoint)
 - **CRITICAL:** Removed hardcoded fallback data pollution
@@ -28,6 +43,55 @@ Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form 
 - All core functionality verified and working correctly
 
 ## Features
+
+### Core Capabilities (Prototype2)
+
+**Temporal Knowledge Graph**
+- Every fact has validity periods (valid_from, valid_until)
+- Track historical changes (e.g., address updates, job transitions)
+- Query current vs expired information
+- View complete temporal history for any attribute
+
+**Multi-Layer Architecture**
+- **Identity Layer**: full_name, display_name, aliases (PUBLIC)
+- **Contact Layer**: email, phone, address, city, state, zip, linkedin, portfolio (PUBLIC)
+- **Academic Layer**: university, department, degree, gpa, graduation_date, thesis, advisor (PUBLIC)
+- **Professional Layer**: employer, job_title, skills, years_experience, work_email (PUBLIC)
+- **Medical Layer**: insurance_provider, policy_number, blood_type, allergies (RESTRICTED)
+
+**Privacy & Security**
+- **PUBLIC**: Can be sent to LLM API (most data)
+- **RESTRICTED**: Local-only, needs consent for API (medical data)
+- **ENCRYPTED**: Never leaves device (SSN, tax_id, passport)
+- Sensitivity-gated routing ensures private data stays private
+- Privacy breakdown shows distribution of data sensitivity
+
+**Intelligent Inference**
+- Automatically infers university from email domain (e.g., @umd.edu → University of Maryland)
+- Deduces country from phone prefix (e.g., +1 → USA)
+- Parses addresses to extract city, state, zip automatically
+- Tracks all inferred facts separately from stored facts
+- Shows confidence levels and source facts for each inference
+
+**Comprehensive Field Mapping**
+- 100+ field label variations supported
+- Handles wildly different form layouts (job apps, university admissions, travel visas)
+- Learns new field mappings dynamically
+- Fuzzy matching for complex field names
+
+**Two-Phase Autofill**
+- Phase 1: Local pattern matching (fast, no API calls)
+- Phase 2: LLM-powered filling for complex/missing fields
+- Graceful degradation if API unavailable
+- Tracks local vs API fills for transparency
+
+**Advanced Statistics**
+- Facts stored, current, expired, and inferred
+- API calls, local fills, API fills
+- Entity and relationship counts
+- Privacy sensitivity breakdown
+
+### Original Features
 
 - **Semantic Form Understanding**: Intelligently interprets complex form fields using knowledge graphs and embeddings
 - **Continuous Learning**: Learns from every form you fill and improves accuracy over time
@@ -60,11 +124,20 @@ Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form 
    cd Autofill-Graph
    ```
 
-2. **Get Your API Key**
+2. **Set Up API Key** (Choose One Method)
+
+   **Method A: Using config.js (Recommended - Auto-loads)**
+   ```bash
+   # Copy the template
+   cp config.example.js config.js
+
+   # Edit config.js and add your API key
+   # MISTRAL_API_KEY: "your-key-here"
    ```
-   Visit: https://console.mistral.ai/api-keys/
-   Create free account → Generate API key
-   ```
+   Get your key from [console.mistral.ai/api-keys/](https://console.mistral.ai/api-keys/)
+
+   **Method B: Manual Entry via Settings Tab**
+   - Skip this step, configure later in Settings tab after loading extension
 
 3. **Load Extension**
    ```
@@ -214,14 +287,34 @@ Autofill-Graph/
 - Works on dynamic/lazy-loaded forms
 
 **Autofill**
+- Two-phase autofill: local matching first, then LLM
 - Fills detected form fields using knowledge graph
 - Highlights filled fields in green
 - Takes 1-3 seconds (first call slower due to API)
 
 **Learn This Form**
 - Extracts filled values from form
-- Updates knowledge graph with new entities
+- Applies deterministic resolvers (email→university, phone→country, etc.)
+- Updates knowledge graph with new entities and inferences
 - Improves future autofill accuracy
+
+### Insights Tab (NEW in Prototype2)
+
+**Inferred Facts**
+- View all automatically inferred information
+- See confidence levels and source facts
+- Understand what the system deduced vs what you provided
+
+**Temporal History**
+- Track changes to your information over time
+- See current vs expired values
+- View complete history for key attributes
+- Understand when data was valid
+
+**Privacy Breakdown**
+- See distribution of PUBLIC vs RESTRICTED vs ENCRYPTED data
+- Understand what information can be sent to APIs
+- Monitor your privacy posture
 
 ### Settings Tab
 
@@ -594,6 +687,6 @@ A: Currently for personal use. Web Store submission possible if documentation im
 Built with privacy first. By Mitali Raj.
 
 **Repository:** https://github.com/GIND123/Autofill-Graph
-**Last Updated:** March 22, 2026
-**Version:** 1.0.2
-**Status:** Production Ready - Major Learning System Fixes Complete
+**Last Updated:** March 23, 2026
+**Version:** 2.0.0
+**Status:** Production Ready - Prototype2 Full Implementation Complete

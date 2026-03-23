@@ -71,9 +71,11 @@ class PopupUI {
         tab.classList.add("active");
         document.getElementById(tabName).classList.add("active");
 
-        // Update graph preview if graph tab is opened
+        // Update content based on tab
         if (tabName === "graph") {
           this.updateGraphPreview();
+        } else if (tabName === "insights") {
+          this.updateInsightsTab();
         }
       });
     });
@@ -282,7 +284,7 @@ class PopupUI {
   }
 
   /**
-   * Update and display graph statistics
+   * Update and display graph statistics (Enhanced for Prototype2)
    */
   async updateGraphStats() {
     chrome.runtime.sendMessage(
@@ -301,22 +303,52 @@ class PopupUI {
           return;
         }
 
-        const { nodeCount, edgeCount, nodes } = response.stats;
+        const stats = response.stats;
 
         let html = `
           <div class="stat-row">
             <span class="stat-label">Entities</span>
-            <span class="stat-value">${nodeCount}</span>
+            <span class="stat-value">${stats.entities || stats.nodeCount || 0}</span>
           </div>
           <div class="stat-row">
             <span class="stat-label">Relationships</span>
-            <span class="stat-value">${edgeCount}</span>
+            <span class="stat-value">${stats.relations || stats.edgeCount || 0}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Facts (Current)</span>
+            <span class="stat-value">${stats.facts_current || 0}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Facts (Inferred)</span>
+            <span class="stat-value">${stats.facts_inferred || 0}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Local Fills</span>
+            <span class="stat-value">${stats.local_fills || 0}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">API Fills</span>
+            <span class="stat-value">${stats.api_fills || 0}</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">API Calls</span>
+            <span class="stat-value">${stats.api_calls || 0}</span>
           </div>
           <div class="stat-row">
             <span class="stat-label">Ready to Autofill</span>
-            <span class="stat-value">${nodeCount > 10 ? "Yes" : "Limited"}</span>
+            <span class="stat-value">${(stats.facts_current || 0) > 5 ? "✓ Yes" : "Limited"}</span>
           </div>
         `;
+
+        // Add temporal info if expired facts exist
+        if (stats.facts_expired && stats.facts_expired > 0) {
+          html += `
+            <div class="stat-row" style="color: #999;">
+              <span class="stat-label">Facts (Expired)</span>
+              <span class="stat-value">${stats.facts_expired}</span>
+            </div>
+          `;
+        }
 
         statsEl.innerHTML = html;
       }
@@ -471,6 +503,145 @@ class PopupUI {
     this.messageTimeout = setTimeout(() => {
       messageEl.remove();
     }, 5000);
+  }
+
+  /**
+   * Update the Insights tab with inferences, temporal history, and privacy stats (Prototype2)
+   */
+  async updateInsightsTab() {
+    chrome.runtime.sendMessage(
+      { type: "GET_INSIGHTS" },
+      (response) => {
+        if (chrome.runtime.lastError) {
+          console.error("Runtime error:", chrome.runtime.lastError);
+          return;
+        }
+
+        if (!response || !response.insights) {
+          this.displayDefaultInsights();
+          return;
+        }
+
+        const insights = response.insights;
+
+        // Display inferred facts
+        this.displayInferredFacts(insights.inferences || []);
+
+        // Display temporal history
+        this.displayTemporalHistory(insights.history || {});
+
+        // Display privacy stats
+        this.displayPrivacyStats(insights.privacy || {});
+      }
+    );
+  }
+
+  displayInferredFacts(inferences) {
+    const container = document.getElementById("inferredFacts");
+
+    if (!inferences || inferences.length === 0) {
+      container.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;">No inferences yet</div>';
+      return;
+    }
+
+    let html = '<div>';
+    inferences.slice(0, 10).forEach((inf, idx) => {
+      html += `
+        <div class="edge-item" style="margin-bottom: 8px; padding: 8px; background: white; border-radius: 4px; border-left: 3px solid #667eea;">
+          <div style="font-weight: 600; color: #333; margin-bottom: 4px;">${inf.field} = ${inf.value}</div>
+          <div style="font-size: 10px; color: #999;">Rule: ${inf.rule} | Confidence: ${(inf.confidence * 100).toFixed(0)}%</div>
+          <div style="font-size: 9px; color: #aaa;">Sources: ${inf.source_facts?.join(', ') || 'N/A'}</div>
+        </div>
+      `;
+    });
+
+    if (inferences.length > 10) {
+      html += `<div style="text-align: center; color: #999; padding: 10px;">... and ${inferences.length - 10} more</div>`;
+    }
+
+    html += '</div>';
+    container.innerHTML = html;
+  }
+
+  displayTemporalHistory(history) {
+    const container = document.getElementById("temporalHistory");
+
+    if (!history || Object.keys(history).length === 0) {
+      container.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;">No history available</div>';
+      return;
+    }
+
+    let html = '<div>';
+
+    for (const [property, values] of Object.entries(history)) {
+      if (values.length > 1) {
+        html += `
+          <div style="margin-bottom: 12px; padding: 8px; background: white; border-radius: 4px;">
+            <div style="font-weight: 600; color: #667eea; margin-bottom: 6px;">${property}</div>
+        `;
+
+        values.forEach((val, idx) => {
+          const isCurrent = !val.valid_until || new Date(val.valid_until) > new Date();
+          html += `
+            <div style="font-size: 10px; color: #666; padding: 4px 0; border-left: 2px solid ${isCurrent ? '#28a745' : '#999'}; padding-left: 8px; margin-left: 4px;">
+              <div style="font-weight: 500;">${val.value} ${isCurrent ? '(current)' : '(expired)'}</div>
+              <div style="font-size: 9px; color: #999;">
+                From: ${new Date(val.valid_from).toLocaleDateString()}
+                ${val.valid_until ? ' | Until: ' + new Date(val.valid_until).toLocaleDateString() : ''}
+              </div>
+            </div>
+          `;
+        });
+
+        html += '</div>';
+      }
+    }
+
+    if (html === '<div>') {
+      container.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;">No temporal changes detected</div>';
+    } else {
+      html += '</div>';
+      container.innerHTML = html;
+    }
+  }
+
+  displayPrivacyStats(privacy) {
+    const container = document.getElementById("privacyStats");
+
+    const publicCount = privacy.public || 0;
+    const restrictedCount = privacy.restricted || 0;
+    const encryptedCount = privacy.encrypted || 0;
+    const total = publicCount + restrictedCount + encryptedCount;
+
+    let html = `
+      <div class="stat-row">
+        <span class="stat-label">Public Facts</span>
+        <span class="stat-value" style="color: #28a745;">${publicCount}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Restricted Facts</span>
+        <span class="stat-value" style="color: #ffc107;">${restrictedCount}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Encrypted Facts</span>
+        <span class="stat-value" style="color: #dc3545;">${encryptedCount}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Total</span>
+        <span class="stat-value">${total}</span>
+      </div>
+    `;
+
+    container.innerHTML = html;
+  }
+
+  displayDefaultInsights() {
+    document.getElementById("inferredFacts").innerHTML =
+      '<div style="text-align: center; color: #999; padding: 20px;">No inferences yet</div>';
+    document.getElementById("temporalHistory").innerHTML =
+      '<div style="text-align: center; color: #999; padding: 20px;">No history available</div>';
+    document.getElementById("privacyStats").innerHTML =
+      '<div style="text-align: center; color: #999; padding: 20px;">No data</div>';
   }
 }
 
