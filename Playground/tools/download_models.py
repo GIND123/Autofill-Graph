@@ -26,14 +26,6 @@ def main() -> None:
     CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
     print("OK: openai/clip-vit-base-patch32")
 
-    # LayoutLMv3 perception backbone (base)
-    from transformers import AutoModelForTokenClassification, AutoProcessor
-
-    AutoProcessor.from_pretrained("microsoft/layoutlmv3-base")
-    AutoModelForTokenClassification.from_pretrained("microsoft/layoutlmv3-base")
-    print("OK: microsoft/layoutlmv3-base")
-
 
 if __name__ == "__main__":
     main()
-
