@@ -41,8 +41,8 @@
                                │
 ┌──────────────────────────────▼──────────────────────────────────────┐
 │                      ADAPTIVE ROUTER (LinUCB)                       │
-│  Context vector = field_embedding(384) ⊕ domain_onehot(6)          │
-│  Arms: [local, llm_small, llm_large]                               │
+│  Context vector = label_embedding(24) ⊕ domain_onehot(6)           │
+│  Active arms: [local, llm_small] | llm_large reserved              │
 │  Policy: ε-greedy (decaying) + forced LLM when local=∅             │
 │  Reward signal: user feedback (accept=1, reject=0, correct=0.2)    │
 ├──────────┬─────────────────────┬────────────────────┬───────────────┤
@@ -64,7 +64,7 @@
 │  │ • Session scope  │ │ • All past fill  │ │ • Typed temporal KG  │ │
 │  │ • Active fields  │ │   episodes       │ │ • NetworkX DiGraph   │ │
 │  │ • Partial fills  │ │ • Per-field       │ │ • Layered attributes │ │
-│  │ • Bandit contexts│ │   accept/reject  │ │ • CLIP image embeds  │ │
+│  │ • Bandit contexts│ │   accept/reject  │ │ • Typed document refs │ │
 │  │ • User correct-  │ │   history        │ │ • Inference registry │ │
 │  │   ions this run  │ │ • Calibrated     │ │ • Retraction set     │ │
 │  │                  │ │   confidence     │ │                      │ │
@@ -97,11 +97,11 @@
 
 The central challenge: mapping arbitrary form labels to canonical properties. Browser autofill fails here because it relies on HTML `autocomplete` attributes. Real forms use synonyms, periphrasis, and adversarial phrasings.
 
-**Phase 1 — Keyword Exact Match.** A hand-curated synonym index maps ~200 surface forms to 37 canonical properties. Covers Tier 1 (standard) labels reliably.
+**Phase 1 — Keyword Exact Match.** A hand-curated synonym index maps 200+ surface forms to 43 canonical properties. Covers Tier 1 (standard) labels reliably.
 
 **Phase 2 — Substring Match.** Bidirectional containment check. Catches partial matches like "Electronic Mail" → "email".
 
-**Phase 3 — Embedding Cosine Similarity.** Each canonical property has a pre-computed MiniLM-L6-v2 embedding of its natural-language description. At query time, the label is encoded and matched by cosine similarity with threshold 0.45. This is the key mechanism for Tier 2 (synonym-heavy) and Tier 3 (adversarial/ambiguous) labels.
+**Phase 3 — Embedding Cosine Similarity.** Each canonical property has a pre-computed MiniLM-L6-v2 embedding of its natural-language description. At query time, the label is encoded and matched by cosine similarity with threshold 0.32. This is the key mechanism for Tier 2 (synonym-heavy) and Tier 3 (adversarial/ambiguous) labels.
 
 | Tier | Example Label | Resolution Path |
 |------|--------------|----------------|
@@ -109,7 +109,7 @@ The central challenge: mapping arbitrary form labels to canonical properties. Br
 | 2 | "Primary Electronic Mail" | Phase 2: substring "mail" |
 | 3 | "How should we reach you digitally?" | Phase 3: MiniLM cosine sim → `email` (0.62) |
 
-**Design choice — CPU-friendly.** MiniLM-L6-v2 is 22M parameters, runs in <10ms per encoding on CPU. Property description embeddings are pre-computed once at init (37 vectors). Field label embeddings are cached.
+**Design choice — CPU-friendly.** MiniLM-L6-v2 is 22M parameters, runs in <10ms per encoding on CPU. Property description embeddings are pre-computed once at init (43 vectors). Field label embeddings are cached.
 
 ---
 
@@ -121,7 +121,7 @@ The core data structure. A directed graph (NetworkX `DiGraph`) where:
 - **Edges** are typed relations: `AFFILIATED_WITH`, `INTERESTED_IN`, `STUDIED_AT`, etc.
 - **Attributes** are per-entity, per-property lists of `AttributeValue` objects with temporal validity (`valid_from`, `valid_until`), confidence scores, source provenance, and sensitivity labels.
 
-**Layered Sensitivity Model.** Seven attribute layers with three sensitivity tiers:
+**Layered Sensitivity Model.** Eight attribute layers with three sensitivity tiers:
 
 | Layer | Sensitivity | Example Properties |
 |-------|------------|-------------------|
@@ -168,7 +168,7 @@ Instead of sending the entire knowledge graph to the LLM, we embed all KG triple
 
 **Adaptive top-k.** The number of retrieved triples scales with the number of unfilled fields: `k = min(15, max(5, num_fields × 2))`. A minimum similarity threshold of 0.15 filters irrelevant noise.
 
-**Compression ratio.** As the graph grows (more facts about the user), the fraction of facts sent to the LLM *decreases*. With 50+ triples, compression exceeds 80% — the LLM sees only 8-10 relevant facts instead of the full graph. This directly reduces token cost and latency.
+**Compression ratio.** As the graph grows (more facts about the user), the fraction of facts sent to the LLM *decreases*. In the current `Prototype5` notebook, the indexed graph is about 20 triples and the benchmark's retriever diagnostic averages ~51% compression. Under the same capped top-k policy, compression would exceed 80% once the graph is well past ~50 triples. That >80% regime should be described as a scaling projection, not as a measured large-graph result from the current notebook.
 
 **CPU cost.** Encoding the query (concatenated field labels) takes ~5ms. Dot-product retrieval over the triple embeddings is sub-millisecond even for hundreds of triples.
 
@@ -178,12 +178,12 @@ Instead of sending the entire knowledge graph to the LLM, we embed all KG triple
 
 A contextual bandit that learns, per-field, whether to use local lookup (free) or LLM generation (costly).
 
-**Context vector (390 dims).** 384-dim MiniLM embedding of the field label + 6-dim one-hot domain encoding (job, academic, visa, medical, financial, general).
+**Context vector (30 dims in `Prototype5`).** The notebook uses a compressed 24-dim prefix of the MiniLM label embedding plus a 6-dim one-hot domain encoding (job, academic, visa, medical, financial, general). This keeps the contextual bandit sample-efficient for the current small-data setting.
 
-**Three arms:**
+**Arms in the current notebook:**
 - `local` (arm 0): Deterministic lookup + compositional + inference. Zero API cost.
-- `llm_small` (arm 1): Mistral Small (~8B). ~0.1$/M tokens.
-- `llm_large` (arm 2): Reserved for future scaling experiments.
+- `llm_small` (arm 1): Mistral Small (~8B). Used for fields with no local evidence and long-form generation.
+- `llm_large` (arm 2): Reserved in the API but not actively selected in `Prototype5`; do not claim results for this arm yet.
 
 **Exploration policy.** ε-greedy with decay (ε₀=0.35, decay=0.97, min=0.05) layered on top of LinUCB upper confidence bounds. This ensures early exploration while converging to exploitation.
 
@@ -205,23 +205,26 @@ This prevents the LLM from fabricating sensitive information. The domains and th
 
 ---
 
-### 3.7 Multimodal — CLIP Image Matching
+### 3.7 Multimodal — Document Category Routing
 
-Forms often require document uploads: profile photos, passport scans, transcripts, signatures, resumes. AutoFillGraph stores these as image attributes in the KG, with CLIP ViT-B/32 embeddings.
+Forms often require document uploads: profile photos, passport scans, transcripts, signatures, resumes. In `Prototype5`, these are stored as typed document attributes in the KG as local document paths.
 
-**Strict semantic category matching.** Unlike generic CLIP similarity, we use a two-phase approach:
-1. **Category gate:** Check if the field label matches one of six predefined image categories (profile_photo, signature, transcript_scan, id_scan, passport_scan, resume_scan) using keyword matching.
-2. **CLIP tiebreaker:** Within matched categories only, use CLIP similarity to select the best stored image.
+**Current implemented behavior.** The notebook uses strict semantic category matching:
+1. **Category gate:** Check if the field label matches one of six predefined image/document categories (profile_photo, signature, transcript_scan, id_scan, passport_scan, resume_scan) using keyword matching.
+2. **Typed retrieval:** Return the stored document for that category directly.
 
-This prevents cross-category errors (e.g., matching "Upload Photo" to a stored signature).
+This prevents cross-category errors (e.g., matching "Upload Photo" to a stored signature). CLIP is import-checked in the notebook but is not the core retrieval mechanism for the reported results, so the paper should describe this module as typed document routing rather than CLIP ranking.
 
 ---
 
-### 3.8 Form Perception — LayoutLMv3 + OCR Fallback
+### 3.8 Form Perception — Tesseract OCR with Layout Heuristics
 
-For image-based form inputs (screenshots, scanned PDFs), the system extracts field labels using:
-1. **LayoutLMv3-base** (attempted first): Uses the processor's built-in OCR + spatial layout understanding.
-2. **Tesseract OCR fallback:** Pattern-matched extraction of field labels from raw OCR text, using regex for colon-terminated labels, asterisk-marked required fields, and heuristic length/content filters.
+For image-based form inputs (screenshots, scanned PDFs), the current notebook extracts field labels using:
+1. **Tesseract OCR text extraction**
+2. **Layout-aware line grouping from Tesseract metadata**
+3. **Heuristic field-label recovery** with fuzzy matching and OCR-noise normalization
+
+`Prototype5` also checks whether LayoutLMv3 is importable, but the demonstrated pipeline and reported outputs come from Tesseract plus layout heuristics, not a full LayoutLMv3 inference pass.
 
 **Note on deployment.** For the browser extension target, this module is replaced by DOM inspection — the browser provides field labels, `name`/`id` attributes, and `placeholder` text directly. The OCR path is retained for PDF forms and mobile screenshot scenarios.
 
@@ -279,7 +282,7 @@ Input: field_labels[], form_domain
 
 Phase 1: IMAGE FIELDS
   for each label containing image keywords:
-    → CLIP semantic match against stored image embeddings
+    → typed document-category match against stored document refs
     → if match: IMAGE_FILLED, else: UNKNOWN
 
 Phase 2: LOCAL RESOLUTION (zero API cost)
@@ -313,7 +316,7 @@ Phase 5: HITL FEEDBACK (async, after user review)
 
 ## 5. FormBench v2 — Evaluation Suite
 
-A custom benchmark of **15 forms across 5 domains** (job, academic, visa, medical, financial) with **3 difficulty tiers**:
+A custom benchmark of **15 synthetic forms across 7 domain scenarios** (job, academic, visa, medical, financial, document, general-composite) with **3 difficulty tiers**:
 
 | Tier | Description | Label Style | Example |
 |------|------------|------------|---------|
@@ -327,10 +330,12 @@ A custom benchmark of **15 forms across 5 domains** (job, academic, visa, medica
 - `GENERATED` is correct if non-empty and substantial (>10 chars) for generative fields
 - `IMAGE_FILLED` is correct if matched property equals expected canonical
 
-**Baselines:**
+**Baselines in `Prototype5`:**
 1. **Browser Autofill** — Flat key-value store with rigid label matching (~30 known mappings)
 2. **Pure Lookup** — Keyword-only field mapper, no embedding fallback, no LLM
-3. **Pure LLM** — Send all user data + field labels to LLM, no graph structure
+3. **No Embedding** — Exact + substring matching only, with the rest of the local pipeline intact
+
+**Important scope note.** In the current notebook, `FormBench v2` is run with `use_llm=False`. The benchmark therefore measures the local path only: mapping, composition, inference, domain guards, and document routing. LLM-backed generation is evaluated separately in the long-form QA / research-application blocks and should be written up as a separate experiment, not folded into the headline FormBench numbers.
 
 ---
 
@@ -375,7 +380,7 @@ LLMs are systematically overconfident. A raw confidence of 0.95 from the LLM is 
 | **Robustness to noisy inputs** | Three-phase field mapping handles synonym, periphrastic, and adversarial labels |
 | **Efficient agentic systems** | LinUCB bandit minimizes API calls; embedding retrieval compresses context; domain-aware skip avoids unnecessary LLM invocations |
 | **Adaptive execution** | Bandit learns per-field routing policy from user feedback; epsilon decays over time |
-| **Evaluation & benchmarking** | FormBench v2: 15 forms, 5 domains, 3 difficulty tiers, 4 baselines |
+| **Evaluation & benchmarking** | FormBench v2: 15 synthetic cases across 7 domain scenarios, plus a held-out semantic challenge and separate LLM demos |
 
 ---
 
@@ -412,11 +417,11 @@ LLMs are systematically overconfident. A raw confidence of 0.95 from the LLM is 
 
 | Component | Research Version | Browser Extension |
 |-----------|-----------------|-------------------|
-| Form perception | LayoutLMv3 + OCR | DOM inspection (`querySelectorAll('input, select, textarea')`) |
+| Form perception | Tesseract OCR + layout heuristics | DOM inspection (`querySelectorAll('input, select, textarea')`) |
 | KG storage | In-memory NetworkX | IndexedDB (persistent across sessions) |
 | Embeddings | MiniLM-L6-v2 (22M params) | ONNX-quantized MiniLM (INT8, ~6MB) or pre-computed lookup table |
 | LLM | Mistral API | Same (API call from background worker) |
-| CLIP | ViT-B/32 (150M params) | Dropped — browser extension handles file uploads via native file picker |
+| Document routing | Typed document-category matching | Native file picker / typed file references |
 | HITL UI | Console print | Popup with per-field review cards |
 | Privacy | In-memory | Local-only IndexedDB; API calls send only relevant subgraph (never raw sensitive data) |
 
@@ -489,7 +494,7 @@ The system improves over every form the user fills:
 ## 10. Properties for Paper Claims
 
 ### 10.1 Claim: Compression scales with graph size
-As the KG grows, the embedding retriever sends a *decreasing fraction* of total facts to the LLM. With 20 triples, compression is ~50%. With 60+ triples, compression exceeds 80%. This means **cost per form fill *decreases* as the system learns more about the user.**
+As the KG grows, the embedding retriever sends a *decreasing fraction* of total facts to the LLM. The current notebook demonstrates ~51% average retriever compression on a ~20-triple graph. The >80% regime at larger graph sizes follows analytically from the current capped top-k policy, but it should be labeled as a projection until backed by larger-graph runs.
 
 ### 10.2 Claim: Three-phase field mapping handles adversarial labels
 Tier 1 (standard): Keyword exact match — near 100%.
@@ -500,32 +505,29 @@ Tier 3 (adversarial): Embedding similarity — the only mechanism that can map "
 Each correction adds a high-confidence fact. Each rejection retracts a wrong inference permanently. Each acceptance calibrates confidence upward. The system cannot "unlearn" a correction — it can only be superseded by a newer correction.
 
 ### 10.4 Claim: Domain-aware unknown handling prevents fabrication
-The system achieves correct `UNKNOWN` on 100% of medical/financial/legal fields when no domain data exists, while Pure LLM fabricates values for these fields.
+The current notebook shows correct `UNKNOWN` behavior on the synthetic medical and financial guard cases when no domain data exists. This is strong evidence for abstention behavior in the local pipeline. A direct Pure-LLM fabrication comparison is not yet included in `Prototype5`, so that contrast should not be claimed unless the baseline is added.
 
 ---
 
 ## 11. Modules — File/Class Reference
 
-| Module | Class/Function | Location | Purpose |
-|--------|---------------|----------|---------|
-| Schema | `EntityType`, `Sensitivity`, `FillStatus`, `LAYER_DEFINITIONS` | §1.3 | Type system |
-| Data classes | `AttributeValue`, `InferredFact`, `FillResult`, `FillEpisode` | §1.3 | Core data structures |
-| Utilities | `_safe_parse_json()`, `_now()` | §1.4 | JSON robustness, timestamps |
-| Resolvers | `DeterministicResolvers` | §1.5 | Email→org, phone→country, address→parts |
-| Field Mapper | `FieldMapper` | §1.6 | Three-phase label resolution |
-| CLIP Encoder | `CLIPEncoder` | §1.7 | Image embedding + semantic category matching |
-| Form Perception | `FormFieldExtractor` | §1.8 | LayoutLMv3 + OCR field extraction |
-| Retrieval | `EmbeddingRetriever` | §1.9 | MiniLM triple embedding + adaptive top-k |
-| Bandit | `LinUCBRouter` | §1.10 | Contextual bandit for compute routing |
-| Working Memory | `WorkingMemory` | §1.11 | Session-scoped state |
-| Episodic Memory | `EpisodicMemory` | §1.11 | Episode log + field-level history |
-| Semantic Memory | `SemanticMemory` | §1.12 | Typed temporal KG core |
-| Consolidation | `MemoryConsolidator` | §1.13 | Episodic → semantic transfer |
-| Composition | `CompositionalResolver` | §1.14 | Composite field assembly |
-| Inference | `InferenceEngine` | §1.14 | Guarded rule-based derivation |
-| LLM Client | `LLMClient` | §1.15 | Mistral API wrapper with stats |
-| Pipeline | `learn_from_form()`, `autofill_form()`, `process_feedback()` | §1.16 | Master orchestration |
-| Evaluation | `evaluate_system()`, baselines | §4.2-4.6 | FormBench runner |
+| Module | Class/Function | Notebook Block | Purpose |
+|--------|---------------|----------------|---------|
+| Schema | `Sensitivity`, `FillStatus`, `Route`, `LAYERS`, `PROPERTIES` | `1.0` | Type system and property registry |
+| Data classes | `AttributeValue`, `FillResult`, `FillEpisode` | `2.0` | Core records for memory and evaluation |
+| Utilities | `_safe_parse_json()`, `_now()`, `_norm()` | `1.0` | JSON robustness, timestamps, normalization |
+| Field Mapper | `FieldMapper` | `2.0` | Three-phase label resolution |
+| Retrieval | `EmbeddingRetriever` | `2.0` | MiniLM triple embedding + retrieval diagnostics |
+| Bandit | `LinUCBRouter` | `2.0` | Contextual routing with active `{local, llm_small}` evaluation |
+| Temporal Memory | `TemporalKG` | `2.0` | Typed temporal KG core |
+| Episodic Memory | `EpisodicMemory` | `2.0` | Episode log + field-level history |
+| Consolidation | `MemoryConsolidator` | `2.0` | Accept/reject/correct transfer back into the KG |
+| Composition | `CompositionalResolver` | `2.0` | Composite field assembly |
+| Inference | `InferenceEngine` | `2.0` | Guarded rule-based derivation |
+| LLM Client | `MistralClient` | `2.0` | JSON/text generation with usage stats |
+| Pipeline | `AutoFillAgent.learn()`, `AutoFillAgent.autofill()`, `AutoFillAgent.feedback()` | `3.0` | Master orchestration |
+| OCR / Documents | OCR helpers + document-path routing | `6.0` | Tesseract parsing and typed document autofill |
+| Evaluation | `FormBench v2`, baselines, held-out challenge | `7.0`-`8.5` | Local-path benchmark + semantic stress tests |
 
 ---
 
@@ -535,10 +537,15 @@ The system achieves correct `UNKNOWN` on 100% of medical/financial/legal fields 
 - Single-user system (no multi-user KG sharing)
 - Inference engine is rule-based (7 rules); doesn't learn new rules from data
 - FormBench is synthetic — needs real-world form diversity testing
+- FormBench in `Prototype5` is local-path only (`use_llm=False`), so adaptive-routing / generation claims must rely on the separate LLM demos rather than the headline benchmark table
+- Long-form "grounding" metrics are lexical proxy checks, not full factuality evaluation
+- Multimodal document fills are typed category routing over stored document paths; CLIP ranking is not yet part of the reported results
 - No differential privacy on LLM context (sensitive data is excluded but not formally DP)
-- Bandit context is 390-dimensional — may be over-parameterized for the current 3-arm setup
+- LayoutLMv3 is availability-checked, but the demonstrated OCR path is Tesseract plus layout heuristics
+- The current bandit uses a compressed 30-dimensional context and reserves `llm_large` rather than evaluating it
 
 **Future directions:**
+- Add a true **Pure LLM** baseline and a mixed local-vs-LLM FormBench so the adaptive router is evaluated end-to-end on the same benchmark table
 - **Meta-learned inference rules** from episodic memory patterns (if users consistently correct X→Y, learn the rule)
 - **Federated KG** — share anonymized form templates across users without sharing personal data
 - **On-device LLM** — replace Mistral API with quantized Phi-3 or Gemma-2B for fully offline operation
