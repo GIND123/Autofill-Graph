@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Autofill Graph - Privacy-First Knowledge Assistant",
-  "version": "2.0.0",
-  "description": "Temporal knowledge graph autofill with privacy-aware multi-layer architecture and intelligent inference",
+  "name": "AutoFillGraph — Agentic KG Autofill",
+  "version": "5.0.0",
+  "description": "AutoFillGraph v5: Agentic knowledge-graph autofill · Temporal KG · LinUCB bandit · LLM long-form QA · OCR fallback · ICML SCALE 2026",
   "permissions": [
     "storage",
     "scripting",
@@ -13,22 +13,25 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background_v5.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["content_v5.js"],
       "run_at": "document_end"
     }
   ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_title": "Autofill Graph Assistant"
+    "default_popup": "popup/popup_v5.html",
+    "default_title": "AutoFillGraph v5"
   },
   "web_accessible_resources": [
     {
-      "resources": ["popup/inject.js"],
+      "resources": [
+        "lib/v5/*.js",
+        "popup/popup_v5.js"
+      ],
       "matches": ["<all_urls>"]
     }
   ]
