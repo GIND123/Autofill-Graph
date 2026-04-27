@@ -2,6 +2,9 @@
 
 A production-ready Chrome extension that intelligently fills web forms using local knowledge graphs and semantic understanding. All data stays on your device.
 
+<img width="1364" height="997" alt="diagram-export-4-27-2026-12_29_01-AM" src="https://github.com/user-attachments/assets/fef5db48-f187-4b82-884b-e0b04f87542f" />
+
+
 ## Overview
 
 Autofill Graph is a Chrome Manifest V3 extension that replaces traditional form autofill with an intelligent, adaptive system powered by knowledge graphs and vector embeddings. Instead of simple string matching, the system learns relationships between your professional information and uses semantic understanding to match complex form fields.
