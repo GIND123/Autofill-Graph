@@ -2,8 +2,7 @@
 
 A production-ready Chrome extension that intelligently fills web forms using local knowledge graphs and semantic understanding. All data stays on your device.
 
-<img width="1364" height="997" alt="diagram-export-4-27-2026-12_29_01-AM" src="https://github.com/user-attachments/assets/fef5db48-f187-4b82-884b-e0b04f87542f" />
-
+<img width="1330" height="861" alt="Adobe Express - file" src="https://github.com/user-attachments/assets/cf57ce2a-ee6d-4a8b-a7b3-fc997ca5d576" />
 
 ## Overview
 
