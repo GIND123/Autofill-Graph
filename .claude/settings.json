@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(node -e ' *)",
-      "Bash(node -e *)"
+      "Bash(node -e *)",
+      "Bash(python -c ' *)",
+      "Read(//c/Users/govin/.claude/projects/e--Autofill-Graph/**)",
+      "Bash(python build_p7.py)",
+      "Bash(python debug_chars.py)",
+      "Bash(jupyter nbconvert *)",
+      "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=mlenv Prototype7.ipynb --output Prototype7.ipynb)",
+      "Bash(python -m jupyter kernelspec list)",
+      "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 \"e:\\\\Autofill-Graph\\\\Baseline\\\\Prototype7.ipynb\" --output \"e:\\\\Autofill-Graph\\\\Baseline\\\\Prototype7.ipynb\")",
+      "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 Prototype7.ipynb --output Prototype7.ipynb)"
     ]
   }
 }
