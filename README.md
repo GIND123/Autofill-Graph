@@ -1,391 +1,150 @@
-# AutoFillGraph — Agentic Temporal Knowledge-Graph Autofill
-
-> **Lifelong-Learning Memory Agent for Adaptive Form Autofill**
-> Submission target: ICML 2026 SCALE Workshop — Late-Breaking Track (3 pages)
-
-<img width="1330" height="861" alt="AutoFillGraph architecture" src="https://github.com/user-attachments/assets/cf57ce2a-ee6d-4a8b-a7b3-fc997ca5d576" />
-
----
-
-## What Is AutoFillGraph?
-
-AutoFillGraph is a lifelong-learning agent that fills web and PDF forms intelligently. It maintains a **typed temporal knowledge graph** of the user's personal data and learns from every form the user fills. Unlike browser autofill — a flat key-value store with rigid HTML-attribute matching — AutoFillGraph resolves synonymous, paraphrased, and adversarial field labels, composes multi-part answers from atomic facts, infers missing properties from existing data, and routes each field through the cheapest sufficient compute path.
-
-| What it is | What it is not |
-|-----------|---------------|
-| A memory-grounded agentic system | A browser password manager |
-| A knowledge graph + bandit router | A fine-tuned form-filling model |
-| A lifelong learner from HITL feedback | A cloud-synced profile service |
-| A privacy-preserving local agent | A web scraper or data broker |
-
----
-
-## Key Results (Prototype5 / Prototype6)
-
-| Metric | Value |
-|--------|-------|
-| FormBench v2 accuracy (55 cases) | **100.0%** |
-| Correct abstentions (domain guard) | **100.0%** |
-| Average retrieval compression | **51.3%** |
-| Token F1 vs best lookup baseline | **1.000 vs 0.500** (2× lift) |
-| Semantic similarity vs browser autofill | **1.000 vs 0.323** (>3× lift) |
-| LLM generation fill rate | **100.0% (4/4 substantial fills)** |
-| Canonical properties | **43** |
-| Guarded inference rules | **7** |
-| Bandit context dimensions | **30** (24 label + 6 domain) |
-
----
-
-## System Architecture
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│  INPUTS                                                          │
-│  Web / PDF Form  ──┐                                             │
-│  User Documents  ──┤──▶  A1: Perception & Field Mapping          │
-│  User (HITL)     ──┘         │ (3-phase: keyword → substr → MiniLM)
-└────────────────────────────────────────────────────────────────  │
-                               │                                   │
-               ┌───────────────▼───────────────┐                   │
-               │   A2: Memory Retrieval         │                   │
-               │   Temporal KG + Episodic Mem  │                   │
-               └───────────────┬───────────────┘                   │
-                               │                                   │
-               ┌───────────────▼───────────────┐                   │
-               │   A3: Adaptive Resolver        │                   │
-               │   LinUCB Bandit               │                   │
-               │   local | LLM-small | reserve  │                   │
-               └───────────────┬───────────────┘                   │
-                               │                                   │
-               ┌───────────────▼───────────────┐                   │
-               │   A4: Validation & Feedback    │◀── User review   │
-               │   Accept / Reject / Correct    │                   │
-               └───────────────┬───────────────┘                   │
-                               │                                   │
-                    ┌──────────▼──────────┐                        │
-                    │  Filled Form Output │                        │
-                    └─────────────────────┘                        │
-```
+# AutoFillGraph
 
-### Three-Tier Memory
+> Lifelong-learning knowledge-graph agent for adaptive form autofill.
+> Current research notebook: `Prototype7`
+> Current browser extension runtime: `v5`
 
-```
-Working Memory        Episodic Memory           Semantic Memory
-─────────────         ────────────────          ───────────────────
-Session-scoped        All past episodes         Temporal KG (NetworkX)
-Active field ctx      Per-field history         43 properties, 7 types
-Bandit contexts       Calibrated confidence     Layered sensitivity
-User corrections      Grows forever             Temporal versioning
-Resets per form                                 Inference registry
-                                                Retraction set
-```
+## Overview
 
----
+AutoFillGraph stores user information in a typed temporal knowledge graph and uses that memory to autofill web and document forms. The core system combines:
 
-## How It Works
+- three-phase field mapping: keyword -> substring -> MiniLM embedding similarity
+- temporal semantic memory plus episodic feedback history
+- deterministic composition and guarded inference
+- a LinUCB router that prefers the cheapest sufficient path
+- human-in-the-loop correction and confidence calibration
 
-### Field Mapping (Three Phases)
+The repo currently has two different maturity levels:
 
-Every form label goes through three resolution phases before being looked up in the KG:
+- the research notebook track has progressed to `Baseline/Prototype7.ipynb`
+- the shipped extension runtime in `manifest.json` still points to the `v5` implementation under `background_v5.js`, `content_v5.js`, `lib/v5/`, and `popup/popup_v5.*`
 
-1. **Keyword exact match** — 200+ surface-form synonyms → 43 canonical properties (<1ms)
-2. **Substring match** — bidirectional containment for partial matches
-3. **MiniLM-L6-v2 embedding cosine similarity** — threshold 0.32, handles adversarial phrasings
+That distinction matters. Prototype 7 is not a separate end-to-end production runtime. It is a notebook-layer evolution built on top of the Prototype 6 core.
 
-| Tier | Example Label | Resolved By | Result |
-|------|--------------|-------------|--------|
-| 1 | "Email" | Phase 1 | `email` |
-| 2 | "Primary Electronic Mail" | Phase 2 | `email` |
-| 3 | "How should we reach you digitally?" | Phase 3 (cosine ~0.62) | `email` |
+## Prototype Status
 
-### Adaptive Routing (LinUCB Bandit)
+| Prototype | Scope |
+|-----------|-------|
+| `Prototype5.ipynb` | Canonical core system, FormBench v2, baselines, LLM QA path |
+| `Prototype6.ipynb` | Prototype 5 plus soft metrics: `token_f1`, `char_sim`, `semantic_sim` |
+| `Prototype7.ipynb` | Prototype 6 plus person-centric KG visualization, multi-profile demo, and expanded figure suite |
 
-The bandit selects the cheapest arm that can fill each field:
+`Prototype7.ipynb` is assembled from `Prototype6.ipynb` by the local helper `Baseline/build_p7.py`. That builder:
 
-| Arm | Name | Cost | Used For |
-|-----|------|------|---------|
-| 0 | `local` | $0 | Direct KG lookup, composition, inference |
-| 1 | `llm_small` | API | Fields with no local evidence; Mistral-small-latest |
-| 2 | `llm_large` | Reserved | Not active in v5 |
+- patches the notebook banner and KG plotting layout
+- adds `TemporalKG.person_name()`
+- replaces the KG snapshot renderer with a person-centric view
+- adds a multi-profile demo with separate Govind and Devika profiles
+- replaces the figure cell with a larger `v7` visualization suite
+- reuses the Prototype 6 core, QA, OCR, FormBench, baseline, and summary cells
 
-Context vector: 30-dim (24-dim MiniLM label prefix + 6-dim domain one-hot). Exploration: ε₀=0.35, decay=0.97, floor=0.05 — converges in ~60 decisions.
+So the meaningful `v7` delta is presentation and demonstration scope, not a new benchmarked agent core.
 
-### Inference Engine (7 Guarded Rules)
+## Key Reported Results
 
-Deterministic rules derive new facts from existing ones, with guards that prevent overwriting explicit user data:
+These are the reported numbers currently carried forward into the `v7` notebook from the `v5/v6` evaluation path.
 
-| Rule | Derives | Confidence |
-|------|---------|------------|
-| Phone prefix (+1) → country | "United States" | 0.90 |
-| Address string parsing | city, state, zip | 0.90 |
-| Degree string ("MS in X") → department | "X" | 0.85 |
-| Email → work_email (copy) | work_email | 0.60 |
-| University + student indicators → employer | university name | 0.70 |
+| Metric | Value | Scope |
+|--------|-------|-------|
+| FormBench v2 accuracy | **100.0% (55/55)** | local path, `use_llm=False` |
+| Correct abstentions | **100.0%** | domain-guard cases |
+| Average retrieval compression | **51.3%** | measured on current graph scale |
+| Token F1 | **1.000** | `v6` fill-row metric |
+| Character similarity | **1.000** | `v6` fill-row metric |
+| Semantic similarity | **1.000** | `v6` fill-row metric |
+| Best lookup-baseline token F1 | `0.500` | no-embedding and pure-lookup baselines |
+| Browser autofill semantic similarity | `0.323` | baseline comparison |
+| LLM generation fill rate | **100.0% (4/4)** | notebook QA/demo path |
+| Canonical properties | **43** | property registry |
+| Guarded inference rules | **7** | inference engine |
+| Bandit context dimensions | **30** | 24 label + 6 domain |
 
-Rejected inferences are added to a permanent retraction set — they cannot re-fire.
+Important scope note: the headline FormBench result is still a local-path benchmark. It does not validate a mixed local-plus-LLM routing benchmark for `v7`.
 
-### Memory Consolidation (HITL Loop)
+## What Prototype 7 Adds
 
-```
-User feedback   →   Semantic memory update   →   Bandit update
-─────────────       ──────────────────────       ─────────────
-accept          →   confidence +0.05             reward = 1.0
-reject          →   confidence −0.15, retract    reward = 0.0
-correct         →   new value conf=1.0, retract  reward = 0.2
-```
+Prototype 7 adds notebook-facing improvements that are real, but narrower than a full system-version jump:
 
-After any feedback: re-run inference engine → re-index embedding retriever.
+- person-centric KG figures with the active person at the center
+- side-by-side multi-profile KG visualization
+- a multi-profile learning/autofill demo
+- enhanced plotting for adversarial lift, KG growth, compression, bandit behavior, route distribution, mapper phases, and temporal confidence
 
-### Context Compression
+What it does not add:
 
-The embedding retriever sends only the most relevant KG triples to the LLM:
+- a new extension runtime
+- a new mixed-path benchmark
+- a pure-LLM baseline
+- a new underlying benchmark dataset beyond the existing notebook stack
 
-- top-k = `min(15, max(5, num_fields × 2))`
-- Minimum similarity threshold: 0.15
-- **Current compression: 51.3%** on a ~20-triple graph
-- Scales to >80% compression at 50+ triples — context window stays bounded as profile grows
+## Repository Layout
 
----
-
-## Benchmarks
-
-### FormBench v2 (Internal, Prototype5)
-
-15 synthetic forms × 7 domains × 3 difficulty tiers = 55 test cases.
-
-**Domains:** job | academic | visa | medical | financial | document | general-composite
-
-**Results (local path, `use_llm=False`):**
-
-| Metric | AutoFillGraph v5 | No Embedding | Pure Lookup | Browser Autofill |
-|--------|-----------------|-------------|-------------|-----------------|
-| Exact accuracy | **100.0%** | — | — | — |
-| Token F1 | **1.000** | 0.500 | 0.500 | 0.186 |
-| Char similarity | **1.000** | 0.553 | 0.553 | 0.288 |
-| Semantic similarity | **1.000** | 0.556 | 0.556 | 0.323 |
-| Abstention accuracy | **100.0%** | — | — | — |
-
-### StandardBenchmarkSuite Lite (External Data, Prototype6)
-
-Real-world noisy form data evaluated using the same agent core:
-
-| Dataset | Description | Embedder |
-|---------|-------------|---------|
-| FUNSD | Scanned form benchmark, full | all-MiniLM-L6-v2 |
-| XFUND-DE | German multilingual subset (40/20 docs cap) | paraphrase-multilingual-MiniLM-L12-v2 |
-
-Evaluated metrics: mapping_acc · fill_acc · abstain_acc
-
-Data budget hard cap: **2 GB total** (CORD v2 excluded — 2.31 GB on HF).
-
----
-
-## Soft Metrics (Prototype6)
-
-Prototype6 adds three soft metric functions for richer diagnostic evaluation:
-
-| Function | What It Measures |
-|----------|----------------|
-| `token_f1(pred, gold)` | Bag-of-words overlap — detects right-answer-wrong-format |
-| `char_sim(pred, gold)` | Normalized edit distance — handles phone/zip normalization |
-| `semantic_sim(pred, gold)` | MiniLM cosine — captures semantically equivalent fills |
-
-Useful interpretation:
-- `token_f1 > exact_acc` → correct answer, formatting mismatch
-- `char_sim high` → short-code fields match after normalization
-- `sem_sim high` → semantically correct fill even when lexically different
-
----
-
-## Privacy and Safety
-
-### Sensitivity Layers
-
-| Layer | Tier | Properties | LLM Context |
-|-------|------|-----------|------------|
-| identity, contact, academic, professional | PUBLIC | email, phone, university… | Included |
-| medical, financial, document | RESTRICTED | allergies, tax_id, resume… | Excluded |
-| legal | ENCRYPTED | passport, visa_status… | Hard excluded |
-
-### Domain-Aware Abstention
-
-For medical, financial, and legal fields: if the KG contains **no data** for that domain, the agent immediately returns `UNKNOWN` — the LLM is never called. This prevents fabrication of SSNs, passport numbers, or medical data.
-
-### LLM Confidence Deflation
-
-LLM outputs are systematically discounted:
-
-```
-stored_confidence = min(0.9, raw_confidence × 0.85)
-```
-
-LLM-sourced values are always reviewed with more skepticism than locally verified facts.
-
----
-
-## Repository Structure
-
-```
+```text
 Autofill-Graph/
-│
-├── Baseline/
-│   ├── Prototype5.ipynb              # v5: complete system implementation
-│   ├── Prototype6.ipynb              # v6: + soft metric instrumentation
-│   ├── StandardBenchmarkSuite_Lite.ipynb  # FUNSD + XFUND evaluation harness
-│   └── documentation.md             # Full technical documentation
-│
-├── Playground/
-│   └── AutoFillGraph_v3_System_Design.md  # Architecture design document
-│
-├── manifest.json                    # Chrome Manifest V3 configuration
-├── background.js                    # Service worker (graph lifecycle)
-├── content.js                       # Content script (DOM form detection)
-├── lib/
-│   ├── knowledgeGraphManager.js     # Core ML engine
-│   └── sampleDataLoader.js          # Test data definitions
-├── popup/
-│   ├── popup.html                   # Extension UI
-│   └── popup.js                     # UI logic + event handlers
-│
-└── README.md                        # This file
+|-- Baseline/
+|   |-- Prototype5.ipynb
+|   |-- Prototype6.ipynb
+|   |-- Prototype7.ipynb
+|   |-- StandardBenchmarkSuite_Lite.ipynb
+|   |-- documentation.md
+|   `-- build_p7.py              # local helper; now listed in .gitignore, still tracked today
+|-- Playground/
+|   `-- AutoFillGraph_v3_System_Design.md
+|-- manifest.json
+|-- background_v5.js
+|-- content_v5.js
+|-- lib/
+|   |-- v5/
+|   |-- knowledgeGraphManager.js # older extension artifact
+|   `-- sampleDataLoader.js
+|-- popup/
+|   |-- popup_v5.html
+|   |-- popup_v5.js
+|   |-- popup.html               # older UI artifact
+|   `-- popup.js                 # older UI artifact
+|-- background.js                # older runtime artifact
+|-- content.js                   # older runtime artifact
+`-- README.md
 ```
 
----
+## Extension Status
 
-## Browser Extension Quick Start
+The extension entrypoints are still explicitly `v5`:
 
-### Prerequisites
-- Chrome / Chromium v100+
-- [Mistral API key](https://console.mistral.ai/api-keys/) (free tier: 100 req/month)
+- `manifest.json` version is `5.0.0`
+- service worker: `background_v5.js`
+- content script: `content_v5.js`
+- popup: `popup/popup_v5.html`
+- libraries: `lib/v5/*.js`
 
-### Install (5 minutes)
+The root README previously implied that the repo structure and extension runtime had already moved in lockstep with the notebook track. That was inaccurate. The extension and notebook are related, but they are not at the same version boundary right now.
 
-```bash
-git clone https://github.com/GIND123/Autofill-Graph.git
-cd Autofill-Graph
-cp config.example.js config.js
-# Add your Mistral API key to config.js
-```
+## Quick Start
 
-Then in Chrome:
-1. Navigate to `chrome://extensions/`
-2. Enable **Developer mode**
-3. Click **Load unpacked** → select the `Autofill-Graph` folder
-4. Click the extension icon → Settings → paste API key → Save
+### Notebook path
 
-### Usage Flow
+Open `Baseline/Prototype7.ipynb` if you want the latest research notebook view.
 
-```
-1. Visit a form page
-2. Click "Detect Forms"          ← DOM inspection, <50ms
-3. Click "Autofill"              ← local fill + LLM batch if needed, <2s
-4. Review and correct fields     ← HITL feedback
-5. Click "Learn This Form"       ← update KG, re-infer, re-index
-```
+Use `Prototype5` and `Prototype6` when you need the earlier canonical evaluation path or want to compare the `v7` additions against the prior notebook state.
 
-### Performance Budget
+### Extension path
 
-| Operation | Target |
-|-----------|--------|
-| DOM field detection | <50ms |
-| Keyword / substring mapping | <1ms |
-| MiniLM Phase 3 mapping | <15ms |
-| Local KG fill | <1ms/field |
-| LLM batch fill (all queued fields) | 500–2000ms |
-| Full 10-field form | <2s total |
+1. Load the repo as an unpacked Chrome extension.
+2. The active runtime will be the `v5` extension declared in `manifest.json`.
+3. Configure the API key through the `v5` popup UI.
 
----
+## Documentation Status
 
-## Research Notebook Usage
+`Baseline/documentation.md` is still a detailed `v5/v6` technical reference. It remains useful for the core architecture, but it is not a full `Prototype7` changelog. The `v7`-specific changes live primarily in `Baseline/Prototype7.ipynb` and the local builder script that generated it.
 
-```python
-# In Prototype5.ipynb
+## Current Gaps
 
-# 1. Learn from user data
-agent.learn({"Full Name": "Alice", "Email": "alice@mit.edu", ...}, context="Profile")
-
-# 2. Autofill a new form
-episode = agent.autofill(
-    ["Applicant Name", "Contact Email", "Cumulative Academic Score"],
-    domain="academic",
-    use_llm=False   # local path; set True to enable LLM generation
-)
-
-# 3. Review results
-for field, result in episode.results.items():
-    print(f"{field}: {result.value} ({result.status}, conf={result.confidence:.2f})")
-
-# 4. Apply HITL feedback — updates KG, re-infers, re-indexes
-agent.feedback(episode, {
-    "Applicant Name": "accept",
-    "Contact Email": "correct:alice@gmail.com",
-    "Cumulative Academic Score": "reject"
-})
-
-# 5. Next form benefits from corrections automatically
-```
-
----
-
-## ICML SCALE 2026 Alignment
-
-AutoFillGraph contributes to all five SCALE workshop research axes:
-
-| Workshop Topic | This System's Contribution |
-|---------------|--------------------------|
-| **Memory of Agents** | Three-tier memory with consolidation, temporal versioning, and forgetting (conf < 0.2) |
-| **Memory consolidation & retrieval** | HITL-driven episodic → semantic transfer; adaptive top-k MiniLM retrieval (51.3% compression) |
-| **Efficient Agentic Systems** | LinUCB bandit minimizes API calls; domain guards skip unnecessary LLM calls |
-| **Evaluation & Benchmarking** | FormBench v2 (55 cases, 3 tiers, 7 domains) + FUNSD/XFUND external validation |
-| **Robustness to noisy inputs** | Three-phase field mapping handles synonym/periphrastic/adversarial labels; OCR noise normalization |
-
----
-
-## Limitations
-
-- **FormBench is synthetic** — needs real-world form diversity testing
-- **FormBench is local-path only** — `use_llm=False`; adaptive routing claims need mixed-path evaluation
-- **No Pure-LLM baseline** — required to justify adaptive router in the paper table
-- **Single-user** — no federated KG sharing
-- **7 fixed inference rules** — rule learning from episodic patterns is future work
-- **llm_large arm unused** — reserved in bandit but not evaluated
-
----
-
-## Roadmap
-
-- [ ] Pure-LLM baseline + mixed-path FormBench
-- [ ] CORD v2 streamed integration (within 2 GB budget)
-- [ ] Meta-learned inference rules from episodic memory
-- [ ] On-device LLM (quantized Phi-3 / Gemma-2B)
-- [ ] MiniWoB++ browser-interaction success rate benchmark
-- [ ] Firefox / Edge extension support
-- [ ] Federated KG for cross-user template sharing
-
----
-
-## Citation
-
-If you use AutoFillGraph in your research:
-
-```bibtex
-@misc{autofillgraph2026,
-  title   = {AutoFillGraph: A Lifelong-Learning Knowledge-Graph Agent for Adaptive Form Autofill},
-  author  = {Govind},
-  year    = {2026},
-  note    = {ICML 2026 SCALE Workshop — Late-Breaking Track submission}
-}
-```
-
----
+- FormBench is synthetic and still primarily a notebook benchmark.
+- The headline FormBench run is local-path only: `use_llm=False`.
+- There is still no pure-LLM baseline for the adaptive-routing claim.
+- The extension runtime has not been upgraded from `v5` to a `v7`-aligned implementation.
+- `Prototype7` mostly advances visualization and demonstration, not the validated core benchmark stack.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-*AutoFillGraph — Lifelong learning, adaptive routing, structured memory, human-in-the-loop.*
-*Designed for ICML SCALE 2026. Built for deployment as a browser extension.*
-
-**Repository:** https://github.com/GIND123/Autofill-Graph
+MIT. See `LICENSE`.

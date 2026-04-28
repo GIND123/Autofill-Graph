@@ -27,7 +27,7 @@
 4. [Autofill Pipeline — End-to-End Flow](#4-autofill-pipeline--end-to-end-flow)
 5. [Evaluation: FormBench v2](#5-evaluation-formbench-v2)
 6. [Evaluation: StandardBenchmarkSuite Lite](#6-evaluation-standardbenchmarksuite-lite)
-7. [Prototype5 vs Prototype6 — Version Differences](#7-prototype5-vs-prototype6--version-differences)
+7. [Prototype5 / Prototype6 / Prototype7 — Version Differences](#7-prototype5--prototype6--prototype7--version-differences)
 8. [Baseline Comparisons](#8-baseline-comparisons)
 9. [Key Quantitative Results](#9-key-quantitative-results)
 10. [Property and Rule Registry](#10-property-and-rule-registry)
@@ -578,7 +578,7 @@ A budget-aware benchmark harness for external standard datasets, designed to val
 
 ---
 
-## 7. Prototype5 vs Prototype6 — Version Differences
+## 7. Prototype5 / Prototype6 / Prototype7 — Version Differences
 
 ### Prototype5 — Core System
 Prototype5 is the complete implementation of AutoFillGraph v5 with all modules defined and tested. It is the canonical source notebook for:
@@ -615,6 +615,46 @@ These perfect scores on synthetic FormBench are expected — the soft metrics ar
 - `char_sim high` → short-code fields (phone, zip) match after normalization
 - `sem_sim high` → semantically correct fills even when lexically different
 - Enables fine-grained analysis across field types and error modes
+
+---
+
+### Prototype7 — Diagnostic Instrumentation + Multi-Profile Extension
+
+Prototype7 builds on Prototype6 without forking core logic. Hard accuracy metrics (100% FormBench) and soft metrics (all 1.000) remain identical. New additions:
+
+#### Mapper Phase Tracking
+Every `bench_row` produced during FormBench evaluation now records a `mapper_phase` field — one of `exact | substring | embedding | unknown` — capturing which of the three resolution phases resolved each label. This enables per-tier phase breakdown analysis.
+
+#### Strengthened Abstention Assertion
+A formal assertion `BENCH_CORRECT_UNK >= 0.90` is added alongside the fill-accuracy assertion, making correct UNKNOWN behavior a first-class testable property rather than a qualitative observation.
+
+#### 7-Round KG Growth Tracking
+The evaluation now traces the KG state across **7 sequential rounds** (R0–R6), recording at each snapshot:
+- `nodes` — NetworkX node count
+- `current_facts` — active attribute values (not expired)
+- `total_records` — all temporal records including soft-expired
+
+This provides empirical evidence for the lifelong learning claim: both node count and active fact count grow monotonically, while total records (including expired history) grows faster, demonstrating temporal versioning in action.
+
+#### Multi-Profile Demo (`draw_multi_profile_kg`)
+A new `draw_multi_profile_kg(agents_labels, title)` function renders a side-by-side NetworkX visualization for two distinct user agents (e.g., Govind A and Devika R) from a single cell. This demonstrates the person-centric KG model and isolates user profiles structurally. This is a demonstration/narrative cell, not part of the evaluated pipeline.
+
+#### Person-Centric KG Visualization
+The `draw_kg_snapshot` / `plot_kg_evolution` rendering now explicitly labels the central Person node as the KG hub, improving readability of multi-entity graph snapshots.
+
+#### New and Enhanced Figures (9 total, vs. 5 in P5/P6)
+
+| Plot File | Status | Content |
+|-----------|--------|---------|
+| `plot_adversarial_challenge.png` | Updated from P5/P6 | Accuracy vs. baselines on held-out adversarial fields; renamed v5→v7 |
+| `plot_formbench_quality.png` | Updated from P5/P6 | Tier-breakdown accuracy + soft metric comparison side-by-side |
+| `plot_kg_growth.png` | **NEW** | Time series: nodes / current facts / temporal records across 7 rounds |
+| `plot_compression.png` | Enhanced | Scatter with error bars + analytic projection + >80% target line |
+| `plot_bandit.png` | Enhanced | Reward trace + **cumulative arm-selection stackplot** (replaces epsilon schedule) |
+| `plot_temporal_confidence.png` | **NEW** | Address versioning history (active vs. expired) + confidence by sensitivity tier |
+| `plot_route_distribution.png` | **NEW** | Horizontal bar: route fractions across FormBench v2 (all local path) |
+| `plot_mapper_phases.png` | **NEW** | Grouped bar: resolution phase (exact/substring/embedding/unknown) by difficulty tier |
+| `plot_kg_evolution.png` | Updated | Person-centric multi-snapshot KG evolution with person-hub layout |
 
 ---
 
@@ -657,6 +697,9 @@ The 2× lift over Pure Lookup and >5× over Browser Autofill demonstrates the co
 | Browser autofill token F1 | 0.186 | Prototype6, baseline |
 | Pure lookup token F1 | 0.500 | Prototype6, baseline |
 | Semantic challenge lift | ≥25% over best lookup baseline | Prototype6 assertion |
+| Correct abstentions (asserted) | ≥90% (BENCH_CORRECT_UNK) | Prototype7, abstention assertion |
+| KG growth rounds tracked | 7 (R0–R6) | Prototype7, cell-figures-v7 |
+| Mapper phase per bench_row | exact / substring / embedding / unknown | Prototype7, bench_rows |
 | Context vector dimensions | 30 (24 + 6) | Prototype5, LinUCBRouter |
 | Canonical properties | 43 | Prototype5, PROPERTIES |
 | Inference rules | 7 | Prototype5, InferenceEngine |
@@ -733,7 +776,7 @@ AutoFillGraph maps directly to all five SCALE 2026 topic areas:
 
 ### Current Limitations
 
-1. **Single-user system** — no multi-user KG sharing or federation
+1. **Single-user system** — Prototype7 demonstrates separate per-user agent instances side-by-side but there is no shared KG, federation, or cross-profile transfer
 2. **Rule-based inference only** — 7 fixed rules; cannot learn new rules from data
 3. **Synthetic benchmark** — FormBench v2 needs real-world form diversity testing
 4. **Local-path FormBench** — `use_llm=False` in current benchmark; adaptive routing claims need a mixed-path baseline
@@ -763,6 +806,7 @@ AutoFillGraph maps directly to all five SCALE 2026 topic areas:
 |------|---------|
 | `Baseline/Prototype5.ipynb` | Complete AutoFillGraph v5 implementation; canonical class definitions; FormBench v2; LLM demos |
 | `Baseline/Prototype6.ipynb` | Prototype5 + soft metric instrumentation (token F1, char sim, semantic sim); updated baseline comparisons |
+| `Baseline/Prototype7.ipynb` | Prototype6 + mapper-phase tracking, 7-round KG growth metrics, abstention assertion, multi-profile demo, 9 diagnostic figures |
 | `Baseline/StandardBenchmarkSuite_Lite.ipynb` | FUNSD + XFUND budget-aware external benchmark harness |
 | `Playground/AutoFillGraph_v3_System_Design.md` | Architecture design document; module specs; claim registry; ICML alignment |
 
@@ -786,6 +830,8 @@ AutoFillGraph maps directly to all five SCALE 2026 topic areas:
 | `PureLookupBaseline` | P5 | cell-baselines | No-embedding ablation baseline |
 | `NoEmbeddingAblation` | P5 | cell-baselines | Substring+keyword only ablation |
 | `token_f1`, `char_sim`, `semantic_sim` | P6 | v6 additions | Soft metric functions |
+| `draw_multi_profile_kg` | P7 | cell-figures-v7 | Side-by-side multi-user KG visualization |
+| `plot_kg_evolution` (updated) | P7 | cell-figures-v7 | Person-centric KG evolution across snapshots |
 
 ---
 

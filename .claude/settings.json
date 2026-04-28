@@ -11,7 +11,10 @@
       "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=mlenv Prototype7.ipynb --output Prototype7.ipynb)",
       "Bash(python -m jupyter kernelspec list)",
       "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 \"e:\\\\Autofill-Graph\\\\Baseline\\\\Prototype7.ipynb\" --output \"e:\\\\Autofill-Graph\\\\Baseline\\\\Prototype7.ipynb\")",
-      "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 Prototype7.ipynb --output Prototype7.ipynb)"
+      "Bash(python -m jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 Prototype7.ipynb --output Prototype7.ipynb)",
+      "Read(//e/e/Autofill-Graph/Baseline/**)",
+      "Read(//tmp/**)",
+      "PowerShell(cd E:\\\\Autofill-Graph\\\\Baseline; $Json = Get-Content -Path Prototype7.ipynb -Raw -Encoding utf8 | ConvertFrom-Json; $Cell = $Json.cells | Where-Object { $_.id -eq 'cell-figures-v7' }; $Source = $Cell.source -join \"\"; $Lines = $Source -split \"`n\"; $InPlot = $false; for \\($i = 0; $i -lt $Lines.Count; $i++\\) { if \\($Lines[$i] -match \"barh|bar\\\\\\(|plot\\\\\\(\"\\) { Write-Output \"Line $i : $\\($Lines[$i].Substring\\(0, [Math]::Min\\(100, $Lines[$i].Length\\)\\)\\)\" } })"
     ]
   }
 }

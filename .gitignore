@@ -4,3 +4,4 @@ config.js
 node_modules/
 .claude/settings.local.json
 Playground/eraser_diagram.md
+Baseline/build_p7.py
