@@ -1,0 +1,77 @@
+doc_id,split,question,canonical,expected_prop,expected_value,llm_predicted,ok
+0000971160,train,Date:,Date,date,9/ 3/ 92,9/3/92,True
+0000971160,train,Name / Phone Ext. :,Full Name,full_name,"M. Hamann P. Harper, P. Martinez","M. Hamann P. Harper, P. Martinez",True
+0000971160,train,Supervisor / Manager,Advisor,advisor,J. S. Wigand,J. S. Wigand,True
+0000989556,train,Company:,Current Employer,employer,B. A. T. CYPRUS,B. A. T. CYPRUS,True
+0000989556,train,Country:,Country,country,CYPRUS,CYPRUS,True
+0000989556,train,Date:,Date,date,"May 1, 1985","May 1, 1985",True
+0000989556,train,Total Pressure Drop (unencap.),Total Amount,amount,90 mm,110 mm,False
+0000989556,train,Total Pressure Drop (encap.),Total Amount,amount,110 mm,974 mg,False
+0000989556,train,Print Position (from filter end),Job Title,job_title,27 mm,B. A. T. CYPRUS,False
+0000989556,train,Total Cigt. Wt.,Total Amount,amount,974 mg,974 mg,True
+0000989556,train,Print Description,Description,description,Brown on yellow,Brown on yellow,True
+0000990274,train,DATE:,Date,date,"March 27, 1984","March 27, 1984",True
+0000990274,train,COUNTRY:,Country,country,BELGIUM,BELGIUM,True
+0000990274,train,TARGET DATE:,Date,date,"April 13, 1984","March 27, 1984",False
+0000999294,train,Total (205),Total Amount,amount,39,200,False
+0000999294,train,No Preference,Reference Number,reference,8,53,False
+0000999294,train,No Preference,Reference Number,reference,9,53,False
+0000999294,train,No Preference,Reference Number,reference,11,53,False
+0000999294,train,No Preference,Reference Number,reference,6,53,False
+0000999294,train,Total (205),Total Amount,amount,8,200,False
+0000999294,train,Total (205),Total Amount,amount,200,200,True
+0000999294,train,Total (205),Total Amount,amount,53+++,200,False
+0000999294,train,FIELD DATE:,Date,date,"September 13, 1982","September 13, 1982",True
+0001118259,train,Standard Grade Mark,GPA,gpa,PCFS Flue cured fines,0.0,False
+0001118259,train,Standard Grade Mark,GPA,gpa,PCBS Burley fines,MC-4,False
+0001118259,train,Standard Grade Mark,GPA,gpa,MC- 4 Manufacturing fines,MC-6 Stem Meal,False
+0001118259,train,Standard Grade Mark,GPA,gpa,MC -6 Stem Meal,MC-6 Stem Meal,True
+0001118259,train,Standard Grade Mark,GPA,gpa,MC -7 Winnowers,MC-6 Stem Meal,False
+0001118259,train,Standard Grade Mark,GPA,gpa,RXF Fine flue cured stem,MC -6 Stem Meal,False
+0001118259,train,Standard Grade Mark,GPA,gpa,RBF Fine Burely stem,MC-6 Stem Meal,False
+0001123541,train,DATE:,Date,date,"June 21, 1993","June 21, 1993",True
+0001123541,train,DEPARTMENT:,Academic Department,department,R&D Library,R&D Library,True
+0001123541,train,Date Rec'd,Date,date,6/ 21/ 93,"June 21, 1993",False
+0001129658,train,DATE:,Date,date,10/ 13/ 99,10/13/99,True
+0001129658,train,COMPANY,Current Employer,employer,Philip Morris,Philip Morris,True
+0001129658,train,PHONE No.,Phone Number,phone,917- 663 3056,917-6633056,True
+0001209043,train,Total Sample,Total Amount,amount,214,214,True
+0001209043,train,Date Sent,Date,date,4/19/74,"WEEK OF MARCH 25, 1974",False
+0001209043,train,Field Date,Date,date,"WEEK OF MARCH 25, 1974","WEEK OF MARCH 25, 1974",True
+0001209043,train,Sample Description,Description,description,MALE AND FEMALE MENTHOL SMOKERS,MALE AND FEMALE MENTHOL SMOKERS,True
+0001239897,train,REFERENCE,Reference Number,reference,(#627/ 647,Current VICEROY 84 25% PG with SORBITOL,False
+0001239897,train,REFERENCE,Reference Number,reference,(#647/ 627),Current VICEROY 84 25% PG with SORBITOL,False
+0001239897,train,REFERENCE,Reference Number,reference,Current VICEROY 84 25% PG with SORBITOL,Current VICEROY 84 25% PG with SORBITOL,True
+0001438955,train,Total Sample,Total Amount,amount,285,0,False
+0001438955,train,Newspaper (Date),Date,date,Pittsburgh Pittsburgh PUTSBURGH PRESS (4 /23 /72,4 /23 /72,False
+0001438955,train,Newspaper (Date),Date,date,San Diego SAN DIEGO UNION (4 /23 /72,4/23/72,False
+0001438955,train,Newspaper (Date),Date,date,Dayton DAYTON NEWS (4 /23 /72),4 /23 /72,False
+0001438955,train,Newspaper (Date),Date,date,Birmingham BIRMINGHAM NEWS (4 /23 /72),4/23/72,False
+0001456787,train,Total Pressure Drop (unencap.),Total Amount,amount,mm,N/A,False
+0001456787,train,Total Cigarette Weight,Total Amount,amount,mg,N/A,False
+0001456787,train,Print Description,Description,description,N/A,N/A,True
+0001456787,train,Print Position (from filter end),Job Title,job_title,35 mm,N/A,False
+0001463282,train,Description:,Description,description,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,True
+0001463282,train,Original Budgeted Amount,Total Amount,amount,23.3,"370,000.00",False
+0001463282,train,Date,Date,date,5/ 2/ 90,5/ 2/ 90,True
+0001463282,train,Date,Date,date,5/3 90,5/ 2/ 90,False
+0001463282,train,Date,Date,date,5/ 3/ 90,5/ 2/ 90,False
+0001463282,train,Total Area Budget:,Total Amount,amount,"370,000.00","370,000.00",True
+0001463282,train,This Amount,Total Amount,amount,-O-,"370,000.00",False
+0001463282,train,Commited to Date: (Current Year),Date,date,"205,775.00",5/ 2/ 90,False
+0001463282,train,Account Name,Full Name,full_name,BARCLAY,BARCLAY,True
+0001463282,train,Total Cost,Total Amount,amount,"$ 35,675","370,000.00",False
+0001463282,train,Total Cost,Total Amount,amount,$ 37000,"370,000.00",False
+0001463282,train,Internal Init. Date,Date,date,4/,5/ 2/ 90,False
+0001463282,train,Ext. Auth. Date Wave (s),Date,date,12/ 90,5/ 2/ 90,False
+0001476912,train,CITY,City,city,Chicago,Los,False
+0001476912,train,CITY,City,city,0.0,Los,False
+0001476912,train,CITY,City,city,3.3,Los,False
+0001476912,train,CITY,City,city,Los,Los,True
+0001477983,train,Amount earned but not received:,Total Amount,amount,$,0,False
+0001477983,train,Organization/ Employer Name:,Full Name,full_name,R. J. Reynolds Tobacco,Peter J. McGinn,False
+0001477983,train,Lobbyist Name:,Full Name,full_name,Peter J. McGinn,Peter J. McGinn,True
+0001485288,train,"Quantity, Cartons of 200 each",Quantity,quantity,20,20,True
+0001485288,train,Date of Request,Date,date,6/ 25/ 81,6/25/81,True
+0001485288,train,Cigarette Description,Description,description,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,True
+0001485288,train,Completion Date,Graduation Date,graduation_date,6/ 25/ 81,6/25/81,True

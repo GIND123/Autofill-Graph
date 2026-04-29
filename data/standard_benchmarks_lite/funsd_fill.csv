@@ -1,0 +1,408 @@
+dataset,split,doc_id,raw_question,query,expected_prop,predicted_prop,expected_value,predicted_value,status,route,ok
+FUNSD,train,0000971160,Date:,Date,date,full_name,9/ 3/ 92,9/ 3/ 92,FILLED,local,True
+FUNSD,train,0000971160,Name / Phone Ext. :,Full Name,full_name,full_name,"M. Hamann P. Harper, P. Martinez",9/ 3/ 92,FILLED,local,False
+FUNSD,train,0000971160,Supervisor / Manager,Advisor,advisor,advisor,J. S. Wigand,J. S. Wigand,FILLED,local,True
+FUNSD,train,0000989556,Company:,Current Employer,employer,employer,B. A. T. CYPRUS,B. A. T. CYPRUS,FILLED,local,True
+FUNSD,train,0000989556,Country:,Country,country,country,CYPRUS,CYPRUS,FILLED,local,True
+FUNSD,train,0000989556,Date:,Date,date,full_name,"May 1, 1985","May 1, 1985",FILLED,local,True
+FUNSD,train,0000989556,Total Pressure Drop (unencap.),Total Amount,amount,,90 mm,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0000989556,Print Position (from filter end),Job Title,job_title,job_title,27 mm,27 mm,FILLED,local,True
+FUNSD,train,0000989556,Print Description,Description,description,profile_photo,Brown on yellow,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0000990274,DATE:,Date,date,full_name,"March 27, 1984","March 27, 1984",FILLED,local,True
+FUNSD,train,0000990274,COUNTRY:,Country,country,country,BELGIUM,BELGIUM,FILLED,local,True
+FUNSD,train,0000999294,Total (205),Total Amount,amount,,39,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0000999294,No Preference,Reference Number,reference,phone,8,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0000999294,FIELD DATE:,Date,date,full_name,"September 13, 1982",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001118259,Standard Grade Mark,GPA,gpa,gpa,PCFS Flue cured fines,PCFS Flue cured fines,FILLED,local,True
+FUNSD,train,0001123541,DATE:,Date,date,full_name,"June 21, 1993","June 21, 1993",FILLED,local,True
+FUNSD,train,0001123541,DEPARTMENT:,Academic Department,department,department,R&D Library,R&D Library,FILLED,local,True
+FUNSD,train,0001129658,DATE:,Date,date,full_name,10/ 13/ 99,10/ 13/ 99,FILLED,local,True
+FUNSD,train,0001129658,COMPANY,Current Employer,employer,employer,Philip Morris,Philip Morris,FILLED,local,True
+FUNSD,train,0001129658,PHONE No.,Phone Number,phone,phone,917- 663 3056,917- 663 3056,FILLED,local,True
+FUNSD,train,0001209043,Total Sample,Total Amount,amount,,214,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001209043,Date Sent,Date,date,full_name,4/19/74,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001209043,Sample Description,Description,description,profile_photo,MALE AND FEMALE MENTHOL SMOKERS,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001239897,REFERENCE,Reference Number,reference,phone,(#627/ 647,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001438955,Total Sample,Total Amount,amount,,285,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001438955,Newspaper (Date),Date,date,full_name,Pittsburgh Pittsburgh PUTSBURGH PRESS (4 /23 /72,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001456787,Total Pressure Drop (unencap.),Total Amount,amount,,mm,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001456787,Print Description,Description,description,profile_photo,N/A,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001456787,Print Position (from filter end),Job Title,job_title,job_title,35 mm,35 mm,FILLED,local,True
+FUNSD,train,0001463282,Description:,Description,description,profile_photo,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001463282,Original Budgeted Amount,Total Amount,amount,,23.3,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001463282,Date,Date,date,full_name,5/ 2/ 90,BARCLAY,FILLED,local,False
+FUNSD,train,0001463282,Account Name,Full Name,full_name,full_name,BARCLAY,BARCLAY,FILLED,local,True
+FUNSD,train,0001476912,CITY,City,city,city,Chicago,Chicago,FILLED,local,True
+FUNSD,train,0001477983,Amount earned but not received:,Total Amount,amount,,$,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001477983,Organization/ Employer Name:,Full Name,full_name,full_name,R. J. Reynolds Tobacco,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001485288,"Quantity, Cartons of 200 each",Quantity,quantity,,20,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001485288,Date of Request,Date,date,full_name,6/ 25/ 81,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001485288,Cigarette Description,Description,description,profile_photo,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0001485288,Completion Date,Graduation Date,graduation_date,graduation_date,6/ 25/ 81,6/ 25/ 81,FILLED,local,True
+FUNSD,train,00040534,DATE RECEIVED,Date,date,full_name,Unk.,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00040534,REFERENCE FOR CALCULATION,Reference Number,reference,phone,"Litchfield, J. T. and Wilcoxin F. , J. of Pharmacol",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00070353,Date,Date,date,full_name,"March 18, 1968","March 18, 1968",FILLED,local,True
+FUNSD,train,00093726,Date:,Date,date,full_name,"September 21, 1976","September 21, 1976",FILLED,local,True
+FUNSD,train,0011505151,DESCRIPTION:,Description,description,profile_photo,CAPRI EXPANSION A&U - CALIFORNIA - WAVE 4.,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011505151,Ext. Autho. Date,Date,date,full_name,11- 16- 87,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011838621,Date:,Date,date,full_name,6/ 21/ 90,International.,FILLED,local,False
+FUNSD,train,0011838621,Description:,Description,description,profile_photo,Hong Kong: Cigarette Market Monitor,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011838621,Adjusted Total Cost of Project:,Total Amount,amount,,.08,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011838621,Account Name,Full Name,full_name,full_name,International.,International.,FILLED,local,True
+FUNSD,train,0011845203,DATE REQUESTED:,Date,date,full_name,2/ 22 by courier,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011856542,DATE,Date,date,full_name,1/4/90,BULL DURHAM Full Flavor King Size Cigarettes,FILLED,local,False
+FUNSD,train,0011856542,PROJECT NAME,Full Name,full_name,full_name,BULL DURHAM Full Flavor King Size Cigarettes,BULL DURHAM Full Flavor King Size Cigarettes,FILLED,local,True
+FUNSD,train,0011859695,Date:,Date,date,full_name,"September 25, 1969","September 25, 1969",FILLED,local,True
+FUNSD,train,0011859695,Address:,Current Address,address,address,"575 Lexington Avenue, New York, New York 10022","575 Lexington Avenue, New York, New York 10022",FILLED,local,True
+FUNSD,train,0011899960,Department,Academic Department,department,department,CORPORATE AFFAIRS,CORPORATE AFFAIRS,FILLED,local,True
+FUNSD,train,0011899960,Date,Date,date,full_name,7/ 9/ 84,7/ 9/ 84,FILLED,local,True
+FUNSD,train,0011906503,TOTAL,Total Amount,amount,,80,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011906503,PROJECT DESCRIPTION,Description,description,profile_photo,"The Cigarette Test Station (CTS400) combines many of the stand- alone instruments that R&D currently uses to measure cigarette weight, pressure drop, ventilation, and hardness into one compact module. The CTS400 has the additional measurement of cigarette hardness in comparison with the CTS300. With this added, measurement R&D will be able to replace the Firmness Integrator that measures cigarette firmness in addition to other measurements that are mentioned above. The Firmness Integrator is no longer manufactured and parts are becoming difficult to obtain. Lastly, purchase of this instrument would provide similar capability as the Macon Plant and help facilitate comparisions between laboratories.",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011973451,Date:,Date,date,full_name,6/ 24/ 94,RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),FILLED,local,False
+FUNSD,train,0011973451,Major Competitive Brands:,Degree Program,degree,degree,TBD,TBD,FILLED,local,True
+FUNSD,train,0011973451,Qty In Units,Quantity,quantity,,500,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011973451,BRAND/PROJECT NAME:,Full Name,full_name,full_name,RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),FILLED,local,True
+FUNSD,train,0011974919,Date:,Date,date,full_name,"September 10, 1996","September 10, 1996",FILLED,local,True
+FUNSD,train,0011974919,Description:,Description,description,profile_photo,Record of confirmation calls for sneak preview appointments,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011974919,Circulation Quantity:,Quantity,quantity,,300,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0011974919,PPS Program #,Degree Program,degree,degree,602399,602399,FILLED,local,True
+FUNSD,train,0011976929,City/ Town:,City,city,city,Dundee,Dundee,FILLED,local,True
+FUNSD,train,0011976929,State:,State,state,state,Illinois,Illinois,FILLED,local,True
+FUNSD,train,0011976929,Name of Event:,Full Name,full_name,full_name,Mrs. Illinois Beauty Pageant,Mrs. Illinois Beauty Pageant,FILLED,local,True
+FUNSD,train,0012178355,Description:,Description,description,profile_photo,"ELI CUTTER KS, for test market, using AMELIA ""B"" Blend (XLF -680G)",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012178355,Date,Date,date,full_name,10/ 10/ 84,10/ 10/ 84,FILLED,local,True
+FUNSD,train,0012199830,Customer,Full Name,full_name,full_name,B&W,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012199830,Total Solids,Total Amount,amount,,Toluene,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012529284,Date:,Date,date,full_name,12- -4 -87,12- -4 -87,FILLED,local,True
+FUNSD,train,0012529284,Description:,Description,description,profile_photo,"CAPRI A&U EXPANSION - CALIFORNIA: WAVE 2 (87 -113) ,",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012529284,Adjusted Total Cost of Project:,Total Amount,amount,,"$ 212, 475 + 10%",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012529295,Date:,Date,date,full_name,10/ /9 87,CAPRI,FILLED,local,False
+FUNSD,train,0012529295,Account Name,Full Name,full_name,full_name,CAPRI,CAPRI,FILLED,local,True
+FUNSD,train,0012529295,Description: CAPRI Expansion:,Description,description,profile_photo,California- A&U Wave II,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012529295,Total Cost,Total Amount,amount,,$112 000 +/ - 10%,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012602424,DATE:,Date,date,full_name,11/ 28/ 84,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,FILLED,local,False
+FUNSD,train,0012602424,PROJECT NAME:,Full Name,full_name,full_name,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,FILLED,local,True
+FUNSD,train,0012602424,AMOUNT OF CHANGE INCREASE ): (CIRCLE ONE),Total Amount,amount,,"+1 ,000 (0 .5% CHANGE)",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0012947358,DATE:,Date,date,full_name,1- -27 -69,1- -27 -69,FILLED,local,True
+FUNSD,train,00283813,Date:,Date,date,full_name,7/ 16/ 68,7/ 16/ 68,FILLED,local,True
+FUNSD,train,0030041455,Section Sales Manager's Name,Full Name,full_name,full_name,Peter Hatch,Peter Hatch,FILLED,local,True
+FUNSD,train,0060000813,Date Received,Date,date,full_name,1 /25 /91,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060007216,DATE,Date,date,full_name,"April 30, 1985",PALL MALL Regular Menthol,FILLED,local,False
+FUNSD,train,0060007216,PROJECT NAME,Full Name,full_name,full_name,PALL MALL Regular Menthol,PALL MALL Regular Menthol,FILLED,local,True
+FUNSD,train,0060024314,DESCRIPTION:,Description,description,profile_photo,Liquid Adhesive,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060024314,PRODUCT (CHEMICAL) NAME:,Full Name,full_name,full_name,Fuller G2315 DC,Fuller G2315 DC,FILLED,local,True
+FUNSD,train,0060029036,Company,Current Employer,employer,employer,"SPEVCO, INC.","SPEVCO, INC.",FILLED,local,True
+FUNSD,train,0060029036,DATE,Date,date,full_name,1-11-94,Michael Wright,FILLED,local,False
+FUNSD,train,0060029036,SIGNATURE,Signature,signature,signature,B J. Powell,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060029036,NAME,Full Name,full_name,full_name,Michael Wright,Michael Wright,FILLED,local,True
+FUNSD,train,0060029036,Total Contract Cost,Total Amount,amount,,"$ 1,340,000.00",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060029036,Brief Description,Description,description,profile_photo,"2 Joe's Place Exhibits for use at Winston Cup, Winston Drag and Camel Super Bike Events.",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060068489,DATE,Date,date,full_name,3/17/82,3/17/82,FILLED,local,True
+FUNSD,train,0060068489,DESCRIPTION,Description,description,profile_photo,30 sheet Posters (White Background),UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060068489,TOTAL,Total Amount,amount,,"$ 28,880.00",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060077689,DESCRIPTION,Description,description,profile_photo,"CARLTON ""Free"" Carton"" Direct Mail Piece",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060077689,DATE,Date,date,full_name,"January 3, 1995","January 3, 1995",FILLED,local,True
+FUNSD,train,0060077689,DEPARTMENT CHARGED,Academic Department,department,department,Brand Operations,Brand Operations,FILLED,local,True
+FUNSD,train,0060080406,DESCRIPTION,Description,description,profile_photo,COLLATERAL MERCHANDISING MATERIALS,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060094595,-Went out immediately,Phone Number,phone,phone,12,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060136394,DATE,Date,date,full_name,"APRIL 1,1957","APRIL 1,1957",FILLED,local,True
+FUNSD,train,0060136394,TOTAL:,Total Amount,amount,,$ 6.600.00,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060136394,PROGRAM,Degree Program,degree,degree,1/2 HOUR PROGRAMES,1/2 HOUR PROGRAMES,FILLED,local,True
+FUNSD,train,0060165115,DATE:,Date,date,full_name,28 Apr. 98,28 Apr. 98,FILLED,local,True
+FUNSD,train,0060165115,ADDRESS:,Current Address,address,address,Philip Morris Europe Fabriques de Tabac Reunies S. A.,Philip Morris Europe Fabriques de Tabac Reunies S. A.,FILLED,local,True
+FUNSD,train,0060165115,Telephone,Phone Number,phone,phone,(0 22 03) 303 -1,(0 22 03) 303 -1,FILLED,local,True
+FUNSD,train,0060173256,Description,Description,description,profile_photo,Displays,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060173256,Amount,Total Amount,amount,,"31,000.00",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060173256,Date,Date,date,full_name,5/5,5/5,FILLED,local,True
+FUNSD,train,0060207528,TOTAL,Total Amount,amount,,54,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060207528,DATE,Date,date,full_name,2/ 25/ 89,PALL MALL RED LIGHTS,FILLED,local,False
+FUNSD,train,0060207528,BRAND NAME:,Full Name,full_name,full_name,PALL MALL RED LIGHTS,PALL MALL RED LIGHTS,FILLED,local,True
+FUNSD,train,0060214859,Date,Date,date,full_name,10- NOV- 1986,10- NOV- 1986,FILLED,local,True
+FUNSD,train,0060214859,Telephone#,Phone Number,phone,phone,6926,2 ROLLS,FILLED,local,False
+FUNSD,train,0060214859,Quantity Received,Quantity,quantity,,2 ROLLS,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060255888,Date:,Date,date,full_name,"October 9, 1968","October 9, 1968",FILLED,local,True
+FUNSD,train,0060255888,Address:,Current Address,address,address,383 Madison Avenue New York 10017,383 Madison Avenue New York 10017,FILLED,local,True
+FUNSD,train,0060255888,Phone Booth :,Phone Number,phone,phone,20,20,FILLED,local,True
+FUNSD,train,0060262650,Telephone:,Phone Number,phone,phone,(202) 842- 9530,(202) 842- 9530,FILLED,local,True
+FUNSD,train,0060262650,Position,Job Title,job_title,job_title,Director - Genetics Centers,Director - Genetics Centers,FILLED,local,True
+FUNSD,train,0060262650,"CITY STATE,",City,city,city,Washington DC 20006,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060270727,BRAND FAMILY NAME:,Full Name,full_name,full_name,MALIBU,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060270727,TOTAL REPORTABLE EXPENDITURES FOR VARIETYI:,Total Amount,amount,,94,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060270727,VARIETY DESCRIPTION:,Description,description,profile_photo,"King Size, Filter",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060270727,FIRST SALES DATE:,Date,date,full_name,10/ 26/ 87,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060302201,NAME:,Full Name,full_name,full_name,Ronald. W Davis,Ronald. W Davis,FILLED,local,True
+FUNSD,train,0060302201,"IF SO, GIVE DATE AND TITLE:",Date,date,full_name,MBTH- reagent for analysis of aliphatic aldehydes 7 / 5 / 67,Ronald. W Davis,FILLED,local,False
+FUNSD,train,0060308251,Date,Date,date,full_name,7/ 24/ 90,7/ 24/ 90,FILLED,local,True
+FUNSD,train,0060308461,(26) TOTAL REPORTABLE EXPENDITURES FOR VARIETY:,Total Amount,amount,,"1,221,771",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060308461,(2) BRAND FAMILY NAME:,Full Name,full_name,full_name,LUCKY STRIKE,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0060308461,(3) VARIETY DESCRIPTION,Description,description,profile_photo,"Low tar, king size, filter, hard pack",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,0071032790,DATE:,Date,date,full_name,"September 16, 1980",-,FILLED,local,False
+FUNSD,train,0071032790,PROJECT NAME:,Full Name,full_name,full_name,-,-,FILLED,local,True
+FUNSD,train,0071032807,Date,Date,date,full_name,"November 15, 1968",Charcoal Smoking Tobacco,FILLED,local,False
+FUNSD,train,0071032807,Project Name,Full Name,full_name,full_name,Charcoal Smoking Tobacco,Charcoal Smoking Tobacco,FILLED,local,True
+FUNSD,train,00836244,DATE RECEIVED,Date,date,full_name,9 /3 /80,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00836816,DATE,Date,date,full_name,8/ 10/ 82,8/ 10/ 82,FILLED,local,True
+FUNSD,train,00836816,PHYSICAL STATE,State,state,state,Clear Colorless liquid,Clear Colorless liquid,FILLED,local,True
+FUNSD,train,00837285,SIGNATURE,Signature,signature,signature,Johnson,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00837285,DATE,Date,date,full_name,11/1381,11/1381,FILLED,local,True
+FUNSD,train,00837285,AMOUNT,Total Amount,amount,,g100ml,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00838511_00838525,NAME,Full Name,full_name,full_name,"Paul Schickedantz, Jack Reid",12- 4- 80,FILLED,local,False
+FUNSD,train,00838511_00838525,DATE,Date,date,full_name,12- 4- 80,12- 4- 80,FILLED,local,True
+FUNSD,train,00851772_1780,NAME,Full Name,full_name,full_name,Jimmy Bell,"May 27, 1982",FILLED,local,False
+FUNSD,train,00851772_1780,DATE,Date,date,full_name,"May 27, 1982","May 27, 1982",FILLED,local,True
+FUNSD,train,00851879,Date,Date,date,full_name,5-13-81,5-13-81,FILLED,local,True
+FUNSD,train,00860012_00860014,DATE ISSUED,Date,date,full_name,"December 13, 1983",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00860012_00860014,PERFORMING DEPARTMENTS,Academic Department,department,department,Acute/ Dermal Toxicology,Acute/ Dermal Toxicology,FILLED,local,True
+FUNSD,train,00865872,Reference:,Reference Number,reference,phone,BC20- 48,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00865872,DATE,Date,date,full_name,8/22/83,8/22/83,FILLED,local,True
+FUNSD,train,00865872,PHYSICAL STATE,State,state,state,Brownish- gray powder,Brownish- gray powder,FILLED,local,True
+FUNSD,train,00866042,SIGNATURE:,Signature,signature,signature,D.,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00866042,RECEIPT DATE(s),Date,date,full_name,9/28/83,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00866042,FOLLOW DEPARTMENT AND COMPANY SAFETY MANUALS,Academic Department,department,department,☑,☑,FILLED,local,False
+FUNSD,train,00920222,DATE,Date,date,full_name,"March 27, 1984","March 27, 1984",FILLED,local,True
+FUNSD,train,00920222,DESCRIPTION,Description,description,profile_photo,"This is your authorization to perform the ""Acute Oral Toxicity Study in the Rat"" tests on materials D13 and D23 supplied by Lorillard. The fixed price for each test is $2050 for each material, for a total price of $4100. Studies are to be conducted in accordance with the October 17, 1980 formal agreement between Borriston and Lorillard. All work is to be coordinated with our Dr. Connie Stone (919) 373- 6663.",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00920222,FOR PURCHASING DEPARTMENT USE ONLY,Academic Department,department,department,"Borriston Laboratories, INC. , 5050 Beech Place Temple Hills, MD 20748","Borriston Laboratories, INC. , 5050 Beech Place Temple Hills, MD 20748",FILLED,local,True
+FUNSD,train,00920294,Date:,Date,date,full_name,3/ 7/ 97,3/ 7/ 97,FILLED,local,True
+FUNSD,train,00920294,Mailfile Description,Description,description,profile_photo,Mail Order- Indy Responders,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00920294,Quantity:,Quantity,quantity,,273,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00920294,Program#:,Degree Program,degree,degree,700418,700418,FILLED,local,True
+FUNSD,train,00920294,Mailfile Cells,Phone Number,phone,phone,HD home delivery,HD home delivery,FILLED,local,True
+FUNSD,train,00922237,DESCRIPTION,Description,description,profile_photo,"This is your authorization to provide the ""1601.013: The Effect of Inhalation of Reference and Test (D3 and D4) Cigarette Smoke on Two Cytogenetic Endpoints in Mice: Chromosome Aberrations and Sister Chromatid Exchange"" test for a fixed price of $19,750 Tests will be performed in accordance with the December 21, 1981 formal agreement between Microbiological Associates and Lorillard. All work is to be coordinated with our Dr. Harry Minnemeyer (919) 373-6603",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,00922237,DATE WANTED,Date,date,full_name,As required,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01073843,DATE RECEIVED,Date,date,full_name,unknown,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01122115,DATE,Date,date,full_name,11 /2 /61,11 /2 /61,FILLED,local,True
+FUNSD,train,01122115,Ref. Paper,Reference Number,reference,phone,#450,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01122115,Total Denier as Marked,Total Amount,amount,,"58 ,000",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01150773_01150774,Date:,Date,date,full_name,"January 15, 1997","January 15, 1997",FILLED,local,True
+FUNSD,train,01150773_01150774,TELEPHONE:,Phone Number,phone,phone,44 71 495 5655,44 71 495 5655,FILLED,local,True
+FUNSD,train,01191071_1072,TEL NO.,Phone Number,phone,phone,SHB,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01191071_1072,Date:,Date,date,full_name,11/12/96,11/12/96,FILLED,local,True
+FUNSD,train,01191071_1072,Company:,Current Employer,employer,employer,Philip Morris Management Corp.,Philip Morris Management Corp.,FILLED,local,True
+FUNSD,train,01197604,DESCRIPTION:,Description,description,profile_photo,OLD GOLD Straights + 3% KNO3,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01197604,DATE SHIPPED:,Date,date,full_name,"November 2, 1965",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,01408099_01408101,DATE,Date,date,full_name,"March 1, 1978",True 100's (R&M),FILLED,local,False
+FUNSD,train,01408099_01408101,PROJECT NAME,Full Name,full_name,full_name,True 100's (R&M),True 100's (R&M),FILLED,local,True
+FUNSD,train,01408099_01408101,GENERAL PROJECT DESCRIPTION,Description,description,profile_photo,"True 100's, Regular and Menthol tar",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,11508234,Date:,Date,date,full_name,"March3, 1995","March3, 1995",FILLED,local,True
+FUNSD,train,11508234,Description:,Description,description,profile_photo,LUCKY STRIKE QUALITATIVE ADVERTISING RESEARCH - GATEWAY CITIES,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,11508234,Total Cost,Total Amount,amount,,"29,500",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,11875011,DATE REQUESTED:,Date,date,full_name,1-23-95,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,12052385,DESCRIPTION:,Description,description,profile_photo,KMDP ANALYSIS UTILIZING BLACK SWITCHING STUDY DATA,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,12603270,Date:,Date,date,full_name,"June 21, 1985",RICHLAND 100's,FILLED,local,False
+FUNSD,train,12603270,Description:,Description,description,profile_photo,Amelia 100's Candidates: (NM-FT and NM- Lights),UNKNOWN,UNKNOWN,local,False
+FUNSD,train,12603270,Total Area Budget:,Total Amount,amount,,"3,669,000",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,12603270,Brand Name:,Full Name,full_name,full_name,RICHLAND 100's,RICHLAND 100's,FILLED,local,True
+FUNSD,train,13149651,Date,Date,date,full_name,2-2-83,2-2-83,FILLED,local,True
+FUNSD,train,660978,DATE:,Date,date,full_name,1/ 19/ 82,1/ 19/ 82,FILLED,local,True
+FUNSD,train,71108371,Department:,Academic Department,department,department,BD & SS,BD & SS,FILLED,local,True
+FUNSD,train,71108371,Phone Number:,Phone Number,phone,phone,7970,"Please run job FRMRXUM2 for GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst. Please place output in the same directory.",FILLED,local,False
+FUNSD,train,71108371,Date Required:,Date,date,full_name,4/20/98,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71108371,Description of Request:,Description,description,profile_photo,"Please run job FRMRXUM2 for GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst. Please place output in the same directory.",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71190280,Signature,Signature,signature,signature,LKelly,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71190280,Department,Academic Department,department,department,production AE,production AE,FILLED,local,True
+FUNSD,train,71190280,Date,Date,date,full_name,10/22/98 10/22/98,10/22/98 10/22/98,FILLED,local,True
+FUNSD,train,71190280,DESCRIPTION,Description,description,profile_photo,Passport Winter Program Ad- EMRO,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71202511,Date:,Date,date,full_name,2/ 26/ 98,2/ 26/ 98,FILLED,local,True
+FUNSD,train,71202511,Description:,Description,description,profile_photo,KOOL Natural Lights Packaging - Round I,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71202511,Total Cost,Total Amount,amount,,"58,500",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71206427,ITEM:,Description,description,profile_photo,Package Fixture Circle-K Convenient Stores,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71206427,DATE:,Date,date,full_name,"June 1, 1990","June 1, 1990",FILLED,local,True
+FUNSD,train,71341634,Address:,Current Address,address,address,395 DYSTER POINT BLVD SUITE 415 S. SAN FRANCISCO,395 DYSTER POINT BLVD SUITE 415 S. SAN FRANCISCO,FILLED,local,True
+FUNSD,train,71341634,Quantity,Quantity,quantity,,6. 382,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71341634,Amount,Total Amount,amount,,$12 784 00,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71341634,Date,Date,date,full_name,03/ 24/ 99,Section 18 Narl Chain Walgreens,FILLED,local,False
+FUNSD,train,71341634,Promotion Name,Full Name,full_name,full_name,Section 18 Narl Chain Walgreens,Section 18 Narl Chain Walgreens,FILLED,local,True
+FUNSD,train,71366499,DESCRIPTION,Description,description,profile_photo,CMS Amerada Hess Dispenser Sign,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,71366499,DATE,Date,date,full_name,12/ 15/ 97,12/ 15/ 97,FILLED,local,True
+FUNSD,train,71563825,Date:,Date,date,full_name,02/ 12/ 98,K001 vs. Marlboro Menthol Lights,FILLED,local,False
+FUNSD,train,71563825,Project Name/ Description,Full Name,full_name,full_name,K001 vs. Marlboro Menthol Lights,K001 vs. Marlboro Menthol Lights,FILLED,local,True
+FUNSD,train,71601299,Date,Date,date,full_name,15. 03. 2000,"Dunhill Lights, CPT",FILLED,local,False
+FUNSD,train,71601299,Project Name/ Description:,Full Name,full_name,full_name,"Dunhill Lights, CPT","Dunhill Lights, CPT",FILLED,local,True
+FUNSD,train,716552,DESCRIPTION,Description,description,profile_photo,VICEROY Rich Lights 100' s 20' s Label,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,716552,DATE:,Date,date,full_name,9/ 17/ 8181,9/ 17/ 8181,FILLED,local,True
+FUNSD,train,80707440_7443,DATE:,Date,date,full_name,8/ 8/ 69,8/ 8/ 69,FILLED,local,True
+FUNSD,train,80718412_8413,Date:,Date,date,full_name,October 3rd,October 3rd,FILLED,local,True
+FUNSD,train,80718412_8413,NUMBER OF SUPERVISORS:,Advisor,advisor,advisor,3,3,FILLED,local,True
+FUNSD,train,80728670,DATE:,Date,date,full_name,2 /28 /84,2 /28 /84,FILLED,local,True
+FUNSD,train,80728670,Hotel /Motel reservations needed,Phone Number,phone,phone,XX,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,81310636,Compound Name,Full Name,full_name,full_name,Proprietary Mixture,Proprietary Mixture,FILLED,local,True
+FUNSD,train,81574683,Date:,Date,date,full_name,3/27/84,3/27/84,FILLED,local,True
+FUNSD,train,81619486_9488,DIVISION NAME:,Full Name,full_name,full_name,Detroit North,Detroit North,FILLED,local,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,Full Name,full_name,full_name,Chatham Oil (311- 01),Chatham Oil (311- 01),FILLED,local,True
+FUNSD,train,81749056_9057,NAME OF ACCOUNT,Full Name,full_name,full_name,None,None,FILLED,local,True
+FUNSD,train,81749056_9057,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,Total Amount,amount,,542,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,81749056_9057,AREA REGION:,State,state,state,1/ 20,1/ 20,FILLED,local,True
+FUNSD,train,82254638,DATE TO CORP:,Date,date,full_name,7/11/97,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,82254638,QUANTITY REQUIRED,Quantity,quantity,,400,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,82254638,CUSTOMER SHIPPING NUMBER,Full Name,full_name,full_name,198-820-0003,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,87533049,Media Name,Full Name,full_name,full_name,N/A,N/A,FILLED,local,True
+FUNSD,train,87533049,Coupon Issue Date,Date,date,full_name,10 / 90,N/A,FILLED,local,False
+FUNSD,train,87672097,DATE RECEIVED,Date,date,full_name,3/5/81,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,87672097,REFERENCE FOR CALCULATION,Reference Number,reference,phone,"Weil, Carrol S., Biometrics, Vol. 8, No. 3., Sept. 1952,",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,88547278_88547279,Date:,Date,date,full_name,"July 7, 1993","July 7, 1993",FILLED,local,True
+FUNSD,train,88547278_88547279,Qty:,Quantity,quantity,,"89,725",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,88547278_88547279,TEL:,Phone Number,phone,phone,(212) 627 4111,(212) 627 4111,FILLED,local,True
+FUNSD,train,88547278_88547279,Quantities and Description:,Description,description,profile_photo,H/D 8 Pk. Wide Header 4 C/P + 2 Hits Day- Glo + Spot Varnish,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,88547278_88547279,Authorized Signature:,Signature,signature,signature,"Applied Graphics Technologies 50 West 23rd Street, N.Y.C. 10010",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,89368010,DATE,Date,date,full_name,16/3/82,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,FILLED,local,False
+FUNSD,train,89368010,Study Name,Full Name,full_name,full_name,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,FILLED,local,True
+FUNSD,train,89386032,Client Name,Full Name,full_name,full_name,"Borriston Laboratories, Inc.","Borriston Laboratories, Inc.",FILLED,local,True
+FUNSD,train,89867723,DATE,Date,date,full_name,"April 27, 1981","April 27, 1981",FILLED,local,True
+FUNSD,train,91104867,TOTAL YEAR,Total Amount,amount,,"25,500",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91104867,ITEM,Description,description,profile_photo,Consumer,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91104867,Department,Academic Department,department,department,Domestic Tax Free,Domestic Tax Free,FILLED,local,True
+FUNSD,train,91161344_91161347,QUANTITY,Quantity,quantity,,"Varies by market, see attached list. Approx. 20% of the total # by state will receive product",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91161344_91161347,Today's Date,Date,date,full_name,3/20/78,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91355841,DATE:,Date,date,full_name,"SEPT. 27, 1991","SEPT. 27, 1991",FILLED,local,True
+FUNSD,train,91356315,DATE:,Date,date,full_name,4/ 26/ 91,4/ 26/ 91,FILLED,local,True
+FUNSD,train,91361993,DATE:,Date,date,full_name,10 /5 /92,CARDINAL CIGARETTES (11 PACKINGS),FILLED,local,False
+FUNSD,train,91361993,BRAND NAME:,Full Name,full_name,full_name,CARDINAL CIGARETTES (11 PACKINGS),CARDINAL CIGARETTES (11 PACKINGS),FILLED,local,True
+FUNSD,train,91372360,DATE,Date,date,full_name,11/4/93,Mr. A. J. Giacoio,FILLED,local,False
+FUNSD,train,91372360,NAME:,Full Name,full_name,full_name,Mr. A. J. Giacoio,Mr. A. J. Giacoio,FILLED,local,True
+FUNSD,train,91372360,FAX PHONE NUMBER:,Phone Number,phone,phone,212 545- 3299,212 545- 3299,FILLED,local,True
+FUNSD,train,91391286,COUPON ISSUE DATE,Date,date,full_name,5/19/93,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91391310,COUPON ISSUE DATE,Date,date,full_name,10/11/93,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91391310,SIGNATURE OF INITIATOR,Signature,signature,signature,Marine B,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91581919,Date,Date,date,full_name,1/31/88,1/31/88,FILLED,local,True
+FUNSD,train,91581919,State of,State,state,state,Indiana ),Indiana ),FILLED,local,True
+FUNSD,train,91856041_6049,EVENT NAME:,Full Name,full_name,full_name,The USO Spring Festival,The USO Spring Festival,FILLED,local,True
+FUNSD,train,91856041_6049,PHONE NUMBER,Phone Number,phone,phone,(201) 923-9208,(201) 923-9208,FILLED,local,True
+FUNSD,train,91914407,DATE:,Date,date,full_name,6- 29- 94,Mr. Al Giacoio,FILLED,local,False
+FUNSD,train,91914407,NAME:,Full Name,full_name,full_name,Mr. Al Giacoio,Mr. Al Giacoio,FILLED,local,True
+FUNSD,train,91914407,TOTAL PAGES,Total Amount,amount,,14,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,91914407,FAX TELEPHONE NUMBER:,Phone Number,phone,phone,(904) 464- 0744,(904) 464- 0744,FILLED,local,True
+FUNSD,train,91939637,DATE:,Date,date,full_name,FROM,FROM,FILLED,local,True
+FUNSD,train,91974562,COUPON ISSUE DATE,Date,date,full_name,10/ 13/ 95,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92081358_1359,% TOTAL =,Total Amount,amount,,100%,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92091873,Date Ordered,Date,date,full_name,Unknown,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92091873,#Customers Invited,Full Name,full_name,full_name,40,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92094746,DATE,Date,date,full_name,9 /8 /95,9 /8 /95,FILLED,local,True
+FUNSD,train,92094746,AREA/ REGION/ DIVISION,State,state,state,2 13,2 13,FILLED,local,True
+FUNSD,train,92094746,ITEM/ BRAND:,Description,description,profile_photo,Sunglasses / Newport,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92094751,DATE,Date,date,full_name,9/ 8 /95,9/ 8 /95,FILLED,local,True
+FUNSD,train,92094751,AREA REGION DIVISION,State,state,state,03/ 07/ 415415 & 418418,03/ 07/ 415415 & 418418,FILLED,local,True
+FUNSD,train,92094751,ITEM/ BRAND,Description,description,profile_photo,Newport Sunglasses,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,92298125,DATE:,Date,date,full_name,JAN 19. 1995,JAN 19. 1995,FILLED,local,True
+FUNSD,train,92314414,(Date),Date,date,full_name,1 November 1991,Andrew H. Tisch (Print or type),FILLED,local,False
+FUNSD,train,92314414,1. Full Name,Full Name,full_name,full_name,Andrew H. Tisch (Print or type),Andrew H. Tisch (Print or type),FILLED,local,True
+FUNSD,train,92314414,2. Residence Address,Current Address,address,address,"26 East 63rd Street, New York, N. Y. 10021 (Include state and zip code)","26 East 63rd Street, New York, N. Y. 10021 (Include state and zip code)",FILLED,local,True
+FUNSD,train,92327794,DATE:,Date,date,full_name,"July 22, 1993","July 22, 1993",FILLED,local,True
+FUNSD,train,92433599_92433601,Name,Full Name,full_name,full_name,"BRAYTON, GISVOLD. & HARLEY","BRAYTON, GISVOLD. & HARLEY",FILLED,local,True
+FUNSD,train,92433599_92433601,Address,Current Address,address,address,"999 Grant Avenue, P. O. Box 2109","999 Grant Avenue, P. O. Box 2109",FILLED,local,True
+FUNSD,train,92433599_92433601,City,City,city,city,Novato,Novato,FILLED,local,True
+FUNSD,train,92433599_92433601,State,State,state,state,CA,CA,FILLED,local,True
+FUNSD,train,92433599_92433601,Telephone,Phone Number,phone,phone,(415) 898- 1555,(415) 898- 1555,FILLED,local,True
+FUNSD,train,92433599_92433601,Zip Code,ZIP Code,zip_code,zip_code,94948,94948,FILLED,local,True
+FUNSD,train,92433599_92433601,3. Date of claimant's birth:,Date,date,full_name,"June 19, 1921","BRAYTON, GISVOLD. & HARLEY",FILLED,local,False
+FUNSD,train,92586242,EVENT NAME:,Full Name,full_name,full_name,Upper Madisor Avenue Festival,Upper Madisor Avenue Festival,FILLED,local,True
+FUNSD,train,92586242,PHONE NUMBER,Phone Number,phone,phone,(201) 923 -9208,(201) 923 -9208,FILLED,local,True
+FUNSD,train,92657391,DATE:,Date,date,full_name,12/ 28/ 94,R. H. Orcutt,FILLED,local,False
+FUNSD,train,92657391,NAME:,Full Name,full_name,full_name,R. H. Orcutt,R. H. Orcutt,FILLED,local,True
+FUNSD,train,92657391,FAX PHONE NUMBER:,Phone Number,phone,phone,(212) 545- 3299,(212) 545- 3299,FILLED,local,True
+FUNSD,train,93213298,# Customers Invited,Full Name,full_name,full_name,8,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,93213298,Date (s),Date,date,full_name,"June 11, 1995",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,93329540,DATE:,Date,date,full_name,8/ 13/ 93,SPECIAL 10' s,FILLED,local,False
+FUNSD,train,93329540,BRAND NAME:,Full Name,full_name,full_name,SPECIAL 10' s,SPECIAL 10' s,FILLED,local,True
+FUNSD,train,93351929_93351931,COUPON ISSUE DATE,Date,date,full_name,"September 1, 1992",UNKNOWN,UNKNOWN,local,False
+FUNSD,train,93380187,- COUPON ISSUE DATE,Date,date,full_name,MAY 1992,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,93380187,- SIGNATURE OF INITIATOR,Signature,signature,signature,Michell,UNKNOWN,UNKNOWN,local,False
+FUNSD,train,93455715,DATE:,Date,date,full_name,4/7/88,4/7/88,FILLED,local,True
+FUNSD,test,82092117,DATE:,Date,date,full_name,12 /10 /98,12 /10 /98,FILLED,local,True
+FUNSD,test,82092117,PHONE NUMBER:,Phone Number,phone,phone,(336) 335- 7363,(336) 335- 7363,FILLED,local,True
+FUNSD,test,82200067_0069,REGION:,State,state,state,(ONLY IF PARTIAL REGION CONTINUE WITH DIVISION (S) SCOPE),(ONLY IF PARTIAL REGION CONTINUE WITH DIVISION (S) SCOPE),FILLED,local,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,Full Name,full_name,full_name,Texaco Seattle,Texaco Seattle,FILLED,local,True
+FUNSD,test,82250337_0338,DATE:,Date,date,full_name,2- Dec- 97,2- Dec- 97,FILLED,local,True
+FUNSD,test,82251504,Region:,State,state,state,17,17,FILLED,local,True
+FUNSD,test,82252956_2958,DIVISION NAME:,Full Name,full_name,full_name,Milw. South,Milw. South,FILLED,local,True
+FUNSD,test,82253058_3059,DATE:,Date,date,full_name,12/ 10/ 96,12/ 10/ 96,FILLED,local,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,Full Name,full_name,full_name,Sheetz,Sheetz,FILLED,local,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,Full Name,full_name,full_name,Chevron,Chevron,FILLED,local,True
+FUNSD,test,82254765,DATE TO NYO:,Date,date,full_name,1/24/97,Nassau/ 107,FILLED,local,False
+FUNSD,test,82254765,QUANTITY REQUIRED,Quantity,quantity,,1500,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,82254765,DIV. NAME/ NO:,Full Name,full_name,full_name,Nassau/ 107,Nassau/ 107,FILLED,local,True
+FUNSD,test,82491256,CASE NAME:,Full Name,full_name,full_name,"Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.","Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.",FILLED,local,True
+FUNSD,test,82491256,DATE FILED:,Date,date,full_name,"July 23, 1998","Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.",FILLED,local,False
+FUNSD,test,82504862,CASE NAME:,Full Name,full_name,full_name,Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,FILLED,local,True
+FUNSD,test,82504862,DATE SERVED,Date,date,full_name,"August 3, 1998",Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,FILLED,local,False
+FUNSD,test,82562350,Date:,Date,date,full_name,"May 1, 2000","May 1, 2000",FILLED,local,True
+FUNSD,test,82562350,Telephone:,Phone Number,phone,phone,(952) 694-2238,(952) 694-2238,FILLED,local,True
+FUNSD,test,82573104,Date:,Date,date,full_name,"December 9, 1999","December 9, 1999",FILLED,local,True
+FUNSD,test,82837252,DATE:,Date,date,full_name,8/ 10/ 90,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,FILLED,local,False
+FUNSD,test,82837252,BRAND NAME:,Full Name,full_name,full_name,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,FILLED,local,True
+FUNSD,test,83443897,DATE:,Date,date,full_name,"January 11, 1999","January 11, 1999",FILLED,local,True
+FUNSD,test,83443897,COMPANY:,Current Employer,employer,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,FILLED,local,True
+FUNSD,test,83443897,PHONE:,Phone Number,phone,phone,336/ 373- 6750,336/ 373- 6750,FILLED,local,True
+FUNSD,test,83553333_3334,Date,Date,date,full_name,November,November,FILLED,local,True
+FUNSD,test,83553333_3334,Reference,Reference Number,reference,phone,17555 002,617- 330- 9000,FILLED,local,False
+FUNSD,test,83553333_3334,Company,Current Employer,employer,employer,Brown Rudnick Freed & Gesmer,Brown Rudnick Freed & Gesmer,FILLED,local,True
+FUNSD,test,83553333_3334,Recipient Phone Number,Phone Number,phone,phone,617- 330- 9000,617- 330- 9000,FILLED,local,True
+FUNSD,test,83573282,Date:,Date,date,full_name,"January 14, 1999","January 14, 1999",FILLED,local,True
+FUNSD,test,83573282,Company:,Current Employer,employer,employer,"Wachtell, Lipton, Rosen & Katz","Wachtell, Lipton, Rosen & Katz",FILLED,local,True
+FUNSD,test,83573282,Phone No.:,Phone Number,phone,phone,(312) 861- 2000,(312) 861- 2000,FILLED,local,True
+FUNSD,test,83594639,Date:,Date,date,full_name,"September 22, 1997","September 22, 1997",FILLED,local,True
+FUNSD,test,83594639,Company:,Current Employer,employer,employer,Lorillard,Lorillard,FILLED,local,True
+FUNSD,test,83624198,DATE:,Date,date,full_name,"February 25, 1998","February 25, 1998",FILLED,local,True
+FUNSD,test,83624198,COMPANY:,Current Employer,employer,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,FILLED,local,True
+FUNSD,test,83624198,PHONE:,Phone Number,phone,phone,910 /335 -7718,910 /335 -7718,FILLED,local,True
+FUNSD,test,83635935,DATE:,Date,date,full_name,"June 4, 1997","June 4, 1997",FILLED,local,True
+FUNSD,test,83641919_1921,DIVISION NAME:,Full Name,full_name,full_name,Flint,Flint,FILLED,local,True
+FUNSD,test,83772145,DATE:,Date,date,full_name,"JANUARY 31, 1997","JANUARY 31, 1997",FILLED,local,True
+FUNSD,test,83772145,TELECOPY NO:,Phone Number,phone,phone,212/ 545- 3297,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,83823750,Date,Date,date,full_name,"November 11, 1997","November 11, 1997",FILLED,local,True
+FUNSD,test,83823750,Company,Current Employer,employer,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,FILLED,local,True
+FUNSD,test,83823750,Reference,Reference Number,reference,phone,17560 -188,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,83996357,COUPON ISSUE DATE,Date,date,full_name,10/ 4/ 99,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,85240939,NAME:,Full Name,full_name,full_name,GEORGE R. TELFORD,GEORGE R. TELFORD,FILLED,local,True
+FUNSD,test,85240939,COMPANY:,Current Employer,employer,employer,Lorillard,Lorillard,FILLED,local,True
+FUNSD,test,85240939,ADDRESS:,Current Address,address,address,"666 Fifth Avenue, New York, NY 10019","666 Fifth Avenue, New York, NY 10019",FILLED,local,True
+FUNSD,test,85240939,PHONE:,Phone Number,phone,phone,(212) 841- 8787,(212) 841- 8787,FILLED,local,True
+FUNSD,test,85240939,ARRIVAL DATE AND TIME:,Date,date,full_name,2/18/80 7:00 P. M.,GEORGE R. TELFORD,FILLED,local,False
+FUNSD,test,86075409_5410,Media Name,Full Name,full_name,full_name,Competitive 21- 34 years,Competitive 21- 34 years,FILLED,local,True
+FUNSD,test,86075409_5410,Coupon Issue Date,Date,date,full_name,4/ 14/ 00,Competitive 21- 34 years,FILLED,local,False
+FUNSD,test,86075409_5410,Signature of Initiator,Signature,signature,signature,21- Jan 00,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,86079776_9777,Date/ Time:,Date,date,full_name,10/30/98 1:46 PM,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,86220490,Date:,Date,date,full_name,8/ 31/ 98,8/ 31/ 98,FILLED,local,True
+FUNSD,test,86220490,Phone #:,Phone Number,phone,phone,335- 7150,335- 7150,FILLED,local,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,Full Name,full_name,full_name,Seyle,Seyle,FILLED,local,True
+FUNSD,test,86263525,DATE,Date,date,full_name,2 /15 /90,2 /15 /90,FILLED,local,True
+FUNSD,test,86263525,DEPARTMENT NAME,Full Name,full_name,full_name,SCIENCE & TECHNOLOGY,2 /15 /90,FILLED,local,False
+FUNSD,test,86328049_8050,Name:,Full Name,full_name,full_name,Ken Forrest,Ken Forrest,FILLED,local,True
+FUNSD,test,86328049_8050,Telecopier Nos.,Phone Number,phone,phone,(804) 788- 8218 (804) 788- 8219 (804) 788- 8669,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87086073,DATE,Date,date,full_name,"August 14, 1990",Vanitrope,FILLED,local,False
+FUNSD,test,87086073,COMPOUND NAME,Full Name,full_name,full_name,Vanitrope,Vanitrope,FILLED,local,True
+FUNSD,test,87093315_87093318,Date:,Date,date,full_name,3/14/90,3/14/90,FILLED,local,True
+FUNSD,test,87125460,DATE,Date,date,full_name,8/ 7/ 87,Induction of Hepatic Enzymes in rats (B202),FILLED,local,False
+FUNSD,test,87125460,STUDY NAME,Full Name,full_name,full_name,Induction of Hepatic Enzymes in rats (B202),Induction of Hepatic Enzymes in rats (B202),FILLED,local,True
+FUNSD,test,87137840,DATE:,Date,date,full_name,03 /02 /90,Lorillard,FILLED,local,False
+FUNSD,test,87137840,SPONSOR'S NAME:,Full Name,full_name,full_name,Lorillard,Lorillard,FILLED,local,True
+FUNSD,test,87137840,PHYSICAL DESCRIPTION:,Description,description,profile_photo,Clear brown liquid,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87137840,STUDY DIRECTOR /DEPARTMENT,Academic Department,department,department,Ray David,Ray David,FILLED,local,True
+FUNSD,test,87147607,DESCRIPTION,Description,description,profile_photo,"This is your authorization to prepare cigarette smoke condensate according to the protocol ""Standard Operating Procedure før the Preparation of Smoke Condensate for Mouse Skin Bioassay,"" for the period April 1, 1988 through December 31, 1988. Condensate will be prepared acording to a time schedule provided by Lorillard. The fixed price for condensate collection will be at a rate of $1, 750/10, 000 cigarettes smoked. Piedmont will pay the cost of consumable supplies. This work is to be conducted in accordance with the December 10, 1984 formal agreement between Piedmont Reseach Laboratories and Lorillard. All work is to be coordinated with our Mr. Neil Thaggard (919) 373-6628",UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87147607,DATE,Date,date,full_name,"April 19, 1988","April 19, 1988",FILLED,local,True
+FUNSD,test,87332450,Telephone:,Phone Number,phone,phone,(615) ) 638- 5532,(615) ) 638- 5532,FILLED,local,True
+FUNSD,test,87428306,PHYSICAL STATE,State,state,state,A crystalline solid at room temperature which melts at > 56 C.,A crystalline solid at room temperature which melts at > 56 C.,FILLED,local,True
+FUNSD,test,87528321,Date,Date,date,full_name,B-17-88,Dan Straka,FILLED,local,False
+FUNSD,test,87528321,ORIGINATOR Name:,Full Name,full_name,full_name,Dan Straka,Dan Straka,FILLED,local,True
+FUNSD,test,87528380,DATE,Date,date,full_name,"October 16, 1987","October 16, 1987",FILLED,local,True
+FUNSD,test,87528380,ADDRESS,Current Address,address,address,666 Fifth Avenue,666 Fifth Avenue,FILLED,local,True
+FUNSD,test,87528380,CITY,City,city,city,New York,New York,FILLED,local,True
+FUNSD,test,87528380,STATE,State,state,state,New York 10103,New York 10103,FILLED,local,True
+FUNSD,test,87528380,ITEM:,Description,description,profile_photo,Harley Davidson Metal Plaque,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87528380,SHIP IMMEDIATELY,Phone Number,phone,phone,☑,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87594142_87594144,(C) City,City,city,city,Baltimore,Baltimore,FILLED,local,True
+FUNSD,test,87594142_87594144,(G) STATE/ZIP,State,state,state,21205,21205,FILLED,local,True
+FUNSD,test,87594142_87594144,INCLUSIVE DATE,Date,date,full_name,01/01/94,UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87594142_87594144,"1. PRINCIPAL INVESTIGATOR NAME, TITLE, TELEPHONE # AND MAILING ADDRESS.",Full Name,full_name,full_name,"Steven R. Kleeberger, Ph. D.",UNKNOWN,UNKNOWN,local,False
+FUNSD,test,87594142_87594144,(c) TELEPHONE,Phone Number,phone,phone,(410) 955-3515/955-0299,(410) 955-3515/955-0299,FILLED,local,True
+FUNSD,test,87594142_87594144,(E) INSTITUTION,University,university,university,"Johns Hopkins University, School of Hyg. & Pub. Hlth.","Johns Hopkins University, School of Hyg. & Pub. Hlth.",FILLED,local,True
+FUNSD,test,87594142_87594144,(D) DEPARTMENT,Academic Department,department,department,Environmental Health Sciences,Environmental Health Sciences,FILLED,local,True
+FUNSD,test,87594142_87594144,(F) MAILING,Current Address,address,address,"615 North Wolfe Street, Baltimore, Maryland","615 North Wolfe Street, Baltimore, Maryland",FILLED,local,True
+FUNSD,test,87594142_87594144,TOTAL COST,Total Amount,amount,,"210, 910",UNKNOWN,UNKNOWN,local,False
+FUNSD,test,89856243,Date,Date,date,full_name,"October 17, 1979","October 17, 1979",FILLED,local,True
+FUNSD,test,91814768_91814769,Address,Current Address,address,address,"P. O. B03 5979 Boston, MA 0212","P. O. B03 5979 Boston, MA 0212",FILLED,local,True
+FUNSD,test,91814768_91814769,Date,Date,date,full_name,"March 30, 1993",M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,FILLED,local,False
+FUNSD,test,91814768_91814769,1. Name of Treasurer,Full Name,full_name,full_name,M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,FILLED,local,True
+FUNSD,test,91814768_91814769,Amount or Value**,Total Amount,amount,,"28, 482. 00",UNKNOWN,UNKNOWN,local,False
+FUNSD,test,92380595,DATE:,Date,date,full_name,12- 13- 89,12- 13- 89,FILLED,local,True
+FUNSD,test,92380595,Phone,Phone Number,phone,phone,512/478- 4873,512/478- 4873,FILLED,local,True
+FUNSD,test,93106788,DATE:,Date,date,full_name,"MARCH 17, 1995","MARCH 17, 1995",FILLED,local,True

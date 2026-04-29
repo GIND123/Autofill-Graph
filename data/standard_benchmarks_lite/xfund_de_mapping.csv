@@ -1,0 +1,304 @@
+dataset,split,doc_id,question,expected_prop,predicted_prop,phase,score,ok
+XFUND-DE,train,de_train_0,"Name, Vorname, ggf. Geburtsname",full_name,full_name,substring,0.138,True
+XFUND-DE,train,de_train_0,Tagsüber tel. erreichbar unter Nummer,phone,phone,embedding,0.648,True
+XFUND-DE,train,de_train_0,"Sofern vorhanden: Gesetzlicher Vertreter (Name, Vorname, Anschrift, Telefon)",full_name,full_name,substring,0.057,True
+XFUND-DE,train,de_train_0,"1. Trägt eine Rechtsschutzversicherung oder eine andere Stelle/Person (z. B. Gewerkschaft, Mieterverein, Sozialverband) die Kosten Ihrer Prozess- oder Verfahrensführung?",phone,insurance_id,embedding,0.415,False
+XFUND-DE,train,de_train_0,"1. Trägt eine Rechtsschutzversicherung oder eine andere Stelle/Person (z. B. Gewerkschaft, Mieterverein, Sozialverband) die Kosten Ihrer Prozess- oder Verfahrensführung?",phone,insurance_id,embedding,0.415,False
+XFUND-DE,train,de_train_0,"1. Trägt eine Rechtsschutzversicherung oder eine andere Stelle/Person (z. B. Gewerkschaft, Mieterverein, Sozialverband) die Kosten Ihrer Prozess- oder Verfahrensführung?",phone,insurance_id,embedding,0.415,False
+XFUND-DE,train,de_train_0,"2. Wenn nein: Besteht eine Rechtsschutzversicherung oder die Mitgliedschaft in einem Verein/einer Organisation (z. B. Gewerkschaft, Mieterverein, Sozialverband), der/die die Kosten der beabsichtigten Prozess- oder Verfahrensführung tragen oder einen Prozessbevollmächtigten stellen könnte?",phone,insurance_id,embedding,0.353,False
+XFUND-DE,train,de_train_0,"2. Wenn nein: Besteht eine Rechtsschutzversicherung oder die Mitgliedschaft in einem Verein/einer Organisation (z. B. Gewerkschaft, Mieterverein, Sozialverband), der/die die Kosten der beabsichtigten Prozess- oder Verfahrensführung tragen oder einen Prozessbevollmächtigten stellen könnte?",phone,insurance_id,embedding,0.353,False
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_0,"Name, Vorname, Anschrift (sofern sie von Ihrer Anschrift abweicht)",full_name,full_name,substring,0.065,True
+XFUND-DE,train,de_train_1,Antragsteller:,phone,advisor,embedding,0.446,False
+XFUND-DE,train,de_train_1,Durchführung durch (Name/Anschrift der verantwortlichen Person):,full_name,full_name,substring,0.066,True
+XFUND-DE,train,de_train_2,Hiermit bestelle ich ab Monat 07 Jahr 2020 das MAXX-Ticket.,phone,,unknown,0.307,False
+XFUND-DE,train,de_train_2,Hiermit bestelle ich ab Monat 07 Jahr 2020 das MAXX-Ticket.,phone,,unknown,0.307,False
+XFUND-DE,train,de_train_2,Kunden-Nummer (bei Wiederbestellung),phone,resume_scan,embedding,0.404,False
+XFUND-DE,train,de_train_2,E-Mail-Adresse,email,email,substring,0.429,True
+XFUND-DE,train,de_train_2,Telefonnummer,phone,phone,embedding,0.792,True
+XFUND-DE,train,de_train_3,Bewerber/in - Bauherr/in (Name/Vorname),full_name,full_name,substring,0.108,True
+XFUND-DE,train,de_train_3,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_3,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_4,"Weitere im Haushalt lebende Personen (Name, Alter, Familienbezug)",full_name,full_name,substring,0.066,True
+XFUND-DE,train,de_train_4,Schule/Institution/Ort:,university,university,substring,0.5,True
+XFUND-DE,train,de_train_4,Schule/Institution/Ort:,university,university,substring,0.5,True
+XFUND-DE,train,de_train_4,Schule/Institution/Ort:,university,university,substring,0.5,True
+XFUND-DE,train,de_train_5,"Name und Ort der Schule, in der die 8. Schulstufe besucht wird/wurde",full_name,full_name,substring,0.06,True
+XFUND-DE,train,de_train_6,Telefonnummer:,phone,phone,embedding,0.801,True
+XFUND-DE,train,de_train_6,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_6,Telefonnummer:,phone,phone,embedding,0.801,True
+XFUND-DE,train,de_train_6,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,research_statement,embedding,0.33,False
+XFUND-DE,train,de_train_7,Datum (Unterschrift Antragsteller /-in),phone,id_scan,embedding,0.342,False
+XFUND-DE,train,de_train_8,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_8,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_8,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_10,Name Schüler/in,full_name,full_name,substring,0.267,True
+XFUND-DE,train,de_train_10,"Datum, bis wann die Aufenthaltsgestattung oder -duldung gilt (als Nachweis bitte die Kopie des Aufenthaltstitels beifügen!)",phone,visa_status,embedding,0.441,False
+XFUND-DE,train,de_train_10,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_10,Telefonnummer*,phone,phone,embedding,0.766,True
+XFUND-DE,train,de_train_10,E-Mail-Adresse*,email,email,substring,0.429,True
+XFUND-DE,train,de_train_11,"Name, Vorname der/des Auszubildenden",full_name,full_name,substring,0.114,True
+XFUND-DE,train,de_train_11,"Name, Vorname der/des Erklärenden",full_name,full_name,substring,0.125,True
+XFUND-DE,train,de_train_11,"Name, ggf. Geburtsname, Vorname",full_name,full_name,substring,0.138,True
+XFUND-DE,train,de_train_12,"3109 St. Pölten, Landhausplatz 1, Haus 7A, Tel .:",phone,city,embedding,0.49,False
+XFUND-DE,train,de_train_12,I. ANTRAGSTELLENDE PERSON(EN),phone,bio,embedding,0.344,False
+XFUND-DE,train,de_train_12,I. ANTRAGSTELLENDE PERSON(EN),phone,bio,embedding,0.344,False
+XFUND-DE,train,de_train_12,I. ANTRAGSTELLENDE PERSON(EN),phone,bio,embedding,0.344,False
+XFUND-DE,train,de_train_12,Tagsüber erreichbar unter Tel .- Nr.,phone,phone,embedding,0.663,True
+XFUND-DE,train,de_train_12,E-Mail-Adresse,email,email,substring,0.429,True
+XFUND-DE,train,de_train_12,Gewünschte Zustellart,phone,,unknown,0.276,False
+XFUND-DE,train,de_train_12,Gewünschte Zustellart,phone,,unknown,0.276,False
+XFUND-DE,train,de_train_13,PP Einstellhalle,phone,country,embedding,0.362,False
+XFUND-DE,train,de_train_13,Mietzins total (pro Monat):,amount,,unknown,0.274,False
+XFUND-DE,train,de_train_13,Mietzins total (pro Monat):,amount,,unknown,0.274,False
+XFUND-DE,train,de_train_13,Name (1),full_name,full_name,substring,0.667,True
+XFUND-DE,train,de_train_13,Tel. P (1),phone,phone,embedding,0.524,True
+XFUND-DE,train,de_train_13,Tel. G (1),phone,phone,embedding,0.405,True
+XFUND-DE,train,de_train_13,E-Mail (1),email,email,substring,0.75,True
+XFUND-DE,train,de_train_13,Arbeitgeber/Tel. (1),phone,employer,embedding,0.484,False
+XFUND-DE,train,de_train_13,Angestellt seit (1),phone,employer,embedding,0.479,False
+XFUND-DE,train,de_train_14,Region,state,state,exact,1.0,True
+XFUND-DE,train,de_train_14,Der Bewerber stellt den Antrag für Experiment-Aufenthalt.,phone,research_interests,embedding,0.409,False
+XFUND-DE,train,de_train_14,Name IL/LS/Stipendienberatung,full_name,full_name,substring,0.138,True
+XFUND-DE,train,de_train_15,5. Telefonnummer,phone,phone,embedding,0.668,True
+XFUND-DE,train,de_train_15,6. E-Mail,email,email,substring,0.667,True
+XFUND-DE,train,de_train_16,oder Email:,email,email,substring,0.5,True
+XFUND-DE,train,de_train_16,Tel.:,phone,phone,embedding,0.66,True
+XFUND-DE,train,de_train_17,"Name, Vorname, ggf. akademischer Grad",full_name,full_name,substring,0.114,True
+XFUND-DE,train,de_train_17,Telefonnummer,phone,phone,embedding,0.792,True
+XFUND-DE,train,de_train_17,E-Mail-Adresse,email,email,substring,0.429,True
+XFUND-DE,train,de_train_19,E-Mail :,email,email,exact,1.0,True
+XFUND-DE,train,de_train_19,E-Mail :,email,email,exact,1.0,True
+XFUND-DE,train,de_train_20,Ausstellungsstaat Diplom:,phone,degree,embedding,0.635,False
+XFUND-DE,train,de_train_20,Früherer Name:,full_name,full_name,substring,0.308,True
+XFUND-DE,train,de_train_20,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_20,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_20,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_21,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_22,Telefon:,phone,phone,embedding,0.839,True
+XFUND-DE,train,de_train_22,eMail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_22,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_22,Tel .- Nr .:,phone,phone,embedding,0.578,True
+XFUND-DE,train,de_train_22,Email:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_23,"Name, Vorname",full_name,full_name,substring,0.333,True
+XFUND-DE,train,de_train_23,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_23,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_23,"Telefonnummer, Mail-Adresse",phone,email,embedding,0.738,False
+XFUND-DE,train,de_train_23,"Telefonnummer, Mail-Adresse",phone,email,embedding,0.738,False
+XFUND-DE,train,de_train_25,"Name, Vorname",full_name,full_name,substring,0.333,True
+XFUND-DE,train,de_train_25,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_25,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_25,Telefax,phone,phone,embedding,0.595,True
+XFUND-DE,train,de_train_26,Name/ Vorname,full_name,full_name,substring,0.308,True
+XFUND-DE,train,de_train_26,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_26,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_27,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_27,Telefon priv.,phone,phone,embedding,0.771,True
+XFUND-DE,train,de_train_27,Telefon dstl.,phone,phone,embedding,0.823,True
+XFUND-DE,train,de_train_28,"Place, Date:",date,country,embedding,0.432,False
+XFUND-DE,train,de_train_29,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_29,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_29,Position,job_title,job_title,exact,1.0,True
+XFUND-DE,train,de_train_29,E-mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_30,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_30,Tel.Nr .:,phone,phone,embedding,0.536,True
+XFUND-DE,train,de_train_30,Titel der Arbeit:,phone,job_title,embedding,0.518,False
+XFUND-DE,train,de_train_31,Name der Einrichtung,full_name,full_name,substring,0.2,True
+XFUND-DE,train,de_train_32,NAME,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_32,TELEFON (MOBIL),phone,phone,embedding,0.856,True
+XFUND-DE,train,de_train_32,E-MAIL-ADRESSE,email,email,substring,0.429,True
+XFUND-DE,train,de_train_32,Name der Hochschule:,full_name,full_name,substring,0.211,True
+XFUND-DE,train,de_train_32,Name des Studiengangs:,full_name,full_name,substring,0.19,True
+XFUND-DE,train,de_train_33,Telefon (mit Vorwahl,phone,phone,embedding,0.843,True
+XFUND-DE,train,de_train_33,Rechtliche Stellung der/ des Erziehungsberechtigten,phone,department,embedding,0.471,False
+XFUND-DE,train,de_train_33,Name d. Mutter od. Vormundes,full_name,full_name,substring,0.143,True
+XFUND-DE,train,de_train_33,Telefon (mit Vorwahl),phone,phone,embedding,0.843,True
+XFUND-DE,train,de_train_33,Name d. Vaters,full_name,full_name,substring,0.286,True
+XFUND-DE,train,de_train_33,Telefon (mit Vorwahl),phone,phone,embedding,0.843,True
+XFUND-DE,train,de_train_33,Position,job_title,job_title,exact,1.0,True
+XFUND-DE,train,de_train_35,Frau/Herr Name,full_name,full_name,substring,0.286,True
+XFUND-DE,train,de_train_35,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,train,de_train_35,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_35,Erhalten Sie ein Stipendium oder sonstige finanzielle Unterstützung durch andere Stellen als das Inter- national Office (z.B. ein Stipendium des DAAD oder anderer deut-scher/internationaler Stipendientra- ger)?,phone,country,substring,0.029,False
+XFUND-DE,train,de_train_35,"Erhalten Sie finanzielle Zuwendun gen der Stadt Freiburg wie z.B. Wohn- oder Kindergeld? Falls ja, von welcher Stelle und Höhe der erhaltenen Unterstützung angeben:",phone,city,embedding,0.394,False
+XFUND-DE,train,de_train_36,Familienname | Last Name,full_name,last_name,substring,0.409,False
+XFUND-DE,train,de_train_36,Vorname | First Name,full_name,first_name,substring,0.556,False
+XFUND-DE,train,de_train_36,Geburtsdatum | Date of Birth,date,graduation_date,embedding,0.469,False
+XFUND-DE,train,de_train_36,Staatsangehörigkeit | Nationality,citizenship,citizenship,substring,0.355,True
+XFUND-DE,train,de_train_36,Straße | Street,address,address,embedding,0.586,True
+XFUND-DE,train,de_train_36,Postleitzahl | Postal code Wohnort | Place of Residence,zip_code,zip_code,substring,0.216,True
+XFUND-DE,train,de_train_36,Bundesland (Heimatort) | State (Place of Origin),state,state,substring,0.119,True
+XFUND-DE,train,de_train_36,Telefon | Phone,phone,phone,substring,0.385,True
+XFUND-DE,train,de_train_36,Mobiltelefon | Cell phone,phone,phone,substring,0.217,True
+XFUND-DE,train,de_train_36,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_37,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_37,Telefonnummer,phone,phone,embedding,0.792,True
+XFUND-DE,train,de_train_37,E-Mail,email,email,exact,1.0,True
+XFUND-DE,train,de_train_38,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_38,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_39,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_39,Tel. Privat:,phone,phone,embedding,0.524,True
+XFUND-DE,train,de_train_39,Tel. Geschäft:,phone,phone,embedding,0.637,True
+XFUND-DE,train,de_train_39,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,train,de_train_39,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,train,de_train_39,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,val,de_val_0,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,val,de_val_0,E-Mail,email,email,exact,1.0,True
+XFUND-DE,val,de_val_1,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,val,de_val_1,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,val,de_val_1,Telefon:,phone,phone,embedding,0.839,True
+XFUND-DE,val,de_val_2,"Name, Vorname:",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_2,Studentische E-Mail-Adresse:,email,email,substring,0.222,True
+XFUND-DE,val,de_val_2,Studentische E-Mail-Adresse:,email,email,substring,0.222,True
+XFUND-DE,val,de_val_2,Studentische E-Mail-Adresse:,email,email,substring,0.222,True
+XFUND-DE,val,de_val_6,Name:,full_name,full_name,exact,1.0,True
+XFUND-DE,val,de_val_6,Telefon:,phone,phone,embedding,0.839,True
+XFUND-DE,val,de_val_6,"(Name, Vorname)",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_7,"Name, Vorname",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_7,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,val,de_val_7,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,val,de_val_7,"Telefonnummer, Mail-Adresse",phone,email,embedding,0.738,False
+XFUND-DE,val,de_val_8,Alternative E-Mail:,email,email,substring,0.333,True
+XFUND-DE,val,de_val_8,Bitte senden Sie das Antragsformular an folgende E-Mail-Adresse:,email,email,substring,0.095,True
+XFUND-DE,val,de_val_9,Postleitzahl Ort/Zustellbezirk,phone,address,embedding,0.727,False
+XFUND-DE,val,de_val_9,Postleitzahl Ort/Zustellbezirk,phone,address,embedding,0.727,False
+XFUND-DE,val,de_val_9,E-Mail,email,email,exact,1.0,True
+XFUND-DE,val,de_val_9,Telefon,phone,phone,embedding,0.82,True
+XFUND-DE,val,de_val_10,"Name, Vorname; ggf. Geburtsname:",full_name,full_name,substring,0.138,True
+XFUND-DE,val,de_val_10,E-Mail-Kontaktadresse:,email,email,substring,0.286,True
+XFUND-DE,val,de_val_11,"Vorname, Name",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_11,Handy / Telefon,phone,phone,embedding,0.726,True
+XFUND-DE,val,de_val_11,Bewerbung als Service-Elektriker | Monteur | Obermonteur (Baustellenverantwortung),phone,advisor,embedding,0.443,False
+XFUND-DE,val,de_val_11,Derzeitige Position,job_title,job_title,substring,0.421,True
+XFUND-DE,val,de_val_11,Gehaltsvorstellung Monats- oder Jahresgehalt,phone,annual_income,embedding,0.68,False
+XFUND-DE,val,de_val_11,Bitte senden Sie das ausgefüllte Formular an bewerbung@ulmatec.de oder postalisch an:,zip_code,email,embedding,0.485,False
+XFUND-DE,val,de_val_11,Bitte senden Sie das ausgefüllte Formular an bewerbung@ulmatec.de oder postalisch an:,zip_code,email,embedding,0.485,False
+XFUND-DE,val,de_val_11,Bitte senden Sie das ausgefüllte Formular an bewerbung@ulmatec.de oder postalisch an:,zip_code,email,embedding,0.485,False
+XFUND-DE,val,de_val_12,Expiration Date:,date,graduation_date,embedding,0.429,False
+XFUND-DE,val,de_val_12,Business Legal Name,full_name,full_name,substring,0.526,True
+XFUND-DE,val,de_val_12,Business Address,address,address,substring,0.438,True
+XFUND-DE,val,de_val_12,Business Phone,phone,phone,substring,0.357,True
+XFUND-DE,val,de_val_12,Number of Employees:,full_name,employer,embedding,0.629,False
+XFUND-DE,val,de_val_12,Owner Name,full_name,full_name,substring,0.4,True
+XFUND-DE,val,de_val_12,Owner Name,full_name,full_name,substring,0.4,True
+XFUND-DE,val,de_val_12,Address,address,address,exact,1.0,True
+XFUND-DE,val,de_val_12,"1. Is the Applicant or any owner of the Applicant presently suspended, debarred, proposed for debarment, declared ineligible, voluntarily excluded from participation in this transaction by any Federal department or agency, or presently involved in any bankruptcy?",full_name,department,substring,0.039,False
+XFUND-DE,val,de_val_12,"2. Has the Applicant,any owner of the Applicant, or any business owned or controlled by any of them, ever obtained a direct or guaranteed loan from SBA or any other Federal agency that is currently delinquent or has defaulted in the last 7 years and caused a loss to the government?",full_name,full_name,substring,0.032,True
+XFUND-DE,val,de_val_12,"3. Is the Applicant or any owner of the Applicant an owner of any other business, or have common management with, any other business? If yes, list all such businesses and describe the relationship on a separate sheet identified as addendum A.",full_name,full_name,substring,0.038,True
+XFUND-DE,val,de_val_12,"4. Has the Applicant received an SBA Economic Injury Disaster Loan between January 31, 2020 and April 3, 2020? If yes, provide details on a separate sheet identified as addendum B.",full_name,full_name,substring,0.051,True
+XFUND-DE,val,de_val_12,"5. Is the Applicant (if an individual) or any individual owning 20% or more of the equity of the Applicant subject to an indictment, criminal information, arraignment, or other means by which formal criminal charges are brought in any jurisdiction, or presently incarcerated, or on probation or parole?",full_name,full_name,substring,0.031,True
+XFUND-DE,val,de_val_12,"6. Within the last 5 years, for any felony, has the Applicant (if an individual) or any owner of the Applicant 1) been convicted; 2) pleaded guilty; 3) pleaded nolo contendere; 4) been placed on pretrial diversion; or 5) been placed on any form of parole or probation (including probation before judgment)?",full_name,full_name,substring,0.031,True
+XFUND-DE,val,de_val_12,7. Is the United States the principal place of residence for all employees of the Applicant included in the Applicant's payroll calculation above?,full_name,full_name,substring,0.062,True
+XFUND-DE,val,de_val_12,8. Is the Applicant a franchise that is listed in the SBA's Franchise Directory?,full_name,full_name,substring,0.114,True
+XFUND-DE,val,de_val_13,"Vorname, Name:",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_13,Telefon:,phone,phone,embedding,0.839,True
+XFUND-DE,val,de_val_13,E-Mail:,email,email,exact,1.0,True
+XFUND-DE,val,de_val_14,IBAN (In Deutschland immer 22 Stellen),phone,,unknown,0.234,False
+XFUND-DE,val,de_val_14,Sonstige SEPA-Länder bis max. 34 Stellen !,phone,gpa,embedding,0.357,False
+XFUND-DE,val,de_val_14,"BIC* (SWIFT-Code, 8 oder 11 Stellen)",phone,,unknown,0.278,False
+XFUND-DE,val,de_val_14,Sonstige SEPA-Länder bis max. 34 Stellen !,phone,gpa,embedding,0.357,False
+XFUND-DE,val,de_val_14,"BIC* (SWIFT-Code, 8 oder 11 Stellen)",phone,,unknown,0.278,False
+XFUND-DE,val,de_val_16,Name,full_name,full_name,exact,1.0,True
+XFUND-DE,val,de_val_16,Tel.,phone,phone,embedding,0.631,True
+XFUND-DE,val,de_val_16,E-Mail,email,email,exact,1.0,True
+XFUND-DE,val,de_val_16,Tel.,phone,phone,embedding,0.631,True
+XFUND-DE,val,de_val_16,E-Mail,email,email,exact,1.0,True
+XFUND-DE,val,de_val_17,"Name, Vorname (oder Firmenname)",full_name,full_name,substring,0.143,True
+XFUND-DE,val,de_val_17,Familienname (früherer Name),full_name,full_name,substring,0.154,True
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,address,embedding,0.53,False
+XFUND-DE,val,de_val_18,IBAN (International Bank Account Number),bank_name,country,substring,0.158,False
+XFUND-DE,val,de_val_18,BIC (Bank Identifier Code),bank_name,id_scan,embedding,0.395,False
+XFUND-DE,val,de_val_18,Name/Sitz des Kreditinstituts,full_name,full_name,substring,0.138,True
+XFUND-DE,val,de_val_19,"Name, Vorname",full_name,full_name,substring,0.333,True
+XFUND-DE,val,de_val_19,"Name, Ort und Land der Hochschule des Erststudiums",full_name,full_name,substring,0.082,True
+XFUND-DE,val,de_val_19,"Unternehmensname, Name der Abteilung(en)",full_name,full_name,substring,0.105,True
+XFUND-DE,val,de_val_19,"Unternehmensname, Name der Abteilung(en)",full_name,full_name,substring,0.105,True
+XFUND-DE,val,de_val_19,"Unternehmensname, Name der Ausbildung/Abteilung(en)",full_name,full_name,substring,0.082,True

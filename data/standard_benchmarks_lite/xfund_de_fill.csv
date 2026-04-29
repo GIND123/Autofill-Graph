@@ -1,0 +1,124 @@
+dataset,split,doc_id,raw_question,query,expected_prop,predicted_prop,expected_value,predicted_value,status,route,ok
+XFUND-DE,train,de_train_0,"Name, Vorname, ggf. Geburtsname",Full Name,full_name,full_name,Julian Herrmann,Julian Herrmann,FILLED,local,True
+XFUND-DE,train,de_train_0,Tagsüber tel. erreichbar unter Nummer,Phone Number,phone,phone,16724891042,16724891042,FILLED,local,True
+XFUND-DE,train,de_train_1,Antragsteller:,Phone Number,phone,phone,Max Weber,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_1,Durchführung durch (Name/Anschrift der verantwortlichen Person):,Full Name,full_name,full_name,"""Max Weber, 55232 Alzey, Bahnhofstraße 30","""Max Weber, 55232 Alzey, Bahnhofstraße 30",FILLED,local,True
+XFUND-DE,train,de_train_2,Hiermit bestelle ich ab Monat 07 Jahr 2020 das MAXX-Ticket.,Phone Number,phone,phone,Erstbestellung (mit Bild).,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_2,E-Mail-Adresse,Email,email,email,Jonas321@gmail.com,Jonas321@gmail.com,FILLED,local,True
+XFUND-DE,train,de_train_3,Bewerber/in - Bauherr/in (Name/Vorname),Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_3,Telefon,Phone Number,phone,phone,17830921231,17830921231,FILLED,local,True
+XFUND-DE,train,de_train_4,"Weitere im Haushalt lebende Personen (Name, Alter, Familienbezug)",Full Name,full_name,full_name,keine,keine,FILLED,local,True
+XFUND-DE,train,de_train_4,Schule/Institution/Ort:,University,university,university,Grundschule,Grundschule,FILLED,local,True
+XFUND-DE,train,de_train_5,"Name und Ort der Schule, in der die 8. Schulstufe besucht wird/wurde",Full Name,full_name,full_name,"BJD Gymnasium, 5 6068 Koblenz, Neversstraße 5,","BJD Gymnasium, 5 6068 Koblenz, Neversstraße 5,",FILLED,local,True
+XFUND-DE,train,de_train_6,Telefonnummer:,Phone Number,phone,phone,1547928921,1547928921,FILLED,local,True
+XFUND-DE,train,de_train_6,E-Mail:,Email,email,email,gsfjls@gmail.de,gsfjls@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_7,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,Phone Number,phone,phone,[x] Zusammenrechnung mehrerer Arbeitseinkom-,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_8,Name,Full Name,full_name,full_name,Thomas Sonntag,Thomas Sonntag,FILLED,local,True
+XFUND-DE,train,de_train_8,Telefon,Phone Number,phone,phone,15145099033,15145099033,FILLED,local,True
+XFUND-DE,train,de_train_8,E-Mail,Email,email,email,Thomas@gmail.com,Thomas@gmail.com,FILLED,local,True
+XFUND-DE,train,de_train_10,Name Schüler/in,Full Name,full_name,full_name,Emma Schwarz,Emma Schwarz,FILLED,local,True
+XFUND-DE,train,de_train_10,"Datum, bis wann die Aufenthaltsgestattung oder -duldung gilt (als Nachweis bitte die Kopie des Aufenthaltstitels beifügen!)",Phone Number,phone,phone,09.07.2014,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_10,E-Mail-Adresse*,Email,email,email,gwefcsd@gmail.de,gwefcsd@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_11,"Name, Vorname der/des Auszubildenden",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_12,"3109 St. Pölten, Landhausplatz 1, Haus 7A, Tel .:",Phone Number,phone,phone,"02742/9005,",UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_12,E-Mail-Adresse,Email,email,email,gasdflk@gmail.de,gasdflk@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_13,PP Einstellhalle,Phone Number,phone,phone,Fr,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_13,Mietzins total (pro Monat):,Total Amount,amount,gpa,Fr.,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_13,Name (1),Full Name,full_name,full_name,Uwe Pitts,Uwe Pitts,FILLED,local,True
+XFUND-DE,train,de_train_13,E-Mail (1),Email,email,email,18934234234@gmail.de,18934234234@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_14,Region,State,state,state,SAM,SAM,FILLED,local,True
+XFUND-DE,train,de_train_14,Der Bewerber stellt den Antrag für Experiment-Aufenthalt.,Phone Number,phone,phone,☒ ja □nein,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_14,Name IL/LS/Stipendienberatung,Full Name,full_name,full_name,Pia Ochmann,Pia Ochmann,FILLED,local,True
+XFUND-DE,train,de_train_15,5. Telefonnummer,Phone Number,phone,phone,15448938231,15448938231,FILLED,local,True
+XFUND-DE,train,de_train_15,6. E-Mail,Email,email,email,violazoller@gmail.com,violazoller@gmail.com,FILLED,local,True
+XFUND-DE,train,de_train_16,oder Email:,Email,email,email,fsj.berlin@jgd.de,fsj.berlin@jgd.de,FILLED,local,True
+XFUND-DE,train,de_train_16,Tel.:,Phone Number,phone,phone,030 / 61 20 31 310,030 / 61 20 31 310,FILLED,local,True
+XFUND-DE,train,de_train_17,"Name, Vorname, ggf. akademischer Grad",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_17,Telefonnummer,Phone Number,phone,phone,17542341232,17542341232,FILLED,local,True
+XFUND-DE,train,de_train_17,E-Mail-Adresse,Email,email,email,34124@ gmail.de,34124@ gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_19,E-Mail :,Email,email,email,www.fr.ch/afe,www.fr.ch/afe,FILLED,local,True
+XFUND-DE,train,de_train_20,Ausstellungsstaat Diplom:,Phone Number,phone,phone,Detuschland,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_20,Früherer Name:,Full Name,full_name,full_name,Max,Max,FILLED,local,True
+XFUND-DE,train,de_train_20,E-Mail,Email,email,email,gsdga@gmail.de,gsdga@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_21,Name:,Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_22,Telefon:,Phone Number,phone,phone,030 29 36 276-0,030 29 36 276-0,FILLED,local,True
+XFUND-DE,train,de_train_22,eMail:,Email,email,email,schulbuero@august-sander-schule.de,schulbuero@august-sander-schule.de,FILLED,local,True
+XFUND-DE,train,de_train_22,Name:,Full Name,full_name,full_name,Thomas Schoeder,Thomas Schoeder,FILLED,local,True
+XFUND-DE,train,de_train_23,"Name, Vorname",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_23,Telefon,Phone Number,phone,phone,17542341232,17542341232,FILLED,local,True
+XFUND-DE,train,de_train_25,"Name, Vorname",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_25,E-Mail,Email,email,email,34124@gmail.de,34124@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_25,Telefon,Phone Number,phone,phone,17542341232,17542341232,FILLED,local,True
+XFUND-DE,train,de_train_26,Name/ Vorname,Full Name,full_name,full_name,Emma Schmitt,Emma Schmitt,FILLED,local,True
+XFUND-DE,train,de_train_26,Telefon,Phone Number,phone,phone,1537847821,1537847821,FILLED,local,True
+XFUND-DE,train,de_train_26,E-Mail,Email,email,email,sfasdf@gmail.de,sfasdf@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_27,Name,Full Name,full_name,full_name,Liane Fox,Liane Fox,FILLED,local,True
+XFUND-DE,train,de_train_27,Telefon priv.,Phone Number,phone,phone,17874809812,17874809812,FILLED,local,True
+XFUND-DE,train,de_train_28,"Place, Date:",Date,date,full_name,09.09.2001,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_29,Name,Full Name,full_name,full_name,Thomas Sonntag,Thomas Sonntag,FILLED,local,True
+XFUND-DE,train,de_train_29,Position,Job Title,job_title,job_title,Deutschland,Deutschland,FILLED,local,True
+XFUND-DE,train,de_train_29,E-mail,Email,email,email,TanjaSieber@gmail.com,TanjaSieber@gmail.com,FILLED,local,True
+XFUND-DE,train,de_train_30,E-Mail:,Email,email,email,vasldkfj@qq.com,vasldkfj@qq.com,FILLED,local,True
+XFUND-DE,train,de_train_30,Tel.Nr .:,Phone Number,phone,phone,15432342344,15432342344,FILLED,local,True
+XFUND-DE,train,de_train_31,Name der Einrichtung,Full Name,full_name,full_name,Mathematik,Mathematik,FILLED,local,True
+XFUND-DE,train,de_train_32,NAME,Full Name,full_name,full_name,Jonas Schritt,Jonas Schritt,FILLED,local,True
+XFUND-DE,train,de_train_32,TELEFON (MOBIL),Phone Number,phone,phone,15534234234,15534234234,FILLED,local,True
+XFUND-DE,train,de_train_32,E-MAIL-ADRESSE,Email,email,email,bdgg@gmail.de,bdgg@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_33,Telefon (mit Vorwahl,Phone Number,phone,phone,15482936723,15482936723,FILLED,local,True
+XFUND-DE,train,de_train_33,Name d. Mutter od. Vormundes,Full Name,full_name,full_name,Pia Schwarz,Pia Schwarz,FILLED,local,True
+XFUND-DE,train,de_train_33,Position,Job Title,job_title,job_title,□FW □D □GK,□FW □D □GK,FILLED,local,True
+XFUND-DE,train,de_train_35,Frau/Herr Name,Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_35,Telefon,Phone Number,phone,phone,15787482781,15787482781,FILLED,local,True
+XFUND-DE,train,de_train_35,E-Mail,Email,email,email,sdfas@gmail.de,sdfas@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_36,Familienname | Last Name,Full Name,full_name,full_name,Weber,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_36,Geburtsdatum | Date of Birth,Date,date,full_name,20.02.1989,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_36,Staatsangehörigkeit | Nationality,Citizenship,citizenship,citizenship,Chin,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,train,de_train_36,Straße | Street,Current Address,address,address,Bahnhofstraße 30,Bahnhofstraße 30,FILLED,local,True
+XFUND-DE,train,de_train_36,Postleitzahl | Postal code Wohnort | Place of Residence,ZIP Code,zip_code,zip_code,53123 Bonn,53123 Bonn,FILLED,local,True
+XFUND-DE,train,de_train_36,Bundesland (Heimatort) | State (Place of Origin),State,state,state,Bayern,Bayern,FILLED,local,True
+XFUND-DE,train,de_train_36,Telefon | Phone,Phone Number,phone,phone,1253413412,1253413412,FILLED,local,True
+XFUND-DE,train,de_train_36,E-Mail,Email,email,email,fdgaf@gmail.de,fdgaf@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_37,Name,Full Name,full_name,full_name,Liane Fox,Liane Fox,FILLED,local,True
+XFUND-DE,train,de_train_37,Telefonnummer,Phone Number,phone,phone,15748239421,15748239421,FILLED,local,True
+XFUND-DE,train,de_train_37,E-Mail,Email,email,email,fasd @ gmail.de,fasd @ gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_38,Name:,Full Name,full_name,full_name,Rita Wite,Rita Wite,FILLED,local,True
+XFUND-DE,train,de_train_38,E-Mail:,Email,email,email,15729843781@gmail.de,15729843781@gmail.de,FILLED,local,True
+XFUND-DE,train,de_train_39,Name:,Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,train,de_train_39,Tel. Privat:,Phone Number,phone,phone,15783748923,15783748923,FILLED,local,True
+XFUND-DE,train,de_train_39,E-Mail:,Email,email,email,dsasdfsa@gmail.de,dsasdfsa@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_0,Telefon,Phone Number,phone,phone,17542341232,17542341232,FILLED,local,True
+XFUND-DE,val,de_val_0,E-Mail,Email,email,email,fasd@gmail.de,fasd@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_1,Name:,Full Name,full_name,full_name,Thomas Sonntag,Thomas Sonntag,FILLED,local,True
+XFUND-DE,val,de_val_1,E-Mail:,Email,email,email,15145099033@ gmail.com,15145099033@ gmail.com,FILLED,local,True
+XFUND-DE,val,de_val_1,Telefon:,Phone Number,phone,phone,15145099033,15145099033,FILLED,local,True
+XFUND-DE,val,de_val_2,"Name, Vorname:",Full Name,full_name,full_name,Anna Klopp,Anna Klopp,FILLED,local,True
+XFUND-DE,val,de_val_2,Studentische E-Mail-Adresse:,Email,email,email,247983714@ gmail.de,247983714@ gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_6,Name:,Full Name,full_name,full_name,Rudolf Helbling,Rudolf Helbling,FILLED,local,True
+XFUND-DE,val,de_val_6,Telefon:,Phone Number,phone,phone,15698982345,15698982345,FILLED,local,True
+XFUND-DE,val,de_val_7,"Name, Vorname",Full Name,full_name,full_name,Bern Schmitt,Bern Schmitt,FILLED,local,True
+XFUND-DE,val,de_val_7,Telefon,Phone Number,phone,phone,1537483294,1537483294,FILLED,local,True
+XFUND-DE,val,de_val_8,Alternative E-Mail:,Email,email,email,gdaasa@gmail.de,gdaasa@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_9,Postleitzahl Ort/Zustellbezirk,Phone Number,phone,phone,"Alzey,",UNKNOWN,UNKNOWN,local,False
+XFUND-DE,val,de_val_9,E-Mail,Email,email,email,vjsfasl@gmail.de,vjsfasl@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_10,"Name, Vorname; ggf. Geburtsname:",Full Name,full_name,full_name,Emma Stone,Emma Stone,FILLED,local,True
+XFUND-DE,val,de_val_10,E-Mail-Kontaktadresse:,Email,email,email,dsafd@gmail.de,dsafd@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_11,"Vorname, Name",Full Name,full_name,full_name,Ute Schwitz,Ute Schwitz,FILLED,local,True
+XFUND-DE,val,de_val_11,Handy / Telefon,Phone Number,phone,phone,15489213121,15489213121,FILLED,local,True
+XFUND-DE,val,de_val_11,Derzeitige Position,Job Title,job_title,job_title,Service-Elektriker,Service-Elektriker,FILLED,local,True
+XFUND-DE,val,de_val_11,Bitte senden Sie das ausgefüllte Formular an bewerbung@ulmatec.de oder postalisch an:,ZIP Code,zip_code,zip_code,ULMATEC Gmbh,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,val,de_val_12,Expiration Date:,Date,date,full_name,09/30/2020,Max Weber,FILLED,local,False
+XFUND-DE,val,de_val_12,Business Legal Name,Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,val,de_val_12,Business Address,Current Address,address,address,"66981 Münchweiler, Industriestraße 12","66981 Münchweiler, Industriestraße 12",FILLED,local,True
+XFUND-DE,val,de_val_12,Business Phone,Phone Number,phone,phone,( ),( ),FILLED,local,False
+XFUND-DE,val,de_val_13,"Vorname, Name:",Full Name,full_name,full_name,Helen Schmitz,Helen Schmitz,FILLED,local,True
+XFUND-DE,val,de_val_13,Telefon:,Phone Number,phone,phone,15289203232,15289203232,FILLED,local,True
+XFUND-DE,val,de_val_13,E-Mail:,Email,email,email,15289203232@gmail.com,15289203232@gmail.com,FILLED,local,True
+XFUND-DE,val,de_val_14,IBAN (In Deutschland immer 22 Stellen),Phone Number,phone,phone,D E 0 0 0 0 0 0 9 1 2 8 3 0 1 9 2 8 0 0 0 0,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,val,de_val_16,Name,Full Name,full_name,full_name,Lucy,Lucy,FILLED,local,True
+XFUND-DE,val,de_val_16,Tel.,Phone Number,phone,phone,15798931874,15798931874,FILLED,local,True
+XFUND-DE,val,de_val_16,E-Mail,Email,email,email,najf@gmail.de,najf@gmail.de,FILLED,local,True
+XFUND-DE,val,de_val_17,"Name, Vorname (oder Firmenname)",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True
+XFUND-DE,val,de_val_18,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,Phone Number,phone,phone,□BRN Busverkehr Rhein-Neckar GmbH,UNKNOWN,UNKNOWN,local,False
+XFUND-DE,val,de_val_18,IBAN (International Bank Account Number),Bank Name,bank_name,full_name,7379187941747019491824,MariaSchroeder,FILLED,local,False
+XFUND-DE,val,de_val_18,Name/Sitz des Kreditinstituts,Full Name,full_name,full_name,MariaSchroeder,MariaSchroeder,FILLED,local,True
+XFUND-DE,val,de_val_19,"Name, Vorname",Full Name,full_name,full_name,Max Weber,Max Weber,FILLED,local,True

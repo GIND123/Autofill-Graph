@@ -1,0 +1,181 @@
+dataset,split,doc_id,question,predicted_prop,predicted_value,status,ok
+XFUND-DE,train,de_train_0,"Beruf, Erwerbstätigkeit",employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_0,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_0,Familienstand,last_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_1,Empfänger:,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_1,Antrag zum Kauf und Gebrauch von Kleinfeuerwerk der Klasse II,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_1,Antrag zum Kauf und Gebrauch von Kleinfeuerwerk der Klasse II,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_2,Vorname Karteninhaber/in,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_2,Nachname Karteninhaber/in,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_2,StraBe,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_3,Anschrift,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_3,Mobil,phone,17830921231,FILLED,False
+XFUND-DE,train,de_train_3,Mail,email,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_4,von/bis:,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_4,von/bis:,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_4,von/bis:,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_5,Schuss /Fanghand,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_5,Schuss /Fanghand,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_5,Liga,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_6,Bewerbung für das Unternehmen,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_6,Bewerbung für das Unternehmen,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_6,Bewerbung für das Unternehmen,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_7,"Es wird beantragt, den nachfolgenden Entwurf als Beschluss auf [X] Pfändung und",research_statement,[x] Zusammenrechnung mehrerer Arbeitseinkom-,FILLED,False
+XFUND-DE,train,de_train_7,"Es wird beantragt, den nachfolgenden Entwurf als Beschluss auf [X] Pfändung und",research_statement,[x] Zusammenrechnung mehrerer Arbeitseinkom-,FILLED,False
+XFUND-DE,train,de_train_7,"Es wird beantragt, den nachfolgenden Entwurf als Beschluss auf [X] Pfändung und",research_statement,[x] Zusammenrechnung mehrerer Arbeitseinkom-,FILLED,False
+XFUND-DE,train,de_train_8,von,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_8,bis,visa_status,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_8,PERSÖNLICHE ANGABEN,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_9,Haftpflichtversicherung am Arbeitsplatz,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_9,Unfallversicherung am Arbeitsplatz,insurance_id,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_9,Krankenversicherung,insurance_id,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_10,Vorname Schüler/in,full_name,Emma Schwarz,FILLED,False
+XFUND-DE,train,de_train_10,"Postanschrift (PLZ, Ort, Ortsteil)",address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_10,"Postanschrift (Straße, Hausnummer)",address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_11,Euro,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_11,Euro,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_11,Euro,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_12,Parteienverkehr:,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_12,Zufahrt:,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_12,EINGANGSVERMERK,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_13,folgendes Mietobjekt,city,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_13,"Strasse, Nr.",,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_13,PLZ / Ort,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_14,Übertrag Familien-/ Hauptname,full_name,Pia Ochmann,FILLED,False
+XFUND-DE,train,de_train_14,Übertrag Vorname,full_name,Pia Ochmann,FILLED,False
+XFUND-DE,train,de_train_14,Land,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_15,1. Familienname,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_15,2. Vorname,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_15,3. Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_16,Was:,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_16,"Haben Sie bereits einen Freiwilligendienst absolviert (z.B. FSJ, FÖJ, BFD, EVS)?",years_experience,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_16,welchen Freiwilligendienst:,skills,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_17,Dienstgrad (falls vorhanden),degree,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_17,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_17,Staatsangehörigkeit,citizenship,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_18,2) Bestehende Heizanlage,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_18,2) Bestehende Heizanlage,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_18,2) Bestehende Heizanlage,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_19,Grundlagen,department,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_19,Grundlagen,department,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_19,Der Kanton richtet unter folgenden Bedingungen Förderbeiträge für den Ersatz von Elektroboilern aus:,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_20,1. Was ist eine direkte Anerkennung des Diploms und wer kann sie beantragen?,degree,Detuschland,FILLED,False
+XFUND-DE,train,de_train_20,1. Was ist eine direkte Anerkennung des Diploms und wer kann sie beantragen?,degree,Detuschland,FILLED,False
+XFUND-DE,train,de_train_20,1. Was ist eine direkte Anerkennung des Diploms und wer kann sie beantragen?,degree,Detuschland,FILLED,False
+XFUND-DE,train,de_train_21,Versicherungsnummer:,insurance_id,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_21,Datum:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_21,Eingereichte Rechnung von:,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_22,Fax:,email,schulbuero@august-sander-schule.de,FILLED,False
+XFUND-DE,train,de_train_22,Vorname:,full_name,Thomas Schoeder,FILLED,False
+XFUND-DE,train,de_train_22,Geburtsdatum:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_23,Privatadresse,email,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_23,Mail-Adresse,email,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_23,Adresse,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_24,4. Beruf deiner Eltern:,job_title,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_24,5. Wie viele Geschwister hast du?,last_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_24,6. Wie alt sind diese?,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_25,ggf. akademischer Grad,degree,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_25,"Straße, Hausnummer",address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_25,"PLZ, Ort",country,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_26,Strasse,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_26,PLZ/ Ort,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_26,Schnupperwoche:,years_experience,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_27,Vorname,full_name,Liane Fox,FILLED,False
+XFUND-DE,train,de_train_27,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_27,Straße,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_28,I have already received previous assistance from PROMOS :,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_28,I have already received previous assistance from PROMOS :,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_28,"If yes, when? (Year, Activity)",years_experience,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_29,Vertreter,advisor,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_29,Adresse,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_29,Anzahl Mitarbeiter,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_30,Vor- und Nachname:,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_30,Postadresse:,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_30,Bitte ankreuzen:,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_31,Bisherige Erasmus-Förderung für ein Auslandspraktikum und/oder ein Auslandstudium,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_31,Bisherige Erasmus-Förderung für ein Auslandspraktikum und/oder ein Auslandstudium,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_31,Bisherige Erasmus-Förderung für ein Auslandspraktikum und/oder ein Auslandstudium,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_32,VORNAME,full_name,Jonas Schritt,FILLED,False
+XFUND-DE,train,de_train_32,GEBURTSDATUM (TT.MM.JJJJ),bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_32,GEBURTSORT,bio,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_33,Familienname,full_name,Pia Schwarz,FILLED,False
+XFUND-DE,train,de_train_33,Vorname,full_name,Pia Schwarz,FILLED,False
+XFUND-DE,train,de_train_33,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_34,Gebühr gemäß GKG KV Nr. 2111,gpa,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_34,Gegenstandswert:,research_statement,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_34,"VV Nr. 3309, ggf. i. V.m. Nr. 1008",,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_35,Vorname,full_name,Max Weber,FILLED,False
+XFUND-DE,train,de_train_35,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_35,Nationalität,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_36,Studienbeginn | Starting,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_36,Studienbeginn | Starting,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_36,Studienbeginn | Starting,university,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_37,Julius-Kobner-9traße 4.,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_37,44.64.4 Wustermark,,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_37,Bewerbungsformular,visa_status,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_38,Geschlecht:,blood_type,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_38,Geschlecht:,blood_type,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_38,Straße/Nr .:,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_39,Bewerbungsformular Tram-Wagenführer/in,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_39,Bewerbungsformular Tram-Wagenführer/in,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,train,de_train_39,Bewerbungsformular Tram-Wagenführer/in,employer,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_0,Bewerbungsfrist:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_0,Bewerbungsfrist:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_0,Vor- und Nachname,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_1,Beginn:,first_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_1,Vorname:,full_name,Thomas Sonntag,FILLED,False
+XFUND-DE,val,de_val_1,Geschlecht:,blood_type,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_2,BITTE IN DRUCKBUCHSTABEN AUSFÜLLEN. ZUTREFFENDES BITTE ANKREUZEN.,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_2,BITTE IN DRUCKBUCHSTABEN AUSFÜLLEN. ZUTREFFENDES BITTE ANKREUZEN.,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_2,Geburtsdatum:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_3,Der Anmeldung bitte beilegen:,visa_status,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_3,Der Anmeldung bitte beilegen:,visa_status,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_3,Der Anmeldung bitte beilegen:,visa_status,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_4,Unterschrift,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_4,Unterschrift,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_4,"Bitte beachten Sie hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten unser Merkblatt A 9106, Datenschutz bei Schutzrechtsanmeldungen“. Dieses finden Sie unter www.dpma.de:",id_scan,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_5,Folgende Unterlagen liegen dieser Bewerbung bei:,research_interests,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_5,Folgende Unterlagen liegen dieser Bewerbung bei:,research_interests,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_5,Folgende Unterlagen liegen dieser Bewerbung bei:,research_interests,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_6,Vorname:,full_name,Rudolf Helbling,FILLED,False
+XFUND-DE,val,de_val_6,Geburtsdatum:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_6,Straße:,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_7,Privatadresse,email,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_7,Mail-Adresse,email,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_7,Anzahl der erwünschten Kalenderexemplare (max. 3),,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_8,Anrede:,citizenship,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_8,Nachname:,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_8,Vorname:,full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_9,Wintersemester,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_9,Sommersemester,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_9,an der,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_10,Aktenzeichen:,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_10,"Straße, Hausnummer:",address,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_10,Nationalität/-en:,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_11,Geburtstag,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_11,Anschrift,signature,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_11,Verfügbar ab,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_12,OMB Control No .:,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_12,Check One:,id_scan,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_12,Check One:,id_scan,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_13,Adresse:,address,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_13,"PLZ, Ort:",,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_13,Geburtsdatum:,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_14,"Kontoinhaber (Nachname, Vorname/Firma/Sonstige)",full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_14,"Kontoinhaber (Nachname, Vorname/Firma/Sonstige)",full_name,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_14,Straße und Hausnummer (falls abweichend vom Zahlungsempfänger),address,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_15,An manchen Partnerhochschulen (gilt nicht im Rahmen des Erasmus+ Programms) fallen Studiengebühren an. Sind Sie bereit diese ggf. zu entrichten?,degree,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_15,An manchen Partnerhochschulen (gilt nicht im Rahmen des Erasmus+ Programms) fallen Studiengebühren an. Sind Sie bereit diese ggf. zu entrichten?,degree,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_15,Fremdsprache:,country,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_16,Vorname,full_name,Lucy,FILLED,False
+XFUND-DE,val,de_val_16,Strasse,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_16,Nummer,phone,15798931874,FILLED,False
+XFUND-DE,val,de_val_17,"PLZ, Ort",country,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_17,"Straße, Hausnummer",address,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_17,"Ich bitte, mir eine einfache Melderegisterauskunft gemäß $ 44 Bundesmeldegesetz zu erteilen. Die Daten werden für",id_scan,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_18,Vorname Kontoinhaber/in,full_name,MariaSchroeder,FILLED,False
+XFUND-DE,val,de_val_18,Nachname Kontoinhaber/in,full_name,MariaSchroeder,FILLED,False
+XFUND-DE,val,de_val_18,Geburtsdatum,graduation_date,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_19,Ziff.,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_19,Ziff.,,UNKNOWN,UNKNOWN,True
+XFUND-DE,val,de_val_19,Ziff.,,UNKNOWN,UNKNOWN,True

@@ -1,0 +1,784 @@
+dataset,split,doc_id,question,expected_prop,predicted_prop,phase,score,ok
+FUNSD,train,0000971160,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0000971160,Name / Phone Ext. :,full_name,phone,substring,0.294,False
+FUNSD,train,0000971160,Supervisor / Manager,advisor,advisor,substring,0.5,True
+FUNSD,train,0000989556,Company:,employer,employer,exact,1.0,True
+FUNSD,train,0000989556,Country:,country,country,exact,1.0,True
+FUNSD,train,0000989556,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0000989556,Total Pressure Drop (unencap.),amount,,unknown,0.157,False
+FUNSD,train,0000989556,Total Pressure Drop (encap.),amount,,unknown,0.163,False
+FUNSD,train,0000989556,Print Position (from filter end),job_title,job_title,substring,0.267,True
+FUNSD,train,0000989556,Total Cigt. Wt.,amount,gpa,embedding,0.332,False
+FUNSD,train,0000989556,Print Description,description,profile_photo,embedding,0.35,False
+FUNSD,train,0000990274,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0000990274,COUNTRY:,country,country,exact,1.0,True
+FUNSD,train,0000990274,TARGET DATE:,date,graduation_date,embedding,0.455,False
+FUNSD,train,0000999294,Total (205),amount,,unknown,0.291,False
+FUNSD,train,0000999294,No Preference,reference,,unknown,0.248,False
+FUNSD,train,0000999294,No Preference,reference,,unknown,0.248,False
+FUNSD,train,0000999294,No Preference,reference,,unknown,0.248,False
+FUNSD,train,0000999294,No Preference,reference,,unknown,0.248,False
+FUNSD,train,0000999294,Total (205),amount,,unknown,0.291,False
+FUNSD,train,0000999294,Total (205),amount,,unknown,0.291,False
+FUNSD,train,0000999294,Total (205),amount,,unknown,0.291,False
+FUNSD,train,0000999294,FIELD DATE:,date,graduation_date,embedding,0.476,False
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001118259,Standard Grade Mark,gpa,gpa,embedding,0.613,True
+FUNSD,train,0001123541,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0001123541,DEPARTMENT:,department,department,exact,1.0,True
+FUNSD,train,0001123541,Date Rec'd,date,graduation_date,embedding,0.443,False
+FUNSD,train,0001129658,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0001129658,COMPANY,employer,employer,exact,1.0,True
+FUNSD,train,0001129658,PHONE No.,phone,phone,substring,0.556,True
+FUNSD,train,0001209043,Total Sample,amount,,unknown,0.278,False
+FUNSD,train,0001209043,Date Sent,date,graduation_date,embedding,0.352,False
+FUNSD,train,0001209043,Field Date,date,graduation_date,embedding,0.466,False
+FUNSD,train,0001209043,Sample Description,description,research_statement,embedding,0.323,False
+FUNSD,train,0001239897,REFERENCE,reference,,unknown,0.242,False
+FUNSD,train,0001239897,REFERENCE,reference,,unknown,0.242,False
+FUNSD,train,0001239897,REFERENCE,reference,,unknown,0.242,False
+FUNSD,train,0001438955,Total Sample,amount,,unknown,0.278,False
+FUNSD,train,0001438955,Newspaper (Date),date,graduation_date,embedding,0.36,False
+FUNSD,train,0001438955,Newspaper (Date),date,graduation_date,embedding,0.36,False
+FUNSD,train,0001438955,Newspaper (Date),date,graduation_date,embedding,0.36,False
+FUNSD,train,0001438955,Newspaper (Date),date,graduation_date,embedding,0.36,False
+FUNSD,train,0001456787,Total Pressure Drop (unencap.),amount,,unknown,0.157,False
+FUNSD,train,0001456787,Total Cigarette Weight,amount,,unknown,0.187,False
+FUNSD,train,0001456787,Print Description,description,profile_photo,embedding,0.35,False
+FUNSD,train,0001456787,Print Position (from filter end),job_title,job_title,substring,0.267,True
+FUNSD,train,0001463282,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0001463282,Original Budgeted Amount,amount,annual_income,embedding,0.355,False
+FUNSD,train,0001463282,Date,date,full_name,substring,0.286,False
+FUNSD,train,0001463282,Date,date,full_name,substring,0.286,False
+FUNSD,train,0001463282,Date,date,full_name,substring,0.286,False
+FUNSD,train,0001463282,Total Area Budget:,amount,annual_income,embedding,0.334,False
+FUNSD,train,0001463282,This Amount,amount,,unknown,0.224,False
+FUNSD,train,0001463282,Commited to Date: (Current Year),date,graduation_date,embedding,0.5,False
+FUNSD,train,0001463282,Account Name,full_name,full_name,substring,0.333,True
+FUNSD,train,0001463282,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0001463282,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0001463282,Internal Init. Date,date,graduation_date,embedding,0.361,False
+FUNSD,train,0001463282,Ext. Auth. Date Wave (s),date,,unknown,0.301,False
+FUNSD,train,0001476912,CITY,city,city,exact,1.0,True
+FUNSD,train,0001476912,CITY,city,city,exact,1.0,True
+FUNSD,train,0001476912,CITY,city,city,exact,1.0,True
+FUNSD,train,0001476912,CITY,city,city,exact,1.0,True
+FUNSD,train,0001477983,Amount earned but not received:,amount,,unknown,0.306,False
+FUNSD,train,0001477983,Organization/ Employer Name:,full_name,employer,substring,0.444,False
+FUNSD,train,0001477983,Lobbyist Name:,full_name,full_name,substring,0.308,True
+FUNSD,train,0001485288,"Quantity, Cartons of 200 each",quantity,,unknown,0.123,False
+FUNSD,train,0001485288,Date of Request,date,graduation_date,embedding,0.36,False
+FUNSD,train,0001485288,Cigarette Description,description,,unknown,0.306,False
+FUNSD,train,0001485288,Completion Date,graduation_date,graduation_date,exact,1.0,True
+FUNSD,train,00040534,DATE RECEIVED,date,graduation_date,embedding,0.456,False
+FUNSD,train,00040534,REFERENCE FOR CALCULATION,reference,,unknown,0.27,False
+FUNSD,train,00040534,REFERENCE FOR CALCULATION,reference,,unknown,0.27,False
+FUNSD,train,00070353,Date,date,full_name,substring,0.286,False
+FUNSD,train,00093726,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0011505151,DESCRIPTION:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0011505151,Ext. Autho. Date,date,graduation_date,embedding,0.38,False
+FUNSD,train,0011838621,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0011838621,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0011838621,Adjusted Total Cost of Project:,amount,,unknown,0.232,False
+FUNSD,train,0011838621,Committed to Date: (Current Year),date,graduation_date,embedding,0.543,False
+FUNSD,train,0011838621,Date,date,full_name,substring,0.286,False
+FUNSD,train,0011838621,Account Name,full_name,full_name,substring,0.333,True
+FUNSD,train,0011838621,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0011838621,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0011838621,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0011838621,Adjusted Total Cost of Project:,amount,,unknown,0.232,False
+FUNSD,train,0011838621,Total Area Budget:,amount,annual_income,embedding,0.334,False
+FUNSD,train,0011845203,DATE REQUESTED:,date,graduation_date,embedding,0.343,False
+FUNSD,train,0011856542,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0011856542,PROJECT NAME,full_name,full_name,substring,0.333,True
+FUNSD,train,0011859695,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0011859695,Address:,address,address,exact,1.0,True
+FUNSD,train,0011899960,Department,department,department,exact,1.0,True
+FUNSD,train,0011899960,Date,date,full_name,substring,0.286,False
+FUNSD,train,0011906503,TOTAL,amount,,unknown,0.226,False
+FUNSD,train,0011906503,PROJECT DESCRIPTION,description,,unknown,0.307,False
+FUNSD,train,0011973451,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0011973451,Major Competitive Brands:,degree,degree,substring,0.208,True
+FUNSD,train,0011973451,Qty In Units,quantity,,unknown,0.18,False
+FUNSD,train,0011973451,BRAND/PROJECT NAME:,full_name,full_name,substring,0.222,True
+FUNSD,train,0011973451,Qty In Units,quantity,,unknown,0.18,False
+FUNSD,train,0011974919,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0011974919,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0011974919,Circulation Quantity:,quantity,,unknown,0.228,False
+FUNSD,train,0011974919,PPS Program #,degree,degree,substring,0.636,True
+FUNSD,train,0011974919,Distribution Drop Date:,date,graduation_date,embedding,0.371,False
+FUNSD,train,0011976929,City/ Town:,city,city,substring,0.4,True
+FUNSD,train,0011976929,State:,state,state,exact,1.0,True
+FUNSD,train,0011976929,Name of Event:,full_name,full_name,substring,0.308,True
+FUNSD,train,0011976929,Contact (Name/ Telephone):,full_name,phone,substring,0.391,False
+FUNSD,train,0012178355,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0012178355,Date,date,full_name,substring,0.286,False
+FUNSD,train,0012178355,REQUESTED IMPLEMENTATION DATE,date,graduation_date,embedding,0.411,False
+FUNSD,train,0012199830,Customer,full_name,first_name,embedding,0.339,False
+FUNSD,train,0012199830,Total Solids,amount,,unknown,0.239,False
+FUNSD,train,0012199830,Total Solids,amount,,unknown,0.239,False
+FUNSD,train,0012199830,Total Solids,amount,,unknown,0.239,False
+FUNSD,train,0012199830,Total Solids,amount,,unknown,0.239,False
+FUNSD,train,0012199830,Total V. O. C. s,amount,,unknown,0.269,False
+FUNSD,train,0012529284,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0012529284,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0012529284,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0012529284,Date,date,full_name,substring,0.286,False
+FUNSD,train,0012529284,Date,date,full_name,substring,0.286,False
+FUNSD,train,0012529284,Adjusted Total Cost of Project:,amount,,unknown,0.232,False
+FUNSD,train,0012529284,This Amount,amount,,unknown,0.224,False
+FUNSD,train,0012529284,Committed To Date:,date,graduation_date,embedding,0.484,False
+FUNSD,train,0012529295,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0012529295,Date,date,full_name,substring,0.286,False
+FUNSD,train,0012529295,Date,date,full_name,substring,0.286,False
+FUNSD,train,0012529295,Account Name,full_name,full_name,substring,0.333,True
+FUNSD,train,0012529295,Description: CAPRI Expansion:,description,,unknown,0.147,False
+FUNSD,train,0012529295,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0012529295,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,0012529295,Initiation Date,date,graduation_date,embedding,0.457,False
+FUNSD,train,0012529295,Total Area Budget:,amount,annual_income,embedding,0.334,False
+FUNSD,train,0012529295,Committed to Date: (Current Year),date,graduation_date,embedding,0.543,False
+FUNSD,train,0012602424,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0012602424,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0012602424,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0012602424,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0012602424,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0012602424,PROJECT NAME:,full_name,full_name,substring,0.333,True
+FUNSD,train,0012602424,AMOUNT OF CHANGE INCREASE ): (CIRCLE ONE),amount,,unknown,0.157,False
+FUNSD,train,0012602424,ADJUSTED TOTAL COST OF PROJECT:,amount,,unknown,0.232,False
+FUNSD,train,0012602424,TOTAL AREA BUDGET:,amount,annual_income,embedding,0.334,False
+FUNSD,train,0012602424,THIS AMOUNT,amount,,unknown,0.224,False
+FUNSD,train,0012602424,ACCOUNT NAME,full_name,full_name,substring,0.333,True
+FUNSD,train,0012947358,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0012947358,Date and Hour of Service,date,,unknown,0.299,False
+FUNSD,train,00283813,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0030041455,Section Sales Manager's Name,full_name,full_name,substring,0.143,True
+FUNSD,train,0060000813,Date Received,date,graduation_date,embedding,0.456,False
+FUNSD,train,0060007216,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060007216,PROJECT NAME,full_name,full_name,substring,0.333,True
+FUNSD,train,0060024314,DESCRIPTION:,description,profile_photo,embedding,0.353,False
+FUNSD,train,0060024314,PRODUCT (CHEMICAL) NAME:,full_name,full_name,substring,0.19,True
+FUNSD,train,0060029036,Company,employer,employer,exact,1.0,True
+FUNSD,train,0060029036,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060029036,SIGNATURE,signature,signature,exact,1.0,True
+FUNSD,train,0060029036,NAME,full_name,full_name,exact,1.0,True
+FUNSD,train,0060029036,NAME,full_name,full_name,exact,1.0,True
+FUNSD,train,0060029036,Date Routed:,date,graduation_date,embedding,0.359,False
+FUNSD,train,0060029036,Total Contract Cost,amount,,unknown,0.112,False
+FUNSD,train,0060029036,Brief Description,description,,unknown,0.319,False
+FUNSD,train,0060068489,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060068489,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060068489,TOTAL,amount,,unknown,0.226,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060077689,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060077689,DATE OF REQUISITION,date,graduation_date,embedding,0.477,False
+FUNSD,train,0060077689,DEPARTMENT CHARGED,department,department,substring,0.556,True
+FUNSD,train,0060080406,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060094595,-Went out immediately,phone,,unknown,0.22,False
+FUNSD,train,0060094595,-Went out immediately,phone,,unknown,0.22,False
+FUNSD,train,0060094595,-Went out immediately,phone,,unknown,0.22,False
+FUNSD,train,0060136394,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060136394,TOTAL:,amount,,unknown,0.22,False
+FUNSD,train,0060136394,PROGRAM,degree,degree,exact,1.0,True
+FUNSD,train,0060136394,REVISED CONTRACT TOTALS.,amount,,unknown,0.301,False
+FUNSD,train,0060136394,REVISED CONTRACT TOTALS.,amount,,unknown,0.301,False
+FUNSD,train,0060165115,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0060165115,ADDRESS:,address,address,exact,1.0,True
+FUNSD,train,0060165115,ADDRESS:,address,address,exact,1.0,True
+FUNSD,train,0060165115,Telephone,phone,phone,exact,1.0,True
+FUNSD,train,0060165115,Telefax,phone,phone,embedding,0.335,True
+FUNSD,train,0060165115,TELEFAX MESSAGE No.:,phone,,unknown,0.319,False
+FUNSD,train,0060173256,Description,description,profile_photo,embedding,0.321,False
+FUNSD,train,0060173256,Amount,amount,,unknown,0.296,False
+FUNSD,train,0060173256,Offer Description,description,,unknown,0.287,False
+FUNSD,train,0060173256,Date,date,full_name,substring,0.286,False
+FUNSD,train,0060207528,TOTAL,amount,,unknown,0.226,False
+FUNSD,train,0060207528,DATE,date,full_name,substring,0.286,False
+FUNSD,train,0060207528,BRAND NAME:,full_name,full_name,substring,0.4,True
+FUNSD,train,0060207528,DATE POSTERS RECEIVED FROM LITHOGRAPHER:,date,graduation_date,embedding,0.324,False
+FUNSD,train,0060207528,SCHEDULED POSTING DATE:,date,graduation_date,embedding,0.332,False
+FUNSD,train,0060207528,DATE POSTING COMPLETED:,date,graduation_date,embedding,0.491,False
+FUNSD,train,0060214859,Date,date,full_name,substring,0.286,False
+FUNSD,train,0060214859,Telephone#,phone,phone,exact,1.0,True
+FUNSD,train,0060214859,Quantity Received,quantity,phone,embedding,0.327,False
+FUNSD,train,0060214859,Date Received,date,graduation_date,embedding,0.456,False
+FUNSD,train,0060255888,Date:,date,full_name,substring,0.286,False
+FUNSD,train,0060255888,Address:,address,address,exact,1.0,True
+FUNSD,train,0060255888,Phone Booth :,phone,phone,substring,0.455,True
+FUNSD,train,0060255888,Phone Booth :,phone,phone,substring,0.455,True
+FUNSD,train,0060255888,Phone Booth :,phone,phone,substring,0.455,True
+FUNSD,train,0060262650,Telephone:,phone,phone,exact,1.0,True
+FUNSD,train,0060262650,TELEPHONE,phone,phone,exact,1.0,True
+FUNSD,train,0060262650,Position,job_title,job_title,exact,1.0,True
+FUNSD,train,0060262650,Position,job_title,job_title,exact,1.0,True
+FUNSD,train,0060262650,Position,job_title,job_title,exact,1.0,True
+FUNSD,train,0060262650,Position,job_title,job_title,exact,1.0,True
+FUNSD,train,0060262650,"CITY STATE,",city,state,substring,0.5,False
+FUNSD,train,0060270727,BRAND FAMILY NAME:,full_name,last_name,substring,0.647,False
+FUNSD,train,0060270727,TOTAL REPORTABLE EXPENDITURES FOR VARIETYI:,amount,annual_income,embedding,0.411,False
+FUNSD,train,0060270727,VARIETY DESCRIPTION:,description,,unknown,0.278,False
+FUNSD,train,0060270727,FIRST SALES DATE:,date,graduation_date,embedding,0.398,False
+FUNSD,train,0060302201,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,0060302201,"IF SO, GIVE DATE AND TITLE:",date,,unknown,0.227,False
+FUNSD,train,0060308251,Date,date,full_name,substring,0.286,False
+FUNSD,train,0060308461,(26) TOTAL REPORTABLE EXPENDITURES FOR VARIETY:,amount,annual_income,embedding,0.398,False
+FUNSD,train,0060308461,(2) BRAND FAMILY NAME:,full_name,last_name,substring,0.579,False
+FUNSD,train,0060308461,(3) VARIETY DESCRIPTION,description,,unknown,0.212,False
+FUNSD,train,0071032790,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,0071032790,PROJECT NAME:,full_name,full_name,substring,0.333,True
+FUNSD,train,0071032807,Date,date,full_name,substring,0.286,False
+FUNSD,train,0071032807,Project Name,full_name,full_name,substring,0.333,True
+FUNSD,train,00836244,DATE RECEIVED,date,graduation_date,embedding,0.456,False
+FUNSD,train,00836816,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00836816,PHYSICAL STATE,state,state,substring,0.357,True
+FUNSD,train,00837285,SIGNATURE,signature,signature,exact,1.0,True
+FUNSD,train,00837285,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00837285,AMOUNT,amount,,unknown,0.296,False
+FUNSD,train,00838511_00838525,NAME,full_name,full_name,exact,1.0,True
+FUNSD,train,00838511_00838525,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00838511_00838525,COMPOUND NAME,full_name,full_name,substring,0.308,True
+FUNSD,train,00851772_1780,NAME,full_name,full_name,exact,1.0,True
+FUNSD,train,00851772_1780,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00851879,Date,date,full_name,substring,0.286,False
+FUNSD,train,00860012_00860014,DATE ISSUED,date,graduation_date,embedding,0.535,False
+FUNSD,train,00860012_00860014,RECEIPT DATE (s),date,graduation_date,embedding,0.479,False
+FUNSD,train,00860012_00860014,PERFORMING DEPARTMENTS,department,department,substring,0.455,True
+FUNSD,train,00865872,Reference:,reference,,unknown,0.243,False
+FUNSD,train,00865872,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00865872,PHYSICAL STATE,state,state,substring,0.357,True
+FUNSD,train,00866042,SIGNATURE:,signature,signature,exact,1.0,True
+FUNSD,train,00866042,RECEIPT DATE(s),date,graduation_date,embedding,0.479,False
+FUNSD,train,00866042,FOLLOW DEPARTMENT AND COMPANY SAFETY MANUALS,department,department,substring,0.227,True
+FUNSD,train,00866042,DATE ISSUED,date,graduation_date,embedding,0.535,False
+FUNSD,train,00920222,DATE,date,full_name,substring,0.286,False
+FUNSD,train,00920222,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,00920222,FOR PURCHASING DEPARTMENT USE ONLY,department,department,substring,0.294,True
+FUNSD,train,00920222,DATE WANTED,date,graduation_date,embedding,0.431,False
+FUNSD,train,00920294,Date:,date,full_name,substring,0.286,False
+FUNSD,train,00920294,Mailfile Description,description,work_email,embedding,0.384,False
+FUNSD,train,00920294,Quantity:,quantity,,unknown,0.32,False
+FUNSD,train,00920294,Program#:,degree,degree,exact,1.0,True
+FUNSD,train,00920294,Program Group,degree,degree,substring,0.538,True
+FUNSD,train,00920294,Mailfile Cells,phone,phone,substring,0.286,True
+FUNSD,train,00920294,Mailfile Cells,phone,phone,substring,0.286,True
+FUNSD,train,00922237,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,00922237,DATE WANTED,date,graduation_date,embedding,0.431,False
+FUNSD,train,01073843,DATE RECEIVED,date,graduation_date,embedding,0.456,False
+FUNSD,train,01122115,DATE,date,full_name,substring,0.286,False
+FUNSD,train,01122115,Ref. Paper,reference,bio,embedding,0.326,False
+FUNSD,train,01122115,Total Denier as Marked,amount,,unknown,0.232,False
+FUNSD,train,01122115,Date Made,date,graduation_date,embedding,0.461,False
+FUNSD,train,01150773_01150774,Date:,date,full_name,substring,0.286,False
+FUNSD,train,01150773_01150774,TELEPHONE:,phone,phone,exact,1.0,True
+FUNSD,train,01150773_01150774,TELEFAX,phone,phone,embedding,0.335,True
+FUNSD,train,01150773_01150774,TELEX,phone,,unknown,0.276,False
+FUNSD,train,01150773_01150774,TELEPHONE:,phone,phone,exact,1.0,True
+FUNSD,train,01191071_1072,TEL NO.,phone,,unknown,0.307,False
+FUNSD,train,01191071_1072,Date:,date,full_name,substring,0.286,False
+FUNSD,train,01191071_1072,Company:,employer,employer,exact,1.0,True
+FUNSD,train,01197604,DESCRIPTION:,description,profile_photo,embedding,0.353,False
+FUNSD,train,01197604,DATE SHIPPED:,date,graduation_date,embedding,0.34,False
+FUNSD,train,01408099_01408101,DATE,date,full_name,substring,0.286,False
+FUNSD,train,01408099_01408101,PROJECT NAME,full_name,full_name,substring,0.333,True
+FUNSD,train,01408099_01408101,GENERAL PROJECT DESCRIPTION,description,portfolio,embedding,0.322,False
+FUNSD,train,01408099_01408101,GENERAL PROJECT DESCRIPTION,description,portfolio,embedding,0.322,False
+FUNSD,train,01408099_01408101,GENERAL PROJECT DESCRIPTION,description,portfolio,embedding,0.322,False
+FUNSD,train,01408099_01408101,GENERAL PROJECT DESCRIPTION,description,portfolio,embedding,0.322,False
+FUNSD,train,11508234,Date:,date,full_name,substring,0.286,False
+FUNSD,train,11508234,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,11508234,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,11508234,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,11508234,Total Area Authorized,amount,,unknown,0.238,False
+FUNSD,train,11508234,This amount: (From Next Year's Budget),amount,annual_income,embedding,0.429,False
+FUNSD,train,11508234,Committed to Date: (Current Year),date,graduation_date,embedding,0.543,False
+FUNSD,train,11508234,Date:,date,full_name,substring,0.286,False
+FUNSD,train,11508234,Date:,date,full_name,substring,0.286,False
+FUNSD,train,11508234,Internal Init Date,date,graduation_date,embedding,0.372,False
+FUNSD,train,11875011,DATE REQUESTED:,date,graduation_date,embedding,0.343,False
+FUNSD,train,12052385,DESCRIPTION:,description,profile_photo,embedding,0.353,False
+FUNSD,train,12603270,Date:,date,full_name,substring,0.286,False
+FUNSD,train,12603270,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,12603270,Total Area Budget:,amount,annual_income,embedding,0.334,False
+FUNSD,train,12603270,Committed To Date:,date,graduation_date,embedding,0.484,False
+FUNSD,train,12603270,This Amount,amount,,unknown,0.224,False
+FUNSD,train,12603270,Brand Name:,full_name,full_name,substring,0.4,True
+FUNSD,train,12603270,Adjusted Total Cost of Protect:,amount,,unknown,0.145,False
+FUNSD,train,12603270,Account Name,full_name,full_name,substring,0.333,True
+FUNSD,train,13149651,Date,date,full_name,substring,0.286,False
+FUNSD,train,660978,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,660978,DATE OF REPORT:,date,graduation_date,embedding,0.432,False
+FUNSD,train,71108371,Department:,department,department,exact,1.0,True
+FUNSD,train,71108371,Phone Number:,phone,phone,exact,1.0,True
+FUNSD,train,71108371,Date Required:,date,graduation_date,embedding,0.449,False
+FUNSD,train,71108371,Date Submitted:,date,graduation_date,embedding,0.421,False
+FUNSD,train,71108371,Description of Request:,description,phone,embedding,0.33,False
+FUNSD,train,71190280,Signature,signature,signature,exact,1.0,True
+FUNSD,train,71190280,Department,department,department,exact,1.0,True
+FUNSD,train,71190280,Date,date,full_name,substring,0.286,False
+FUNSD,train,71190280,DATE,date,full_name,substring,0.286,False
+FUNSD,train,71190280,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,71202511,Date:,date,full_name,substring,0.286,False
+FUNSD,train,71202511,Description:,description,profile_photo,embedding,0.353,False
+FUNSD,train,71202511,Total Cost,amount,,unknown,0.146,False
+FUNSD,train,71202511,Date:,date,full_name,substring,0.286,False
+FUNSD,train,71202511,Proiected External Authorization Date,date,,unknown,0.26,False
+FUNSD,train,71202511,Total Authorized Project Amount,amount,,unknown,0.313,False
+FUNSD,train,71206427,ITEM:,description,,unknown,0.312,False
+FUNSD,train,71206427,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,71341634,Address:,address,address,exact,1.0,True
+FUNSD,train,71341634,Quantity,quantity,,unknown,0.288,False
+FUNSD,train,71341634,Quantity,quantity,,unknown,0.288,False
+FUNSD,train,71341634,Units,quantity,,unknown,0.268,False
+FUNSD,train,71341634,Amount,amount,,unknown,0.296,False
+FUNSD,train,71341634,Amount,amount,,unknown,0.296,False
+FUNSD,train,71341634,Date,date,full_name,substring,0.286,False
+FUNSD,train,71341634,Date,date,full_name,substring,0.286,False
+FUNSD,train,71341634,Promotion Name,full_name,full_name,substring,0.286,True
+FUNSD,train,71341634,Promotion Name,full_name,full_name,substring,0.286,True
+FUNSD,train,71341634,Promotion Name,full_name,full_name,substring,0.286,True
+FUNSD,train,71366499,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,71366499,DATE,date,full_name,substring,0.286,False
+FUNSD,train,71563825,Date:,date,full_name,substring,0.286,False
+FUNSD,train,71563825,Project Name/ Description,full_name,full_name,substring,0.16,True
+FUNSD,train,71601299,Date,date,full_name,substring,0.286,False
+FUNSD,train,71601299,Project Name/ Description:,full_name,full_name,substring,0.16,True
+FUNSD,train,716552,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,train,716552,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,716552,DELIVERY DATE,date,graduation_date,embedding,0.442,False
+FUNSD,train,716552,SCHEDULE: DATE OR INVENTORY DEPLETION,date,,unknown,0.242,False
+FUNSD,train,716552,INVENTORY DEPLETION DATE,date,,unknown,0.305,False
+FUNSD,train,80707440_7443,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,80718412_8413,Date:,date,full_name,substring,0.286,False
+FUNSD,train,80718412_8413,NUMBER OF SUPERVISORS:,advisor,advisor,substring,0.476,True
+FUNSD,train,80728670,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,80728670,Hotel /Motel reservations needed,phone,,unknown,0.142,False
+FUNSD,train,80728670,Arrival date and time (include airline and flight no.),date,graduation_date,embedding,0.376,False
+FUNSD,train,80728670,Arrival date and time (include airline and flight no.),date,graduation_date,embedding,0.376,False
+FUNSD,train,81310636,Compound Name,full_name,full_name,substring,0.308,True
+FUNSD,train,81574683,Date:,date,full_name,substring,0.286,False
+FUNSD,train,81619486_9488,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,train,81619486_9488,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,train,81619486_9488,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,train,81619486_9488,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,train,81619486_9488,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,train,81619486_9488,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,train,81619486_9488,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81619511_9513,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81749056_9057,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,train,81749056_9057,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,,unknown,0.111,False
+FUNSD,train,81749056_9057,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,,unknown,0.111,False
+FUNSD,train,81749056_9057,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,,unknown,0.111,False
+FUNSD,train,81749056_9057,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,,unknown,0.111,False
+FUNSD,train,81749056_9057,TOTAL # OF NUMBER ONE CLUB OUTLETS WITH DISTRIBUTION,amount,,unknown,0.14,False
+FUNSD,train,81749056_9057,TOTAL # OF NUMBER ONE CLUB OUTLETS WITH DISTRIBUTION,amount,,unknown,0.14,False
+FUNSD,train,81749056_9057,TOTAL # OF NUMBER ONE CLUB OUTLETS WITH DISTRIBUTION,amount,,unknown,0.14,False
+FUNSD,train,81749056_9057,TOTAL # OF NUMBER ONE CLUB OUTLETS WITH DISTRIBUTION,amount,,unknown,0.14,False
+FUNSD,train,81749056_9057,TOTAL # OF INDEPENDENT SPECIAL EMPHASIS OUTLETS:,amount,,unknown,0.213,False
+FUNSD,train,81749056_9057,TOTAL # OF INDEPENDENT NEWPORT #1 CLUB OUTLETS:,amount,,unknown,0.121,False
+FUNSD,train,81749056_9057,AREA REGION:,state,state,substring,0.545,True
+FUNSD,train,82254638,DATE TO CORP:,date,employer,embedding,0.404,False
+FUNSD,train,82254638,QUANTITY REQUIRED,quantity,,unknown,0.287,False
+FUNSD,train,82254638,DATE FORWARDED TO PROMOTION SERVICES:,date,graduation_date,embedding,0.371,False
+FUNSD,train,82254638,CUSTOMER SHIPPING NUMBER,full_name,phone,embedding,0.349,False
+FUNSD,train,82254638,DIV. NAME/ NO:,full_name,full_name,substring,0.308,True
+FUNSD,train,82254638,NAME OF EVENT:,full_name,full_name,substring,0.308,True
+FUNSD,train,82254638,*DATE OF EVENT:,date,graduation_date,embedding,0.474,False
+FUNSD,train,87533049,Media Name,full_name,full_name,substring,0.4,True
+FUNSD,train,87533049,Coupon Issue Date,date,,unknown,0.3,False
+FUNSD,train,87533049,Coupon Expiration Date,date,,unknown,0.294,False
+FUNSD,train,87533049,Date Initiated,date,graduation_date,embedding,0.51,False
+FUNSD,train,87672097,DATE RECEIVED,date,graduation_date,embedding,0.456,False
+FUNSD,train,87672097,DATE RECEIVED,date,graduation_date,embedding,0.456,False
+FUNSD,train,87672097,REFERENCE FOR CALCULATION,reference,,unknown,0.27,False
+FUNSD,train,87672097,REFERENCE FOR CALCULATION,reference,,unknown,0.27,False
+FUNSD,train,88547278_88547279,Date:,date,full_name,substring,0.286,False
+FUNSD,train,88547278_88547279,Qty:,quantity,,unknown,0.291,False
+FUNSD,train,88547278_88547279,TEL:,phone,phone,substring,0.333,True
+FUNSD,train,88547278_88547279,Quantities and Description:,description,,unknown,0.224,False
+FUNSD,train,88547278_88547279,Authorized Signature:,signature,signature,substring,0.45,True
+FUNSD,train,89368010,DATE,date,full_name,substring,0.286,False
+FUNSD,train,89368010,Study Name,full_name,full_name,substring,0.4,True
+FUNSD,train,89368010,Initiation Date,date,graduation_date,embedding,0.457,False
+FUNSD,train,89368010,Date of Final Report (Review Completed Date),date,graduation_date,embedding,0.408,False
+FUNSD,train,89386032,Client Name,full_name,full_name,substring,0.364,True
+FUNSD,train,89867723,DATE,date,full_name,substring,0.286,False
+FUNSD,train,91104867,TOTAL YEAR,amount,annual_income,embedding,0.494,False
+FUNSD,train,91104867,TOTAL YEAR,amount,annual_income,embedding,0.494,False
+FUNSD,train,91104867,TOTAL YEAR,amount,annual_income,embedding,0.494,False
+FUNSD,train,91104867,TOTAL YEAR,amount,annual_income,embedding,0.494,False
+FUNSD,train,91104867,ITEM,description,,unknown,0.296,False
+FUNSD,train,91104867,ITEM,description,,unknown,0.296,False
+FUNSD,train,91104867,Department,department,department,exact,1.0,True
+FUNSD,train,91104867,TOTAL YEAR,amount,annual_income,embedding,0.494,False
+FUNSD,train,91161344_91161347,QUANTITY,quantity,,unknown,0.288,False
+FUNSD,train,91161344_91161347,QUANTITY,quantity,,unknown,0.288,False
+FUNSD,train,91161344_91161347,QUANTITY,quantity,,unknown,0.288,False
+FUNSD,train,91161344_91161347,Today's Date,date,graduation_date,embedding,0.476,False
+FUNSD,train,91355841,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91356315,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91361993,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91361993,BRAND NAME:,full_name,full_name,substring,0.4,True
+FUNSD,train,91372360,DATE,date,full_name,substring,0.286,False
+FUNSD,train,91372360,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,91372360,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,91372360,FAX PHONE NUMBER:,phone,phone,substring,0.75,True
+FUNSD,train,91372360,FAX PHONE NUMBER:,phone,phone,substring,0.75,True
+FUNSD,train,91391286,COUPON ISSUE DATE,date,,unknown,0.3,False
+FUNSD,train,91391286,COUPON EXPIRATION DATE,date,,unknown,0.294,False
+FUNSD,train,91391286,DATE INITIATED,date,graduation_date,embedding,0.51,False
+FUNSD,train,91391310,COUPON ISSUE DATE,date,,unknown,0.3,False
+FUNSD,train,91391310,COUPON EXPIRATION DATE,date,,unknown,0.294,False
+FUNSD,train,91391310,DATE INITIATED,date,graduation_date,embedding,0.51,False
+FUNSD,train,91391310,SIGNATURE OF INITIATOR,signature,signature,substring,0.409,True
+FUNSD,train,91581919,Date,date,full_name,substring,0.286,False
+FUNSD,train,91581919,State of,state,state,substring,0.625,True
+FUNSD,train,91856041_6049,EVENT NAME:,full_name,full_name,substring,0.4,True
+FUNSD,train,91856041_6049,NAME OF ALLWAYS SUPERVISOR:,full_name,advisor,substring,0.385,False
+FUNSD,train,91856041_6049,PHONE NUMBER,phone,phone,exact,1.0,True
+FUNSD,train,91914407,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91914407,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,91914407,TOTAL PAGES,amount,,unknown,0.156,False
+FUNSD,train,91914407,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,91914407,FAX TELEPHONE NUMBER:,phone,phone,substring,0.6,True
+FUNSD,train,91939637,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91939637,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,91974562,COUPON ISSUE DATE,date,,unknown,0.3,False
+FUNSD,train,91974562,COUPON EXPIRATION DATE,date,,unknown,0.294,False
+FUNSD,train,91974562,DATE INITIATED,date,graduation_date,embedding,0.51,False
+FUNSD,train,92081358_1359,% TOTAL =,amount,,unknown,0.238,False
+FUNSD,train,92081358_1359,TOTAL,amount,,unknown,0.226,False
+FUNSD,train,92091873,Date Ordered,date,graduation_date,embedding,0.453,False
+FUNSD,train,92091873,Date,date,full_name,substring,0.286,False
+FUNSD,train,92091873,Date,date,full_name,substring,0.286,False
+FUNSD,train,92091873,Date,date,full_name,substring,0.286,False
+FUNSD,train,92091873,#Customers Invited,full_name,,unknown,0.29,False
+FUNSD,train,92091873,#Customers Attended,full_name,,unknown,0.257,False
+FUNSD,train,92091873,Date (s),date,graduation_date,embedding,0.547,False
+FUNSD,train,92091873,Date Submitted,date,graduation_date,embedding,0.463,False
+FUNSD,train,92091873,Date Submitted,date,graduation_date,embedding,0.463,False
+FUNSD,train,92091873,Date Notified,date,graduation_date,embedding,0.439,False
+FUNSD,train,92091873,Date Rec'd,date,graduation_date,embedding,0.443,False
+FUNSD,train,92094746,DATE,date,full_name,substring,0.286,False
+FUNSD,train,92094746,AREA/ REGION/ DIVISION,state,state,substring,0.273,True
+FUNSD,train,92094746,ITEM/ BRAND:,description,,unknown,0.316,False
+FUNSD,train,92094751,DATE,date,full_name,substring,0.286,False
+FUNSD,train,92094751,AREA REGION DIVISION,state,state,substring,0.3,True
+FUNSD,train,92094751,ITEM/ BRAND,description,,unknown,0.284,False
+FUNSD,train,92298125,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,92314414,(Date),date,full_name,substring,0.286,False
+FUNSD,train,92314414,1. Full Name,full_name,full_name,substring,0.75,True
+FUNSD,train,92314414,2. Residence Address,address,address,substring,0.35,True
+FUNSD,train,92314414,3. Business Address,address,address,substring,0.368,True
+FUNSD,train,92327794,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,92433599_92433601,Name,full_name,full_name,exact,1.0,True
+FUNSD,train,92433599_92433601,Address,address,address,exact,1.0,True
+FUNSD,train,92433599_92433601,City,city,city,exact,1.0,True
+FUNSD,train,92433599_92433601,State,state,state,exact,1.0,True
+FUNSD,train,92433599_92433601,Telephone,phone,phone,exact,1.0,True
+FUNSD,train,92433599_92433601,Zip Code,zip_code,zip_code,exact,1.0,True
+FUNSD,train,92433599_92433601,3. Date of claimant's birth:,date,graduation_date,embedding,0.361,False
+FUNSD,train,92586242,EVENT NAME:,full_name,full_name,substring,0.4,True
+FUNSD,train,92586242,NAME OF ALLWAYS SUPERVISOR,full_name,advisor,substring,0.385,False
+FUNSD,train,92586242,PHONE NUMBER,phone,phone,exact,1.0,True
+FUNSD,train,92657391,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,92657391,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,92657391,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,train,92657391,FAX PHONE NUMBER:,phone,phone,substring,0.75,True
+FUNSD,train,92657391,FAX PHONE NUMBER:,phone,phone,substring,0.75,True
+FUNSD,train,93213298,# Customers Invited,full_name,,unknown,0.29,False
+FUNSD,train,93213298,# Customers Attended,full_name,,unknown,0.257,False
+FUNSD,train,93213298,Date (s),date,graduation_date,embedding,0.547,False
+FUNSD,train,93213298,Date Submitted,date,graduation_date,embedding,0.463,False
+FUNSD,train,93213298,Date Rec'd,date,graduation_date,embedding,0.443,False
+FUNSD,train,93329540,DATE:,date,full_name,substring,0.286,False
+FUNSD,train,93329540,BRAND NAME:,full_name,full_name,substring,0.4,True
+FUNSD,train,93351929_93351931,COUPON ISSUE DATE,date,,unknown,0.3,False
+FUNSD,train,93351929_93351931,COUPON EXPIRATION DATE,date,,unknown,0.294,False
+FUNSD,train,93351929_93351931,DATE INITIATED,date,graduation_date,embedding,0.51,False
+FUNSD,train,93380187,- COUPON ISSUE DATE,date,,unknown,0.319,False
+FUNSD,train,93380187,- COUPON EXPIRATION DATE,date,graduation_date,embedding,0.349,False
+FUNSD,train,93380187,- SIGNATURE OF INITIATOR,signature,signature,substring,0.375,True
+FUNSD,train,93380187,- -DATE INITIATED,date,graduation_date,embedding,0.49,False
+FUNSD,train,93455715,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,82092117,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,82092117,PHONE NUMBER:,phone,phone,exact,1.0,True
+FUNSD,test,82092117,SENDER /PHONE NUMBER:,phone,phone,substring,0.6,True
+FUNSD,test,82200067_0069,REGION:,state,state,exact,1.0,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82200067_0069,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82250337_0338,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,82251504,Region:,state,state,exact,1.0,True
+FUNSD,test,82252956_2958,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,82252956_2958,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,82252956_2958,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253058_3059,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253245_3247,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82253362_3364,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,82254765,DATE TO NYO:,date,graduation_date,embedding,0.391,False
+FUNSD,test,82254765,DATE FORWARDED TO PROMOTION SERVICES:,date,graduation_date,embedding,0.371,False
+FUNSD,test,82254765,QUANTITY REQUIRED,quantity,,unknown,0.287,False
+FUNSD,test,82254765,QUANTITY REQUIRED,quantity,,unknown,0.287,False
+FUNSD,test,82254765,DIV. NAME/ NO:,full_name,full_name,substring,0.308,True
+FUNSD,test,82254765,NAME OF EVENT:,full_name,full_name,substring,0.308,True
+FUNSD,test,82254765,"""DATE OF EVENT:",date,graduation_date,embedding,0.491,False
+FUNSD,test,82254765,CUSTOMER SHIPPING NUMBER,full_name,phone,embedding,0.349,False
+FUNSD,test,82491256,CASE NAME:,full_name,full_name,substring,0.444,True
+FUNSD,test,82491256,DATE FILED:,date,graduation_date,embedding,0.453,False
+FUNSD,test,82491256,DATE SERVED:,date,graduation_date,embedding,0.484,False
+FUNSD,test,82504862,CASE NAME:,full_name,full_name,substring,0.444,True
+FUNSD,test,82504862,DATE SERVED,date,graduation_date,embedding,0.449,False
+FUNSD,test,82562350,Date:,date,full_name,substring,0.286,False
+FUNSD,test,82562350,Telephone:,phone,phone,exact,1.0,True
+FUNSD,test,82573104,Date:,date,full_name,substring,0.286,False
+FUNSD,test,82837252,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,82837252,BRAND NAME:,full_name,full_name,substring,0.4,True
+FUNSD,test,83443897,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,83443897,COMPANY:,employer,employer,exact,1.0,True
+FUNSD,test,83443897,PHONE:,phone,phone,exact,1.0,True
+FUNSD,test,83443897,PHONE:,phone,phone,exact,1.0,True
+FUNSD,test,83553333_3334,Date,date,full_name,substring,0.286,False
+FUNSD,test,83553333_3334,Date,date,full_name,substring,0.286,False
+FUNSD,test,83553333_3334,Reference,reference,,unknown,0.242,False
+FUNSD,test,83553333_3334,Company,employer,employer,exact,1.0,True
+FUNSD,test,83553333_3334,Company,employer,employer,exact,1.0,True
+FUNSD,test,83553333_3334,Company,employer,employer,exact,1.0,True
+FUNSD,test,83553333_3334,Company,employer,employer,exact,1.0,True
+FUNSD,test,83553333_3334,Company,employer,employer,exact,1.0,True
+FUNSD,test,83553333_3334,Recipient Phone Number,phone,phone,substring,0.545,True
+FUNSD,test,83553333_3334,Recipient Phone Number,phone,phone,substring,0.545,True
+FUNSD,test,83553333_3334,Recipient Phone Number,phone,phone,substring,0.545,True
+FUNSD,test,83553333_3334,Recipient Phone Number,phone,phone,substring,0.545,True
+FUNSD,test,83553333_3334,Recipient Phone Number,phone,phone,substring,0.545,True
+FUNSD,test,83573282,Date:,date,full_name,substring,0.286,False
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83573282,Phone No.:,phone,phone,substring,0.556,True
+FUNSD,test,83573282,Phone No.:,phone,phone,substring,0.556,True
+FUNSD,test,83573282,Phone No.:,phone,phone,substring,0.556,True
+FUNSD,test,83594639,Date:,date,full_name,substring,0.286,False
+FUNSD,test,83594639,Company:,employer,employer,exact,1.0,True
+FUNSD,test,83624198,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,83624198,COMPANY:,employer,employer,exact,1.0,True
+FUNSD,test,83624198,PHONE:,phone,phone,exact,1.0,True
+FUNSD,test,83624198,PHONE:,phone,phone,exact,1.0,True
+FUNSD,test,83624198,Tel,phone,phone,substring,0.333,True
+FUNSD,test,83635935,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,DIVISION NAME:,full_name,full_name,substring,0.308,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83641919_1921,Name of Account,full_name,full_name,substring,0.267,True
+FUNSD,test,83772145,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,83772145,TELECOPY NO:,phone,,unknown,0.291,False
+FUNSD,test,83823750,Date,date,full_name,substring,0.286,False
+FUNSD,test,83823750,Company,employer,employer,exact,1.0,True
+FUNSD,test,83823750,Reference,reference,,unknown,0.242,False
+FUNSD,test,83996357,COUPON ISSUE DATE,date,,unknown,0.3,False
+FUNSD,test,83996357,COUPON EXPIRATION DATE,date,,unknown,0.294,False
+FUNSD,test,85240939,NAME:,full_name,full_name,exact,1.0,True
+FUNSD,test,85240939,COMPANY:,employer,employer,exact,1.0,True
+FUNSD,test,85240939,ADDRESS:,address,address,exact,1.0,True
+FUNSD,test,85240939,PHONE:,phone,phone,exact,1.0,True
+FUNSD,test,85240939,ARRIVAL DATE AND TIME:,date,graduation_date,embedding,0.391,False
+FUNSD,test,85240939,DEPARTURE DATE AND TIME:,date,graduation_date,embedding,0.437,False
+FUNSD,test,86075409_5410,Media Name,full_name,full_name,substring,0.4,True
+FUNSD,test,86075409_5410,Coupon Issue Date,date,,unknown,0.3,False
+FUNSD,test,86075409_5410,Coupon Expiration Date,date,,unknown,0.294,False
+FUNSD,test,86075409_5410,Signature of Initiator,signature,signature,substring,0.409,True
+FUNSD,test,86079776_9777,Date/ Time:,date,graduation_date,embedding,0.408,False
+FUNSD,test,86220490,Date:,date,full_name,substring,0.286,False
+FUNSD,test,86220490,Phone #:,phone,phone,exact,1.0,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86230203_0206,NAME OF ACCOUNT,full_name,full_name,substring,0.267,True
+FUNSD,test,86263525,DATE,date,full_name,substring,0.286,False
+FUNSD,test,86263525,DATE,date,full_name,substring,0.286,False
+FUNSD,test,86263525,DATE,date,full_name,substring,0.286,False
+FUNSD,test,86263525,DEPARTMENT NAME,full_name,department,substring,0.667,False
+FUNSD,test,86263525,INDEX BINDERS CONSOLIDATED BY:,date,,unknown,0.118,False
+FUNSD,test,86263525,RECORDS TRANSFER INVENTORY FORMS UPDATED BY:,date,,unknown,0.217,False
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Name:,full_name,full_name,exact,1.0,True
+FUNSD,test,86328049_8050,Telecopier Nos.,phone,,unknown,0.238,False
+FUNSD,test,87086073,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87086073,COMPOUND NAME,full_name,full_name,substring,0.308,True
+FUNSD,test,87093315_87093318,Date:,date,full_name,substring,0.286,False
+FUNSD,test,87125460,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87125460,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87125460,STUDY NAME,full_name,full_name,substring,0.4,True
+FUNSD,test,87125460,INITIATION DATE,date,graduation_date,embedding,0.457,False
+FUNSD,test,87125460,DATE OF FINAL REPORT,date,graduation_date,embedding,0.443,False
+FUNSD,test,87137840,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,87137840,SPONSOR'S NAME:,full_name,full_name,substring,0.286,True
+FUNSD,test,87137840,PHYSICAL DESCRIPTION:,description,bio,embedding,0.339,False
+FUNSD,test,87137840,EXPIRATION DATE:,date,graduation_date,embedding,0.398,False
+FUNSD,test,87137840,STUDY DIRECTOR /DEPARTMENT,department,department,substring,0.385,True
+FUNSD,test,87147607,DESCRIPTION,description,profile_photo,embedding,0.321,False
+FUNSD,test,87147607,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87147607,DATE WANTED,date,graduation_date,embedding,0.431,False
+FUNSD,test,87332450,Telephone:,phone,phone,exact,1.0,True
+FUNSD,test,87428306,PHYSICAL STATE,state,state,substring,0.357,True
+FUNSD,test,87528321,Date,date,full_name,substring,0.286,False
+FUNSD,test,87528321,Date Prepared,date,graduation_date,embedding,0.505,False
+FUNSD,test,87528321,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87528321,Proposed Effective Date,date,graduation_date,embedding,0.476,False
+FUNSD,test,87528321,ORIGINATOR Name:,full_name,full_name,substring,0.267,True
+FUNSD,test,87528321,Department Name and Location,full_name,department,substring,0.357,False
+FUNSD,test,87528380,DATE,date,full_name,substring,0.286,False
+FUNSD,test,87528380,ADDRESS,address,address,exact,1.0,True
+FUNSD,test,87528380,CITY,city,city,exact,1.0,True
+FUNSD,test,87528380,STATE,state,state,exact,1.0,True
+FUNSD,test,87528380,ITEM:,description,,unknown,0.312,False
+FUNSD,test,87528380,SHIP IMMEDIATELY,phone,,unknown,0.291,False
+FUNSD,test,87594142_87594144,(C) City,city,city,substring,0.667,True
+FUNSD,test,87594142_87594144,(G) STATE/ZIP,state,state,substring,0.455,True
+FUNSD,test,87594142_87594144,INCLUSIVE DATE,date,graduation_date,embedding,0.445,False
+FUNSD,test,87594142_87594144,INCLUSIVE DATE,date,graduation_date,embedding,0.445,False
+FUNSD,test,87594142_87594144,INCLUSIVE DATE,date,graduation_date,embedding,0.445,False
+FUNSD,test,87594142_87594144,(E) DATE,date,graduation_date,embedding,0.516,False
+FUNSD,test,87594142_87594144,"1. PRINCIPAL INVESTIGATOR NAME, TITLE, TELEPHONE # AND MAILING ADDRESS.",full_name,address,substring,0.224,False
+FUNSD,test,87594142_87594144,(c) TELEPHONE,phone,phone,substring,0.818,True
+FUNSD,test,87594142_87594144,(E) INSTITUTION,university,university,substring,0.846,True
+FUNSD,test,87594142_87594144,(D) DEPARTMENT,department,department,substring,0.833,True
+FUNSD,test,87594142_87594144,(F) MAILING,address,address,embedding,0.546,True
+FUNSD,test,87594142_87594144,(A) INSTITUTION,university,university,substring,0.846,True
+FUNSD,test,87594142_87594144,(a) STREET,address,address,embedding,0.52,True
+FUNSD,test,87594142_87594144,(D) STATE/ZIP,state,state,substring,0.455,True
+FUNSD,test,87594142_87594144,TOTAL COST,amount,,unknown,0.146,False
+FUNSD,test,87594142_87594144,TOTAL COST,amount,,unknown,0.146,False
+FUNSD,test,87594142_87594144,TOTAL COST,amount,,unknown,0.146,False
+FUNSD,test,87594142_87594144,(A) NAME,full_name,full_name,substring,0.667,True
+FUNSD,test,87594142_87594144,(C) TELEPHONE,phone,phone,substring,0.818,True
+FUNSD,test,89856243,Date,date,full_name,substring,0.286,False
+FUNSD,test,91814768_91814769,Address,address,address,exact,1.0,True
+FUNSD,test,91814768_91814769,Address,address,address,exact,1.0,True
+FUNSD,test,91814768_91814769,Date,date,full_name,substring,0.286,False
+FUNSD,test,91814768_91814769,1. Name of Treasurer,full_name,full_name,substring,0.2,True
+FUNSD,test,91814768_91814769,2. Name of Corporation,full_name,full_name,substring,0.182,True
+FUNSD,test,91814768_91814769,3. Address of Corporation,address,address,substring,0.28,True
+FUNSD,test,91814768_91814769,Date Paid,date,graduation_date,embedding,0.387,False
+FUNSD,test,91814768_91814769,Date Paid,date,graduation_date,embedding,0.387,False
+FUNSD,test,91814768_91814769,Amount or Value**,amount,phone,embedding,0.34,False
+FUNSD,test,91814768_91814769,Amount or Value**,amount,phone,embedding,0.34,False
+FUNSD,test,91814768_91814769,Total Expenditures or Disbursements on This Report,amount,annual_income,embedding,0.482,False
+FUNSD,test,91814768_91814769,Total Expenditures for Disbursements Previously Reported,amount,annual_income,embedding,0.331,False
+FUNSD,test,91814768_91814769,Total Expenditures or Disbursements to Date,date,annual_income,embedding,0.458,False
+FUNSD,test,92380595,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,92380595,DATE,date,full_name,substring,0.286,False
+FUNSD,test,92380595,Phone,phone,phone,exact,1.0,True
+FUNSD,test,92380595,Date Received:,date,graduation_date,embedding,0.411,False
+FUNSD,test,93106788,DATE:,date,full_name,substring,0.286,False
+FUNSD,test,93106788,DATE:,date,full_name,substring,0.286,False

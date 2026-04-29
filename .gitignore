@@ -5,3 +5,12 @@ node_modules/
 .claude/settings.local.json
 Playground/eraser_diagram.md
 Baseline/build_p7.py
+**/__MACOSX/
+**/.DS_Store
+data/standard_benchmarks_lite/funsd/dataset.zip
+data/standard_benchmarks_lite/funsd/raw/
+data/standard_benchmarks_lite/xfund/de/de.train.zip
+data/standard_benchmarks_lite/xfund/de/de.val.zip
+data/standard_benchmarks_lite/xfund/de/train_images/
+data/standard_benchmarks_lite/xfund/de/val_images/
+data/standard_benchmarks_lite/xfund/de/*.json
