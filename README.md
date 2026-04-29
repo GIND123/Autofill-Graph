@@ -4,6 +4,10 @@ A lifelong-learning, knowledge-graph-based form autofill agent. Evaluated for th
 
 ---
 
+
+<img width="3584" height="1536" alt="cropped-diagram-export-4-28-2026-12_28_53-AM (1)" src="https://github.com/user-attachments/assets/4c022458-c780-4e20-a809-c9e2bf069e9f" />
+
+
 ## Key Results
 
 ### External Benchmarks (FUNSD · XFUND-DE)
@@ -21,14 +25,11 @@ Evaluated on real scanned-form datasets the system was not designed for, using `
 
 Both systems receive the same form Q/A pairs. AutoFillGraph stores them in a temporal KG; the baseline (Mistral-small) receives them as plain in-context text.
 
-| System | Fill Acc | LLM API Calls (fill) |
-|--------|----------|----------------------|
-| AutoFillGraph v7 (KG + Adaptive Routing) | **0.538** | **0** |
-| Mistral-small (in-context, no memory) | 0.434 | 76 |
+
 
 **+10.4% fill accuracy lift with zero LLM calls at fill time.**
 
-![External Benchmarks and LLM Baseline](docs/fig_benchmark_external.png)
+
 
 ### Adversarial Semantic Stress Test (held-out, internal)
 
@@ -40,9 +41,8 @@ Both systems receive the same form Q/A pairs. AutoFillGraph stores them in a tem
 | No Embedding baseline | 42% |
 | Pure Lookup baseline | 42% |
 
-**+58% lift over best non-embedding baseline.**
+**+58% lift over best non-embedding baseline.**<img width="3584" height="1536" alt="cropped-diagram-export-4-28-2026-12_28_53-AM (1)" src="https://github.com/user-attachments/assets/460a6613-be75-4605-a7f3-d419835debfe" />
 
-![Adversarial Embedding Lift](docs/fig_v7_1.png)
 
 ### FormBench v2 (internal, local path)
 
