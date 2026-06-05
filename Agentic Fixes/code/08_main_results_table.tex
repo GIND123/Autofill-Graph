@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+\caption{Main results on FUNSD (199 docs) and XFUND-DE (60 docs). Fill Acc. = fraction of in-schema fields correctly filled; Abstain Acc. = fraction of out-of-schema fields correctly returned as UNKNOWN. \textbf{Bold} = best per column. API/form = LLM calls per document at evaluation time. $\dagger$~Ablation rows share the same KB; only the listed component is removed.}
+\label{tab:main_results}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+\multirow{2}{*}{\textbf{System}} & \multicolumn{2}{c}{\textbf{FUNSD}} & \multicolumn{2}{c}{\textbf{XFUND-DE}} & \multirow{2}{*}{\makecell{\textbf{API}\\\textbf{calls/doc}}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & \textbf{Fill↑} & \textbf{Abs.↑} & \textbf{Fill↑} & \textbf{Abs.↑} & \\
+\midrule
+\textbf{AutoFillGraph} (full system) & \textbf{53.8} & \textbf{98.4} & \textbf{83.7} & \textbf{87.2} & \textbf{0.0} \\
+\ \ $-$ No inference rules & — & \textbf{98.4} & — & — & \textbf{0.0} \\
+\ \ $-$ No embedding (Phase-3) & — & \textbf{98.4} & — & — & \textbf{0.0} \\
+\ \ $-$ No bandit (always-LLM fallback) & 43.4 & 15.0 & — & — & 2.3 \\
+Flat key-value (Levenshtein) & 13.5 & 81.3 & 30.1 & — & \textbf{0.0} \\
+Mistral-small (direct extraction) & 43.4 & 0.0 & — & — & 5.1 \\
+\bottomrule
+\end{tabular}}
+\end{table}

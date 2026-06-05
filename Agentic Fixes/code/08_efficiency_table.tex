@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Efficiency comparison on full FUNSD (178 documents, 407 fill + 573 abstain decisions).}
+\label{tab:efficiency}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{System} & \textbf{API calls} & \textbf{Est. cost} & \textbf{\% local} & \textbf{Avg. latency/field} \\
+\midrule
+AutoFillGraph (full) & \textbf{0} & \textbf{\$0.000} & \textbf{100\%} & $\approx$24 ms \\
+Flat Key-Value       &           0 & \$0.000           & 100\%           & $<$5 ms \\
+Mistral-small (est.) & $\sim$1{,}009 & \$0.042         & 0\%            & $\sim$1.8 s \\
+\bottomrule
+\end{tabular}
+\end{table}
