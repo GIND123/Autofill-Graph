@@ -1,0 +1,124 @@
+doc_id,split,question,expected_prop,expected_value,rag_predicted,is_unknown,ok
+de_train_0,train,"Name, Vorname, ggf. Geburtsname",full_name,Julian Herrmann,Alex Johnson,False,False
+de_train_0,train,Tagsüber tel. erreichbar unter Nummer,phone,16724891042,UNKNOWN,True,False
+de_train_1,train,Antragsteller:,phone,Max Weber,Alex Johnson,False,False
+de_train_1,train,Durchführung durch (Name/Anschrift der verantwortlichen Person):,full_name,"""Max Weber, 55232 Alzey, Bahnhofstraße 30",Alex Johnson,False,False
+de_train_2,train,Hiermit bestelle ich ab Monat 07 Jahr 2020 das MAXX-Ticket.,phone,Erstbestellung (mit Bild).,UNKNOWN,True,False
+de_train_2,train,E-Mail-Adresse,email,Jonas321@gmail.com,alex.johnson@email.com,False,False
+de_train_3,train,Bewerber/in - Bauherr/in (Name/Vorname),full_name,Max Weber,Alex Johnson,False,False
+de_train_3,train,Telefon,phone,17830921231,UNKNOWN,True,False
+de_train_4,train,"Weitere im Haushalt lebende Personen (Name, Alter, Familienbezug)",full_name,keine,"Alex Johnson, [Alter unbekannt], Familienmitglied",False,False
+de_train_4,train,Schule/Institution/Ort:,university,Grundschule,UNKNOWN,True,False
+de_train_5,train,"Name und Ort der Schule, in der die 8. Schulstufe besucht wird/wurde",full_name,"BJD Gymnasium, 5 6068 Koblenz, Neversstraße 5,",UNKNOWN,True,False
+de_train_6,train,Telefonnummer:,phone,1547928921,UNKNOWN,True,False
+de_train_6,train,E-Mail:,email,gsfjls@gmail.de,alex.johnson@email.com,False,False
+de_train_7,train,Es wird gemäß dem nachfolgenden Entwurf des Beschlusses Antrag gestellt auf,phone,[x] Zusammenrechnung mehrerer Arbeitseinkom-,Antrag gestellt auf,False,False
+de_train_8,train,Name,full_name,Thomas Sonntag,Alex Johnson,False,False
+de_train_8,train,Telefon,phone,15145099033,UNKNOWN,True,False
+de_train_8,train,E-Mail,email,Thomas@gmail.com,alex.johnson@email.com,False,False
+de_train_10,train,Name Schüler/in,full_name,Emma Schwarz,Alex J.,False,False
+de_train_10,train,"Datum, bis wann die Aufenthaltsgestattung oder -duldung gilt (als Nachweis bitte die Kopie des Aufenthaltstitels beifügen!)",phone,09.07.2014,UNKNOWN,True,False
+de_train_10,train,E-Mail-Adresse*,email,gwefcsd@gmail.de,alex.johnson@email.com,False,False
+de_train_11,train,"Name, Vorname der/des Auszubildenden",full_name,Max Weber,"Alex, Alex",False,False
+de_train_12,train,"3109 St. Pölten, Landhausplatz 1, Haus 7A, Tel .:",phone,"02742/9005,",UNKNOWN,True,False
+de_train_12,train,E-Mail-Adresse,email,gasdflk@gmail.de,alex.johnson@email.com,False,False
+de_train_13,train,PP Einstellhalle,phone,Fr,UNKNOWN,True,False
+de_train_13,train,Mietzins total (pro Monat):,amount,Fr.,UNKNOWN,True,False
+de_train_13,train,Name (1),full_name,Uwe Pitts,Alex Johnson,False,False
+de_train_13,train,E-Mail (1),email,18934234234@gmail.de,alex.johnson@email.com,False,False
+de_train_14,train,Region,state,SAM,UNKNOWN,True,False
+de_train_14,train,Der Bewerber stellt den Antrag für Experiment-Aufenthalt.,phone,☒ ja □nein,UNKNOWN,True,False
+de_train_14,train,Name IL/LS/Stipendienberatung,full_name,Pia Ochmann,Alex J.,False,False
+de_train_15,train,5. Telefonnummer,phone,15448938231,UNKNOWN,True,False
+de_train_15,train,6. E-Mail,email,violazoller@gmail.com,alex.johnson@email.com,False,False
+de_train_16,train,oder Email:,email,fsj.berlin@jgd.de,alex.johnson@email.com,False,False
+de_train_16,train,Tel.:,phone,030 / 61 20 31 310,UNKNOWN,True,False
+de_train_17,train,"Name, Vorname, ggf. akademischer Grad",full_name,Max Weber,Alex Johnson,False,False
+de_train_17,train,Telefonnummer,phone,17542341232,UNKNOWN,True,False
+de_train_17,train,E-Mail-Adresse,email,34124@ gmail.de,alex.johnson@email.com,False,False
+de_train_19,train,E-Mail :,email,www.fr.ch/afe,alex.johnson@email.com,False,False
+de_train_20,train,Ausstellungsstaat Diplom:,phone,Detuschland,UNKNOWN,True,False
+de_train_20,train,Früherer Name:,full_name,Max,UNKNOWN,True,False
+de_train_20,train,E-Mail,email,gsdga@gmail.de,alex.johnson@email.com,False,False
+de_train_21,train,Name:,full_name,Max Weber,Alex Johnson,False,False
+de_train_22,train,Telefon:,phone,030 29 36 276-0,UNKNOWN,True,False
+de_train_22,train,eMail:,email,schulbuero@august-sander-schule.de,alex.johnson@email.com,False,False
+de_train_22,train,Name:,full_name,Thomas Schoeder,Alex Johnson,False,False
+de_train_23,train,"Name, Vorname",full_name,Max Weber,Alex,False,False
+de_train_23,train,Telefon,phone,17542341232,UNKNOWN,True,False
+de_train_25,train,"Name, Vorname",full_name,Max Weber,Alex,False,False
+de_train_25,train,E-Mail,email,34124@gmail.de,alex.johnson@email.com,False,False
+de_train_25,train,Telefon,phone,17542341232,UNKNOWN,True,False
+de_train_26,train,Name/ Vorname,full_name,Emma Schmitt,Alex,False,False
+de_train_26,train,Telefon,phone,1537847821,UNKNOWN,True,False
+de_train_26,train,E-Mail,email,sfasdf@gmail.de,alex.johnson@email.com,False,False
+de_train_27,train,Name,full_name,Liane Fox,Alex Johnson,False,False
+de_train_27,train,Telefon priv.,phone,17874809812,UNKNOWN,True,False
+de_train_28,train,"Place, Date:",date,09.09.2001,May 2018,False,False
+de_train_29,train,Name,full_name,Thomas Sonntag,Alex Johnson,False,False
+de_train_29,train,Position,job_title,Deutschland,UNKNOWN,True,False
+de_train_29,train,E-mail,email,TanjaSieber@gmail.com,alex.johnson@email.com,False,False
+de_train_30,train,E-Mail:,email,vasldkfj@qq.com,alex.johnson@email.com,False,False
+de_train_30,train,Tel.Nr .:,phone,15432342344,UNKNOWN,True,False
+de_train_31,train,Name der Einrichtung,full_name,Mathematik,UNKNOWN,True,False
+de_train_32,train,NAME,full_name,Jonas Schritt,Alex Johnson,False,False
+de_train_32,train,TELEFON (MOBIL),phone,15534234234,UNKNOWN,True,False
+de_train_32,train,E-MAIL-ADRESSE,email,bdgg@gmail.de,alex.johnson@email.com,False,False
+de_train_33,train,Telefon (mit Vorwahl,phone,15482936723,UNKNOWN,True,False
+de_train_33,train,Name d. Mutter od. Vormundes,full_name,Pia Schwarz,UNKNOWN,True,False
+de_train_33,train,Position,job_title,□FW □D □GK,UNKNOWN,True,False
+de_train_35,train,Frau/Herr Name,full_name,Max Weber,Alex Johnson,False,False
+de_train_35,train,Telefon,phone,15787482781,UNKNOWN,True,False
+de_train_35,train,E-Mail,email,sdfas@gmail.de,alex.johnson@email.com,False,False
+de_train_36,train,Familienname | Last Name,full_name,Weber,Johnson,False,False
+de_train_36,train,Geburtsdatum | Date of Birth,date,20.02.1989,UNKNOWN,True,False
+de_train_36,train,Staatsangehörigkeit | Nationality,citizenship,Chin,UNKNOWN,True,False
+de_train_36,train,Straße | Street,address,Bahnhofstraße 30,UNKNOWN,True,False
+de_train_36,train,Postleitzahl | Postal code Wohnort | Place of Residence,zip_code,53123 Bonn,UNKNOWN,True,False
+de_train_36,train,Bundesland (Heimatort) | State (Place of Origin),state,Bayern,California,False,False
+de_train_36,train,Telefon | Phone,phone,1253413412,555-123-4567,False,False
+de_train_36,train,E-Mail,email,fdgaf@gmail.de,alex.johnson@email.com,False,False
+de_train_37,train,Name,full_name,Liane Fox,Alex Johnson,False,False
+de_train_37,train,Telefonnummer,phone,15748239421,UNKNOWN,True,False
+de_train_37,train,E-Mail,email,fasd @ gmail.de,alex.johnson@email.com,False,False
+de_train_38,train,Name:,full_name,Rita Wite,Alex Johnson,False,False
+de_train_38,train,E-Mail:,email,15729843781@gmail.de,alex.johnson@email.com,False,False
+de_train_39,train,Name:,full_name,Max Weber,Alex Johnson,False,False
+de_train_39,train,Tel. Privat:,phone,15783748923,UNKNOWN,True,False
+de_train_39,train,E-Mail:,email,dsasdfsa@gmail.de,alex.johnson@email.com,False,False
+de_val_0,val,Telefon,phone,17542341232,UNKNOWN,True,False
+de_val_0,val,E-Mail,email,fasd@gmail.de,alex.johnson@email.com,False,False
+de_val_1,val,Name:,full_name,Thomas Sonntag,Alex Johnson,False,False
+de_val_1,val,E-Mail:,email,15145099033@ gmail.com,alex.johnson@email.com,False,False
+de_val_1,val,Telefon:,phone,15145099033,UNKNOWN,True,False
+de_val_2,val,"Name, Vorname:",full_name,Anna Klopp,Alex,False,False
+de_val_2,val,Studentische E-Mail-Adresse:,email,247983714@ gmail.de,UNKNOWN,True,False
+de_val_6,val,Name:,full_name,Rudolf Helbling,Alex Johnson,False,False
+de_val_6,val,Telefon:,phone,15698982345,UNKNOWN,True,False
+de_val_7,val,"Name, Vorname",full_name,Bern Schmitt,Alex,False,False
+de_val_7,val,Telefon,phone,1537483294,UNKNOWN,True,False
+de_val_8,val,Alternative E-Mail:,email,gdaasa@gmail.de,UNKNOWN,True,False
+de_val_9,val,Postleitzahl Ort/Zustellbezirk,phone,"Alzey,",UNKNOWN,True,False
+de_val_9,val,E-Mail,email,vjsfasl@gmail.de,alex.johnson@email.com,False,False
+de_val_10,val,"Name, Vorname; ggf. Geburtsname:",full_name,Emma Stone,Alex Johnson,False,False
+de_val_10,val,E-Mail-Kontaktadresse:,email,dsafd@gmail.de,alex.johnson@email.com,False,False
+de_val_11,val,"Vorname, Name",full_name,Ute Schwitz,Alex Johnson,False,False
+de_val_11,val,Handy / Telefon,phone,15489213121,UNKNOWN,True,False
+de_val_11,val,Derzeitige Position,job_title,Service-Elektriker,UNKNOWN,True,False
+de_val_11,val,Bitte senden Sie das ausgefüllte Formular an bewerbung@ulmatec.de oder postalisch an:,zip_code,ULMATEC Gmbh,UNKNOWN,True,False
+de_val_12,val,Expiration Date:,date,09/30/2020,UNKNOWN,True,False
+de_val_12,val,Business Legal Name,full_name,Max Weber,Alex Johnson,False,False
+de_val_12,val,Business Address,address,"66981 Münchweiler, Industriestraße 12",UNKNOWN,True,False
+de_val_12,val,Business Phone,phone,( ),UNKNOWN,True,False
+de_val_13,val,"Vorname, Name:",full_name,Helen Schmitz,Alex Johnson,False,False
+de_val_13,val,Telefon:,phone,15289203232,UNKNOWN,True,False
+de_val_13,val,E-Mail:,email,15289203232@gmail.com,alex.johnson@email.com,False,False
+de_val_14,val,IBAN (In Deutschland immer 22 Stellen),phone,D E 0 0 0 0 0 0 9 1 2 8 3 0 1 9 2 8 0 0 0 0,UNKNOWN,True,False
+de_val_16,val,Name,full_name,Lucy,Alex Johnson,False,False
+de_val_16,val,Tel.,phone,15798931874,UNKNOWN,True,False
+de_val_16,val,E-Mail,email,najf@gmail.de,alex.johnson@email.com,False,False
+de_val_17,val,"Name, Vorname (oder Firmenname)",full_name,Max Weber,Alex Johnson,False,False
+de_val_18,val,Bitte wählen Sie Ihr Verkehrsunternehmen aus und senden Sie den ausgefüllten Bestellschein an die entsprechende Adresse:,phone,□BRN Busverkehr Rhein-Neckar GmbH,UNKNOWN,True,False
+de_val_18,val,IBAN (International Bank Account Number),bank_name,7379187941747019491824,UNKNOWN,True,False
+de_val_18,val,Name/Sitz des Kreditinstituts,full_name,MariaSchroeder,First National Bank,False,False
+de_val_19,val,"Name, Vorname",full_name,Max Weber,Alex,False,False

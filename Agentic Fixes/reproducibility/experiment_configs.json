@@ -1,0 +1,148 @@
+{
+  "01_flat_kv_baseline": {
+    "script": "Agentic Fixes/code/01_flat_kv_baseline.py",
+    "description": "Flat key-value baseline on FUNSD + XFUND-DE",
+    "expected_outputs": [
+      "data/standard_benchmarks_lite/funsd_fill.csv"
+    ],
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "funsd_fill_acc": 13.5,
+      "xfund_fill_acc": 30.1
+    }
+  },
+  "02_ablation_suite": {
+    "script": "Agentic Fixes/code/02_ablation_suite.py",
+    "description": "No-embedding, no-inference, no-bandit ablations",
+    "expected_outputs": [],
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "no_bandit_fill_acc": 43.4,
+      "no_inference_fill_acc": 52.3
+    }
+  },
+  "03_efficiency_metrics": {
+    "script": "Agentic Fixes/code/03_efficiency_metrics.py",
+    "description": "API call + latency efficiency analysis",
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "speedup_ratio": 130,
+      "annual_savings_usd": 0.81
+    }
+  },
+  "04_bandit_reward_analysis": {
+    "script": "Agentic Fixes/code/04_bandit_reward_analysis.py",
+    "description": "LinUCB reward formalization and convergence",
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "local_arm_pct": 94.6,
+      "final_epsilon": 0.05
+    }
+  },
+  "05_kb_level_metrics": {
+    "script": "Agentic Fixes/code/05_kb_level_metrics.py",
+    "description": "Triple P/R/F1, stale-fact rate, provenance coverage",
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "funsd_triple_f1": 65.3,
+      "xfund_triple_f1": 90.0,
+      "stale_fact_flat_kv": 94.8,
+      "stale_fact_ag": 0.0
+    }
+  },
+  "06_confidence_calibration": {
+    "script": "Agentic Fixes/code/06_confidence_calibration.py",
+    "description": "Confidence calibration ECE measurement",
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "ece_raw": 0.15
+    }
+  },
+  "07_longitudinal_simulation": {
+    "script": "Agentic Fixes/code/07_longitudinal_simulation.py",
+    "description": "50-session longitudinal simulation, 4 profile changes",
+    "random_seed": 42,
+    "requires_api": false,
+    "expected_results": {
+      "ag_avg_fill_acc": 62.8,
+      "api_reduction_pct": 73.0
+    }
+  },
+  "09_full_funsd_llm_comparison": {
+    "script": "Agentic Fixes/code/09_full_funsd_llm_comparison.py",
+    "description": "Full FUNSD Mistral-small baseline (178 docs / 407 fields)",
+    "random_seed": null,
+    "requires_api": true,
+    "api_model": "mistral-small-latest",
+    "expected_outputs": [
+      "data/standard_benchmarks_lite/llm_baseline_funsd_full.csv"
+    ],
+    "expected_results": {
+      "mistral_fill_acc_full": "see csv"
+    }
+  },
+  "10_rag_kv_baseline": {
+    "script": "Agentic Fixes/code/10_rag_kv_baseline.py",
+    "description": "RAG-over-flat-KV (BM25 + Mistral) on FUNSD + XFUND-DE",
+    "random_seed": null,
+    "requires_api": true,
+    "api_model": "mistral-small-latest",
+    "expected_outputs": [
+      "data/standard_benchmarks_lite/rag_kv_baseline_funsd.csv",
+      "data/standard_benchmarks_lite/rag_kv_baseline_xfund_de.csv"
+    ]
+  },
+  "11_error_analysis": {
+    "script": "Agentic Fixes/code/11_error_analysis.py",
+    "description": "Error categorization across 9 error types",
+    "random_seed": 42,
+    "requires_api": false
+  },
+  "12_multilingual_xfund": {
+    "script": "Agentic Fixes/code/12_multilingual_xfund.py",
+    "description": "XFUND-DE full + XFUND-FR simulation",
+    "random_seed": 42,
+    "requires_api": false
+  },
+  "13_gpt4o_mini_baseline": {
+    "script": "Agentic Fixes/code/13_gpt4o_mini_baseline.py",
+    "description": "GPT-4o-mini second LLM baseline on full FUNSD",
+    "random_seed": null,
+    "requires_api": true,
+    "api_model": "gpt-4o-mini",
+    "expected_outputs": [
+      "data/standard_benchmarks_lite/gpt4o_mini_baseline_funsd.csv"
+    ]
+  },
+  "14_rule_scalability": {
+    "script": "Agentic Fixes/code/14_rule_scalability.py",
+    "description": "9-rule timing + LLM-call reduction on held-out subset",
+    "random_seed": 42,
+    "requires_api": false
+  },
+  "15_privacy_audit": {
+    "script": "Agentic Fixes/code/15_privacy_audit.py",
+    "description": "Sensitivity-gating leak audit on 50 synthetic profiles",
+    "random_seed": 42,
+    "requires_api": false
+  },
+  "17_personal_kb_benchmark": {
+    "script": "Agentic Fixes/code/17_personal_kb_benchmark.py",
+    "description": "Personal-KB autofill benchmark (DS-160, FAFSA, job app)",
+    "random_seed": 42,
+    "requires_api": false
+  },
+  "18_model_version_pin": {
+    "script": "Agentic Fixes/code/18_model_version_pin.py",
+    "description": "Pin Mistral model version + reference run",
+    "random_seed": null,
+    "requires_api": true,
+    "api_model": "mistral-small-latest"
+  }
+}

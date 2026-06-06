@@ -1,0 +1,98 @@
+form_id,form_name,category,label,expected_prop,predicted_prop,expected_value,predicted_value,phase,sim_score,row_type,ok
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Surname,last_name,last_name,Johnson,Johnson,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Given Name,first_name,first_name,Alex,Alex,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Full Name as on Passport,full_name,full_name,Alex Jordan Johnson,Alex Jordan Johnson,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Date of Birth,date_of_birth,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,City of Birth,city_of_birth,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Country of Birth,country,country,United States,United States,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Country of Citizenship,citizenship,citizenship,United States,United States,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,U.S. Social Security Number,ssn,ssn,###-##-####,###-##-####,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Passport Number,passport_number,passport_number,US123456789,US123456789,exact,1.0,fill,True
+ds160_p1,DS-160 Nonimmigrant Visa Application — Personal Info,visa,Passport Issuance Date,passport_issue_date,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+ds160_p2,DS-160 — Contact Info,visa,Home Address: Street,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",substring,1.0,fill,True
+ds160_p2,DS-160 — Contact Info,visa,Home Address: City,city,city,San Francisco,San Francisco,substring,1.0,fill,True
+ds160_p2,DS-160 — Contact Info,visa,Home Address: State,state,state,California,California,substring,1.0,fill,True
+ds160_p2,DS-160 — Contact Info,visa,Home Address: ZIP Code,zip_code,zip_code,94105,94105,substring,1.0,fill,True
+ds160_p2,DS-160 — Contact Info,visa,Primary Phone Number,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+ds160_p2,DS-160 — Contact Info,visa,Email Address,email,email,alex.johnson@email.com,alex.johnson@email.com,exact,1.0,fill,True
+ds160_p3,DS-160 — Travel Companions / Work,visa,Present Employer,employer,employer,TechCorp Inc.,TechCorp Inc.,exact,1.0,fill,True
+ds160_p3,DS-160 — Travel Companions / Work,visa,Employer Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+ds160_p3,DS-160 — Travel Companions / Work,visa,Job Title,job_title,job_title,Senior Software Engineer,Senior Software Engineer,exact,1.0,fill,True
+ds160_p3,DS-160 — Travel Companions / Work,visa,Monthly Salary,annual_income,annual_income,"120,000","120,000",exact,1.0,fill,True
+ds160_p3,DS-160 — Travel Companions / Work,visa,Work Phone Number,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Student's Last Name,last_name,last_name,Johnson,Johnson,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Student's First Name,first_name,first_name,Alex,Alex,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Social Security Number,ssn,ssn,###-##-####,###-##-####,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Date of Birth,date_of_birth,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Permanent Mailing Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",substring,0.667,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,City,city,city,San Francisco,San Francisco,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,State,state,state,California,California,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,ZIP Code,zip_code,zip_code,94105,94105,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Phone Number,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,Email Address,email,email,alex.johnson@email.com,alex.johnson@email.com,exact,1.0,fill,True
+fafsa_p1,FAFSA — Student Personal Information,financial_aid,U.S. Citizen or Eligible Non-Citizen,citizenship,citizenship,United States,United States,exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,Adjusted Gross Income,annual_income,annual_income,"120,000","120,000",exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,U.S. Income Tax Paid,tax_id,tax_id,TAX-123456789,TAX-123456789,exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,Bank Account Balance,bank_name,bank_name,First National Bank,First National Bank,exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,College/University,university,university,"University of California, Berkeley","University of California, Berkeley",exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,Degree/Certificate,degree,degree,Master of Science in Computer Science,Master of Science in Computer Science,exact,1.0,fill,True
+fafsa_p2,FAFSA — Financial Information,financial_aid,Expected Graduation Date,graduation_date,graduation_date,May 2018,May 2018,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Full Legal Name,full_name,full_name,Alex Jordan Johnson,Alex Jordan Johnson,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Email Address,email,email,alex.johnson@email.com,alex.johnson@email.com,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Phone,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Current Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,City,city,city,San Francisco,San Francisco,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,State,state,state,California,California,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Zip,zip_code,zip_code,94105,94105,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,LinkedIn Profile,linkedin,linkedin,linkedin.com/in/alexjohnson,linkedin.com/in/alexjohnson,exact,1.0,fill,True
+job_app_p1,Job Application — Personal Details,employment,Portfolio URL,portfolio,portfolio,alexjohnson.dev,alexjohnson.dev,exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,University / College,university,university,"University of California, Berkeley","University of California, Berkeley",exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,Major / Field of Study,department,department,Computer Science,Computer Science,exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,Degree Earned,degree,degree,Master of Science in Computer Science,Master of Science in Computer Science,exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,GPA,gpa,gpa,3.82,3.82,exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,Graduation Year,graduation_date,graduation_date,May 2018,May 2018,exact,1.0,fill,True
+job_app_p2,Job Application — Education,employment,Thesis Title,thesis,thesis,Scalable Knowledge Graph Construction via Active Learning,Scalable Knowledge Graph Construction via Active Learning,exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Most Recent Employer,employer,employer,TechCorp Inc.,TechCorp Inc.,exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Job Title / Position,job_title,job_title,Senior Software Engineer,Senior Software Engineer,exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Years of Experience,years_experience,years_experience,8,8,exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Key Skills,skills,skills,"Python, ML, cloud computing, data engineering","Python, ML, cloud computing, data engineering",exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Professional Bio,bio,bio,Senior software engineer specializing in ML systems.,Senior software engineer specializing in ML systems.,exact,1.0,fill,True
+job_app_p3,Job Application — Work Experience,employment,Research Statement,research_statement,research_statement,My research focuses on structured knowledge extraction.,My research focuses on structured knowledge extraction.,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Patient Full Name,full_name,full_name,Alex Jordan Johnson,Alex Jordan Johnson,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Date of Birth,date_of_birth,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Phone Number,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Home Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Insurance ID,insurance_id,insurance_id,INS-987654321,INS-987654321,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Primary Care Physician,primary_care,primary_care,Dr. Michael Torres,Dr. Michael Torres,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Known Allergies,allergies,allergies,none,none,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Current Medications,medications,medications,none,none,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Medical Conditions,conditions,conditions,none,none,exact,1.0,fill,True
+medical_intake_p1,Medical Intake — Patient Information,medical,Blood Type,blood_type,blood_type,O positive,O positive,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Legal Name,full_name,full_name,Alex Jordan Johnson,Alex Jordan Johnson,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Preferred Name,display_name,display_name,Alex J.,Alex J.,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Personal Email,email,email,alex.johnson@email.com,alex.johnson@email.com,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Phone,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Mailing Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Undergraduate University,university,university,"University of California, Berkeley","University of California, Berkeley",exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Undergraduate GPA,gpa,gpa,3.82,3.82,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Graduate Program,department,department,Computer Science,Computer Science,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Thesis Advisor,advisor,advisor,Dr. Sarah Chen,Dr. Sarah Chen,exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Research Area,research_interests,research_interests,"knowledge graphs, machine learning, NLP","knowledge graphs, machine learning, NLP",exact,1.0,fill,True
+uni_enroll,University Graduate Enrollment,academic,Citizenship Status,citizenship,citizenship,United States,United States,exact,1.0,fill,True
+address_change,USPS Change of Address,government,First Name,first_name,first_name,Alex,Alex,exact,1.0,fill,True
+address_change,USPS Change of Address,government,Last Name,last_name,last_name,Johnson,Johnson,exact,1.0,fill,True
+address_change,USPS Change of Address,government,New Street Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+address_change,USPS Change of Address,government,New City,city,city,San Francisco,San Francisco,exact,1.0,fill,True
+address_change,USPS Change of Address,government,New State,state,state,California,California,exact,1.0,fill,True
+address_change,USPS Change of Address,government,New ZIP+4,zip_code,zip_code,94105,94105,exact,1.0,fill,True
+address_change,USPS Change of Address,government,Phone Number,phone,phone,+1-555-123-4567,+1-555-123-4567,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Full Name,full_name,full_name,Alex Jordan Johnson,Alex Jordan Johnson,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Social Security Number,ssn,ssn,###-##-####,###-##-####,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Date of Birth,date_of_birth,,UNKNOWN,UNKNOWN,unknown,0.0,abstain,True
+insurance_app,Health Insurance Application,insurance,Street Address,address,address,"123 Main Street, Apt 4B","123 Main Street, Apt 4B",exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,City,city,city,San Francisco,San Francisco,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,State,state,state,California,California,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,ZIP,zip_code,zip_code,94105,94105,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Annual Income,annual_income,annual_income,"120,000","120,000",exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Employer Name,employer,employer,TechCorp Inc.,TechCorp Inc.,exact,1.0,fill,True
+insurance_app,Health Insurance Application,insurance,Current Coverage ID,insurance_id,insurance_id,INS-987654321,INS-987654321,exact,1.0,fill,True

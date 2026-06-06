@@ -1,0 +1,38 @@
+{
+  "model_alias": "mistral-small-latest",
+  "pin_date": "2026-06-05T23:10:25.179829Z",
+  "reference_fields": [
+    {
+      "label": "Full Name",
+      "expected": "Alex Johnson",
+      "predicted": "Alex Johnson",
+      "ok": true
+    },
+    {
+      "label": "Email",
+      "expected": "alex.johnson@email.com",
+      "predicted": "alex.johnson@email.com",
+      "ok": true
+    },
+    {
+      "label": "Phone",
+      "expected": "+1-555-123-4567",
+      "predicted": "+1-555-123-4567",
+      "ok": true
+    },
+    {
+      "label": "Employer",
+      "expected": "TechCorp Inc.",
+      "predicted": "TechCorp Inc.",
+      "ok": true
+    },
+    {
+      "label": "University",
+      "expected": "University of California, Berkeley",
+      "predicted": "University of California, Berkeley",
+      "ok": true
+    }
+  ],
+  "all_correct": true,
+  "model_version_from_response": "mistral-small-latest"
+}

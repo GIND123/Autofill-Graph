@@ -1,0 +1,408 @@
+doc_id,split,question,expected_prop,expected_value,llm_predicted,ok,canonical
+0000971160,train,Date:,date,9/ 3/ 92,9/ 3/ 92,True,Date:
+0000971160,train,Name / Phone Ext. :,full_name,"M. Hamann P. Harper, P. Martinez","M. Hamann P. Harper, P. Martinez",True,Name / Phone Ext. :
+0000971160,train,Supervisor / Manager,advisor,J. S. Wigand,J. S. Wigand,True,Supervisor / Manager
+0000989556,train,Company:,employer,B. A. T. CYPRUS,B. A. T. CYPRUS,True,Company:
+0000989556,train,Country:,country,CYPRUS,CYPRUS,True,Country:
+0000989556,train,Date:,date,"May 1, 1985","May 1, 1985",True,Date:
+0000989556,train,Total Pressure Drop (unencap.),amount,90 mm,90 mm,True,Total Pressure Drop (unencap.)
+0000989556,train,Print Position (from filter end),job_title,27 mm,27 mm,True,Print Position (from filter end)
+0000989556,train,Print Description,description,Brown on yellow,Brown on yellow,True,Print Description
+0000990274,train,DATE:,date,"March 27, 1984","March 27, 1984",True,DATE:
+0000990274,train,COUNTRY:,country,BELGIUM,BELGIUM,True,COUNTRY:
+0000999294,train,Total (205),amount,39,39,True,Total (205)
+0000999294,train,No Preference,reference,8,8,True,No Preference
+0000999294,train,FIELD DATE:,date,"September 13, 1982","September 13, 1982",True,FIELD DATE:
+0001118259,train,Standard Grade Mark,gpa,PCFS Flue cured fines,PCFS Flue cured fines,True,Standard Grade Mark
+0001123541,train,DATE:,date,"June 21, 1993","June 21, 1993",True,DATE:
+0001123541,train,DEPARTMENT:,department,R&D Library,R&D Library,True,DEPARTMENT:
+0001129658,train,DATE:,date,10/ 13/ 99,10/ 13/ 99,True,DATE:
+0001129658,train,COMPANY,employer,Philip Morris,Philip Morris,True,COMPANY
+0001129658,train,PHONE No.,phone,917- 663 3056,917- 663 3056,True,PHONE No.
+0001209043,train,Total Sample,amount,214,214,True,Total Sample
+0001209043,train,Date Sent,date,4/19/74,4/19/74,True,Date Sent
+0001209043,train,Sample Description,description,MALE AND FEMALE MENTHOL SMOKERS,MALE AND FEMALE MENTHOL SMOKERS,True,Sample Description
+0001239897,train,REFERENCE,reference,(#627/ 647,#627/ 647,True,REFERENCE
+0001438955,train,Total Sample,amount,285,285,True,Total Sample
+0001438955,train,Newspaper (Date),date,Pittsburgh Pittsburgh PUTSBURGH PRESS (4 /23 /72,Pittsburgh Pittsburgh PUTSBURGH PRESS (4 /23 /72,True,Newspaper (Date)
+0001456787,train,Total Pressure Drop (unencap.),amount,mm,mm,True,Total Pressure Drop (unencap.)
+0001456787,train,Print Description,description,N/A,N/A,True,Print Description
+0001456787,train,Print Position (from filter end),job_title,35 mm,35 mm,True,Print Position (from filter end)
+0001463282,train,Description:,description,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,True,Description:
+0001463282,train,Original Budgeted Amount,amount,23.3,23.3,True,Original Budgeted Amount
+0001463282,train,Date,date,5/ 2/ 90,5/2/90,True,Date
+0001463282,train,Account Name,full_name,BARCLAY,BARCLAY,True,Account Name
+0001476912,train,CITY,city,Chicago,Chicago,True,CITY
+0001477983,train,Amount earned but not received:,amount,$,$,True,Amount earned but not received:
+0001477983,train,Organization/ Employer Name:,full_name,R. J. Reynolds Tobacco,R. J. Reynolds Tobacco,True,Organization/ Employer Name:
+0001485288,train,"Quantity, Cartons of 200 each",quantity,20,20,True,"Quantity, Cartons of 200 each"
+0001485288,train,Date of Request,date,6/ 25/ 81,6/ 25/ 81,True,Date of Request
+0001485288,train,Cigarette Description,description,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,True,Cigarette Description
+0001485288,train,Completion Date,graduation_date,6/ 25/ 81,6/ 25/ 81,True,Completion Date
+00040534,train,DATE RECEIVED,date,Unk.,Unk.,True,DATE RECEIVED
+00040534,train,REFERENCE FOR CALCULATION,reference,"Litchfield, J. T. and Wilcoxin F. , J. of Pharmacol","Litchfield, J. T. and Wilcoxin F. , J. of Pharmacol",True,REFERENCE FOR CALCULATION
+00070353,train,Date,date,"March 18, 1968","March 18, 1968",True,Date
+00093726,train,Date:,date,"September 21, 1976","September 21, 1976",True,Date:
+0011505151,train,DESCRIPTION:,description,CAPRI EXPANSION A&U - CALIFORNIA - WAVE 4.,CAPRI EXPANSION A&U - CALIFORNIA - WAVE 4.,True,DESCRIPTION:
+0011505151,train,Ext. Autho. Date,date,11- 16- 87,11- 16- 87,True,Ext. Autho. Date
+0011838621,train,Date:,date,6/ 21/ 90,6/ 21/ 90,True,Date:
+0011838621,train,Description:,description,Hong Kong: Cigarette Market Monitor,Hong Kong: Cigarette Market Monitor,True,Description:
+0011838621,train,Adjusted Total Cost of Project:,amount,.08,.08,True,Adjusted Total Cost of Project:
+0011838621,train,Account Name,full_name,International.,International,True,Account Name
+0011845203,train,DATE REQUESTED:,date,2/ 22 by courier,2/ 22 by courier,True,DATE REQUESTED:
+0011856542,train,DATE,date,1/4/90,1/4/90,True,DATE
+0011856542,train,PROJECT NAME,full_name,BULL DURHAM Full Flavor King Size Cigarettes,BULL DURHAM Full Flavor King Size Cigarettes,True,PROJECT NAME
+0011859695,train,Date:,date,"September 25, 1969","September 25, 1969",True,Date:
+0011859695,train,Address:,address,"575 Lexington Avenue, New York, New York 10022","575 Lexington Avenue, New York, New York 10022",True,Address:
+0011899960,train,Department,department,CORPORATE AFFAIRS,CORPORATE AFFAIRS,True,Department
+0011899960,train,Date,date,7/ 9/ 84,7/ 9/ 84,True,Date
+0011906503,train,TOTAL,amount,80,80,True,TOTAL
+0011906503,train,PROJECT DESCRIPTION,description,"The Cigarette Test Station (CTS400) combines many of the stand- alone instruments that R&D currently uses to measure cigarette weight, pressure drop, ventilation, and hardness into one compact module. The CTS400 has the additional measurement of cigarette hardness in comparison with the CTS300. With this added, measurement R&D will be able to replace the Firmness Integrator that measures cigarette firmness in addition to other measurements that are mentioned above. The Firmness Integrator is no longer manufactured and parts are becoming difficult to obtain. Lastly, purchase of this instrument would provide similar capability as the Macon Plant and help facilitate comparisions between laboratories.","The Cigarette Test Station (CTS400) combines many of the stand- alone instruments that R&D currently uses to measure cigarette weight, pressure drop, ventilation, and hardness into one compact module. The CTS400 has the additional measurement of cigarette hardness in comparison with the CTS300. With this added, measurement R&D will be able to replace the Firm",True,PROJECT DESCRIPTION
+0011973451,train,Date:,date,6/ 24/ 94,6/ 24/ 94,True,Date:
+0011973451,train,Major Competitive Brands:,degree,TBD,TBD,True,Major Competitive Brands:
+0011973451,train,Qty In Units,quantity,500,500,True,Qty In Units
+0011973451,train,BRAND/PROJECT NAME:,full_name,RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),True,BRAND/PROJECT NAME:
+0011974919,train,Date:,date,"September 10, 1996","September 10, 1996",True,Date:
+0011974919,train,Description:,description,Record of confirmation calls for sneak preview appointments,Record of confirmation calls for sneak preview appointments,True,Description:
+0011974919,train,Circulation Quantity:,quantity,300,300,True,Circulation Quantity:
+0011974919,train,PPS Program #,degree,602399,602399,True,PPS Program #
+0011976929,train,City/ Town:,city,Dundee,Dundee,True,City/ Town:
+0011976929,train,State:,state,Illinois,Illinois,True,State:
+0011976929,train,Name of Event:,full_name,Mrs. Illinois Beauty Pageant,Mrs. Illinois Beauty Pageant,True,Name of Event:
+0012178355,train,Description:,description,"ELI CUTTER KS, for test market, using AMELIA ""B"" Blend (XLF -680G)","ELI CUTTER KS, for test market, using AMELIA ""B"" Blend (XLF -680G)",True,Description:
+0012178355,train,Date,date,10/ 10/ 84,10/ 10/ 84,True,Date
+0012199830,train,Customer,full_name,B&W,B&W,True,Customer
+0012199830,train,Total Solids,amount,Toluene,Toluene,True,Total Solids
+0012529284,train,Date:,date,12- -4 -87,12- -4 -87,True,Date:
+0012529284,train,Description:,description,"CAPRI A&U EXPANSION - CALIFORNIA: WAVE 2 (87 -113) ,",CAPRI A&U EXPANSION - CALIFORNIA: WAVE 2 (87 -113),True,Description:
+0012529284,train,Adjusted Total Cost of Project:,amount,"$ 212, 475 + 10%","$ 212,475 + 10%",True,Adjusted Total Cost of Project:
+0012529295,train,Date:,date,10/ /9 87,10/ /9 87,True,Date:
+0012529295,train,Account Name,full_name,CAPRI,CAPRI,True,Account Name
+0012529295,train,Description: CAPRI Expansion:,description,California- A&U Wave II,California- A&U Wave II,True,Description: CAPRI Expansion:
+0012529295,train,Total Cost,amount,$112 000 +/ - 10%,$112 000 +/- 10%,True,Total Cost
+0012602424,train,DATE:,date,11/ 28/ 84,11/ 28/ 84,True,DATE:
+0012602424,train,PROJECT NAME:,full_name,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,True,PROJECT NAME:
+0012602424,train,AMOUNT OF CHANGE INCREASE ): (CIRCLE ONE),amount,"+1 ,000 (0 .5% CHANGE)","+1 ,000 (0 .5% CHANGE)",True,AMOUNT OF CHANGE INCREASE ): (CIRCLE ONE)
+0012947358,train,DATE:,date,1- -27 -69,1- -27 -69,True,DATE:
+00283813,train,Date:,date,7/ 16/ 68,7/16/68,True,Date:
+0030041455,train,Section Sales Manager's Name,full_name,Peter Hatch,Peter Hatch,True,Section Sales Manager's Name
+0060000813,train,Date Received,date,1 /25 /91,1 /25 /91,True,Date Received
+0060007216,train,DATE,date,"April 30, 1985","April 30, 1985",True,DATE
+0060007216,train,PROJECT NAME,full_name,PALL MALL Regular Menthol,PALL MALL Regular Menthol,True,PROJECT NAME
+0060024314,train,DESCRIPTION:,description,Liquid Adhesive,Liquid Adhesive,True,DESCRIPTION:
+0060024314,train,PRODUCT (CHEMICAL) NAME:,full_name,Fuller G2315 DC,Fuller G2315 DC,True,PRODUCT (CHEMICAL) NAME:
+0060029036,train,Company,employer,"SPEVCO, INC.","SPEVCO, INC.",True,Company
+0060029036,train,DATE,date,1-11-94,1-11-94,True,DATE
+0060029036,train,SIGNATURE,signature,B J. Powell,B J. Powell,True,SIGNATURE
+0060029036,train,NAME,full_name,Michael Wright,Michael Wright,True,NAME
+0060029036,train,Total Contract Cost,amount,"$ 1,340,000.00","$ 1,340,000.00",True,Total Contract Cost
+0060029036,train,Brief Description,description,"2 Joe's Place Exhibits for use at Winston Cup, Winston Drag and Camel Super Bike Events.","2 Joe's Place Exhibits for use at Winston Cup, Winston Drag and Camel Super Bike Events.",True,Brief Description
+0060068489,train,DATE,date,3/17/82,3/17/82,True,DATE
+0060068489,train,DESCRIPTION,description,30 sheet Posters (White Background),30 sheet Posters (White Background),True,DESCRIPTION
+0060068489,train,TOTAL,amount,"$ 28,880.00","$ 28,880.00",True,TOTAL
+0060077689,train,DESCRIPTION,description,"CARLTON ""Free"" Carton"" Direct Mail Piece","CARLTON ""Free"" Carton"" Direct Mail Piece",True,DESCRIPTION
+0060077689,train,DATE,date,"January 3, 1995","January 3, 1995",True,DATE
+0060077689,train,DEPARTMENT CHARGED,department,Brand Operations,Brand Operations,True,DEPARTMENT CHARGED
+0060080406,train,DESCRIPTION,description,COLLATERAL MERCHANDISING MATERIALS,COLLATERAL MERCHANDISING MATERIALS,True,DESCRIPTION
+0060094595,train,-Went out immediately,phone,12,12,True,-Went out immediately
+0060136394,train,DATE,date,"APRIL 1,1957","APRIL 1,1957",True,DATE
+0060136394,train,TOTAL:,amount,$ 6.600.00,$ 6.600.00,True,TOTAL:
+0060136394,train,PROGRAM,degree,1/2 HOUR PROGRAMES,1/2 HOUR PROGRAMES,True,PROGRAM
+0060165115,train,DATE:,date,28 Apr. 98,28 Apr. 98,True,DATE:
+0060165115,train,ADDRESS:,address,Philip Morris Europe Fabriques de Tabac Reunies S. A.,Philip Morris Europe Fabriques de Tabac Reunies S. A.,True,ADDRESS:
+0060165115,train,Telephone,phone,(0 22 03) 303 -1,(0 22 03) 303 -1,True,Telephone
+0060173256,train,Description,description,Displays,Displays,True,Description
+0060173256,train,Amount,amount,"31,000.00","31,000.00",True,Amount
+0060173256,train,Date,date,5/5,5/5,True,Date
+0060207528,train,TOTAL,amount,54,54,True,TOTAL
+0060207528,train,DATE,date,2/ 25/ 89,2/25/89,True,DATE
+0060207528,train,BRAND NAME:,full_name,PALL MALL RED LIGHTS,PALL MALL RED LIGHTS,True,BRAND NAME:
+0060214859,train,Date,date,10- NOV- 1986,10- NOV- 1986,True,Date
+0060214859,train,Telephone#,phone,6926,6926,True,Telephone#
+0060214859,train,Quantity Received,quantity,2 ROLLS,2 ROLLS,True,Quantity Received
+0060255888,train,Date:,date,"October 9, 1968","October 9, 1968",True,Date:
+0060255888,train,Address:,address,383 Madison Avenue New York 10017,383 Madison Avenue New York 10017,True,Address:
+0060255888,train,Phone Booth :,phone,20,20,True,Phone Booth :
+0060262650,train,Telephone:,phone,(202) 842- 9530,(202) 842- 9530,True,Telephone:
+0060262650,train,Position,job_title,Director - Genetics Centers,Director - Genetics Centers,True,Position
+0060262650,train,"CITY STATE,",city,Washington DC 20006,Washington DC 20006,True,"CITY STATE,"
+0060270727,train,BRAND FAMILY NAME:,full_name,MALIBU,MALIBU,True,BRAND FAMILY NAME:
+0060270727,train,TOTAL REPORTABLE EXPENDITURES FOR VARIETYI:,amount,94,94,True,TOTAL REPORTABLE EXPENDITURES FOR VARIETYI:
+0060270727,train,VARIETY DESCRIPTION:,description,"King Size, Filter","King Size, Filter",True,VARIETY DESCRIPTION:
+0060270727,train,FIRST SALES DATE:,date,10/ 26/ 87,10/ 26/ 87,True,FIRST SALES DATE:
+0060302201,train,NAME:,full_name,Ronald. W Davis,Ronald. W Davis,True,NAME:
+0060302201,train,"IF SO, GIVE DATE AND TITLE:",date,MBTH- reagent for analysis of aliphatic aldehydes 7 / 5 / 67,MBTH- reagent for analysis of aliphatic aldehydes 7 / 5 / 67,True,"IF SO, GIVE DATE AND TITLE:"
+0060308251,train,Date,date,7/ 24/ 90,7/24/90,True,Date
+0060308461,train,(26) TOTAL REPORTABLE EXPENDITURES FOR VARIETY:,amount,"1,221,771","1,221,771",True,(26) TOTAL REPORTABLE EXPENDITURES FOR VARIETY:
+0060308461,train,(2) BRAND FAMILY NAME:,full_name,LUCKY STRIKE,LUCKY STRIKE,True,(2) BRAND FAMILY NAME:
+0060308461,train,(3) VARIETY DESCRIPTION,description,"Low tar, king size, filter, hard pack","Low tar, king size, filter, hard pack",True,(3) VARIETY DESCRIPTION
+0071032790,train,DATE:,date,"September 16, 1980","September 16, 1980",True,DATE:
+0071032790,train,PROJECT NAME:,full_name,-,-,True,PROJECT NAME:
+0071032807,train,Date,date,"November 15, 1968","November 15, 1968",True,Date
+0071032807,train,Project Name,full_name,Charcoal Smoking Tobacco,Charcoal Smoking Tobacco,True,Project Name
+00836244,train,DATE RECEIVED,date,9 /3 /80,9 /3 /80,True,DATE RECEIVED
+00836816,train,DATE,date,8/ 10/ 82,8/ 10/ 82,True,DATE
+00836816,train,PHYSICAL STATE,state,Clear Colorless liquid,Clear Colorless liquid,True,PHYSICAL STATE
+00837285,train,SIGNATURE,signature,Johnson,Johnson,True,SIGNATURE
+00837285,train,DATE,date,11/1381,11/1381,True,DATE
+00837285,train,AMOUNT,amount,g100ml,g100ml,True,AMOUNT
+00838511_00838525,train,NAME,full_name,"Paul Schickedantz, Jack Reid","Paul Schickedantz, Jack Reid",True,NAME
+00838511_00838525,train,DATE,date,12- 4- 80,12- 4- 80,True,DATE
+00851772_1780,train,NAME,full_name,Jimmy Bell,Jimmy Bell,True,NAME
+00851772_1780,train,DATE,date,"May 27, 1982","May 27, 1982",True,DATE
+00851879,train,Date,date,5-13-81,5-13-81,True,Date
+00860012_00860014,train,DATE ISSUED,date,"December 13, 1983","December 13, 1983",True,DATE ISSUED
+00860012_00860014,train,PERFORMING DEPARTMENTS,department,Acute/ Dermal Toxicology,Acute/ Dermal Toxicology,True,PERFORMING DEPARTMENTS
+00865872,train,Reference:,reference,BC20- 48,BC20- 48,True,Reference:
+00865872,train,DATE,date,8/22/83,8/22/83,True,DATE
+00865872,train,PHYSICAL STATE,state,Brownish- gray powder,Brownish- gray powder,True,PHYSICAL STATE
+00866042,train,SIGNATURE:,signature,D.,D.,True,SIGNATURE:
+00866042,train,RECEIPT DATE(s),date,9/28/83,9/28/83,True,RECEIPT DATE(s)
+00866042,train,FOLLOW DEPARTMENT AND COMPANY SAFETY MANUALS,department,☑,☑,True,FOLLOW DEPARTMENT AND COMPANY SAFETY MANUALS
+00920222,train,DATE,date,"March 27, 1984","March 27, 1984",True,DATE
+00920222,train,DESCRIPTION,description,"This is your authorization to perform the ""Acute Oral Toxicity Study in the Rat"" tests on materials D13 and D23 supplied by Lorillard. The fixed price for each test is $2050 for each material, for a total price of $4100. Studies are to be conducted in accordance with the October 17, 1980 formal agreement between Borriston and Lorillard. All work is to be coordinated with our Dr. Connie Stone (919) 373- 6663.","This is your authorization to perform the ""Acute Oral Toxicity Study in the Rat"" tests on materials D13 and D23 supplied by Lorillard. The fixed price for each test is $2050 for each material, for a total price of $4100. Studies are to be conducted in accordance with the October 17, 1980 formal",True,DESCRIPTION
+00920222,train,FOR PURCHASING DEPARTMENT USE ONLY,department,"Borriston Laboratories, INC. , 5050 Beech Place Temple Hills, MD 20748","Borriston Laboratories, INC. , 5050 Beech Place Temple Hills, MD 20748",True,FOR PURCHASING DEPARTMENT USE ONLY
+00920294,train,Date:,date,3/ 7/ 97,3/ 7/ 97,True,Date:
+00920294,train,Mailfile Description,description,Mail Order- Indy Responders,Mail Order- Indy Responders,True,Mailfile Description
+00920294,train,Quantity:,quantity,273,273,True,Quantity:
+00920294,train,Program#:,degree,700418,700418,True,Program#:
+00920294,train,Mailfile Cells,phone,HD home delivery,HD home delivery,True,Mailfile Cells
+00922237,train,DESCRIPTION,description,"This is your authorization to provide the ""1601.013: The Effect of Inhalation of Reference and Test (D3 and D4) Cigarette Smoke on Two Cytogenetic Endpoints in Mice: Chromosome Aberrations and Sister Chromatid Exchange"" test for a fixed price of $19,750 Tests will be performed in accordance with the December 21, 1981 formal agreement between Microbiological Associates and Lorillard. All work is to be coordinated with our Dr. Harry Minnemeyer (919) 373-6603","This is your authorization to provide the ""1601.013: The Effect of Inhalation of Reference and Test (D3 and D4) Cigarette Smoke on Two Cytogenetic Endpoints in Mice: Chromosome Aberrations and Sister Chromatid Exchange"" test for a fixed price of $19,750 Tests will be performed in accordance with the December",True,DESCRIPTION
+00922237,train,DATE WANTED,date,As required,As required,True,DATE WANTED
+01073843,train,DATE RECEIVED,date,unknown,UNKNOWN,False,Date
+01122115,train,DATE,date,11 /2 /61,11 /2 /61,True,Date
+01122115,train,Ref. Paper,reference,#450,#450,True,Reference Number
+01122115,train,Total Denier as Marked,amount,"58 ,000","58 ,000",True,Total Amount
+01150773_01150774,train,Date:,date,"January 15, 1997","January 15, 1997",True,Date
+01150773_01150774,train,TELEPHONE:,phone,44 71 495 5655,44 71 495 5655,True,Phone Number
+01191071_1072,train,TEL NO.,phone,SHB,SHB,True,Phone Number
+01191071_1072,train,Date:,date,11/12/96,11/12/96,True,Date
+01191071_1072,train,Company:,employer,Philip Morris Management Corp.,Philip Morris Management Corp.,True,Current Employer
+01197604,train,DESCRIPTION:,description,OLD GOLD Straights + 3% KNO3,OLD GOLD Straights + 3% KNO3,True,Description
+01197604,train,DATE SHIPPED:,date,"November 2, 1965","November 2, 1965",True,Date
+01408099_01408101,train,DATE,date,"March 1, 1978","March 1, 1978",True,Date
+01408099_01408101,train,PROJECT NAME,full_name,True 100's (R&M),UNKNOWN,False,Full Name
+01408099_01408101,train,GENERAL PROJECT DESCRIPTION,description,"True 100's, Regular and Menthol tar","True 100's, Regular and Menthol tar",True,Description
+11508234,train,Date:,date,"March3, 1995","March3, 1995",True,Date
+11508234,train,Description:,description,LUCKY STRIKE QUALITATIVE ADVERTISING RESEARCH - GATEWAY CITIES,LUCKY STRIKE QUALITATIVE ADVERTISING RESEARCH - GATEWAY CITIES,True,Description
+11508234,train,Total Cost,amount,"29,500","29,500",True,Total Amount
+11875011,train,DATE REQUESTED:,date,1-23-95,1-23-95,True,Date
+12052385,train,DESCRIPTION:,description,KMDP ANALYSIS UTILIZING BLACK SWITCHING STUDY DATA,KMDP ANALYSIS UTILIZING BLACK SWITCHING STUDY DATA,True,Description
+12603270,train,Date:,date,"June 21, 1985","June 21, 1985",True,Date
+12603270,train,Description:,description,Amelia 100's Candidates: (NM-FT and NM- Lights),Amelia 100's Candidates: (NM-FT and NM- Lights),True,Description
+12603270,train,Total Area Budget:,amount,"3,669,000","3,669,000",True,Total Amount
+12603270,train,Brand Name:,full_name,RICHLAND 100's,RICHLAND 100's,True,Full Name
+13149651,train,Date,date,2-2-83,2-2-83,True,Date
+660978,train,DATE:,date,1/ 19/ 82,1/ 19/ 82,True,Date
+71108371,train,Department:,department,BD & SS,BD & SS,True,Academic Department
+71108371,train,Phone Number:,phone,7970,7970,True,Phone Number
+71108371,train,Date Required:,date,4/20/98,4/20/98,True,Date
+71108371,train,Description of Request:,description,"Please run job FRMRXUM2 for GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst. Please place output in the same directory.","Please run job FRMRXUM2 for GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst. Please place output in the same directory.",True,Description
+71190280,train,Signature,signature,LKelly,LKelly,True,Signature
+71190280,train,Department,department,production AE,production AE,True,Academic Department
+71190280,train,Date,date,10/22/98 10/22/98,10/22/98 10/22/98,True,Date
+71190280,train,DESCRIPTION,description,Passport Winter Program Ad- EMRO,Passport Winter Program Ad- EMRO,True,Description
+71202511,train,Date:,date,2/ 26/ 98,2/ 26/ 98,True,Date
+71202511,train,Description:,description,KOOL Natural Lights Packaging - Round I,KOOL Natural Lights Packaging - Round I,True,Description
+71202511,train,Total Cost,amount,"58,500","58,500",True,Total Amount
+71206427,train,ITEM:,description,Package Fixture Circle-K Convenient Stores,Package Fixture Circle-K Convenient Stores,True,Description
+71206427,train,DATE:,date,"June 1, 1990","June 1, 1990",True,Date
+71341634,train,Address:,address,395 DYSTER POINT BLVD SUITE 415 S. SAN FRANCISCO,395 DYSTER POINT BLVD SUITE 415 S. SAN FRANCISCO,True,Current Address
+71341634,train,Quantity,quantity,6. 382,6. 382,True,Quantity
+71341634,train,Amount,amount,$12 784 00,$12 784 00,True,Total Amount
+71341634,train,Date,date,03/ 24/ 99,03/ 24/ 99,True,Date
+71341634,train,Promotion Name,full_name,Section 18 Narl Chain Walgreens,Section 18 Narl Chain Walgreens,True,Full Name
+71366499,train,DESCRIPTION,description,CMS Amerada Hess Dispenser Sign,CMS Amerada Hess Dispenser Sign,True,Description
+71366499,train,DATE,date,12/ 15/ 97,12/ 15/ 97,True,Date
+71563825,train,Date:,date,02/ 12/ 98,02/ 12/ 98,True,Date
+71563825,train,Project Name/ Description,full_name,K001 vs. Marlboro Menthol Lights,K001 vs. Marlboro Menthol Lights,True,Full Name
+71601299,train,Date,date,15. 03. 2000,15. 03. 2000,True,Date
+71601299,train,Project Name/ Description:,full_name,"Dunhill Lights, CPT","Dunhill Lights, CPT",True,Full Name
+716552,train,DESCRIPTION,description,VICEROY Rich Lights 100' s 20' s Label,VICEROY Rich Lights 100' s 20' s Label,True,Description
+716552,train,DATE:,date,9/ 17/ 8181,9/ 17/ 8181,True,Date
+80707440_7443,train,DATE:,date,8/ 8/ 69,8/ 8/ 69,True,Date
+80718412_8413,train,Date:,date,October 3rd,October 3rd,True,Date
+80718412_8413,train,NUMBER OF SUPERVISORS:,advisor,3,UNKNOWN,False,Advisor
+80728670,train,DATE:,date,2 /28 /84,2 /28 /84,True,Date
+80728670,train,Hotel /Motel reservations needed,phone,XX,XX,True,Phone Number
+81310636,train,Compound Name,full_name,Proprietary Mixture,Proprietary Mixture,True,Full Name
+81574683,train,Date:,date,3/27/84,3/27/84,True,Date
+81619486_9488,train,DIVISION NAME:,full_name,Detroit North,Detroit North,True,Full Name
+81619511_9513,train,NAME OF ACCOUNT,full_name,Chatham Oil (311- 01),Chatham Oil (311- 01),True,Full Name
+81749056_9057,train,NAME OF ACCOUNT,full_name,None,UNKNOWN,False,Full Name
+81749056_9057,train,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,542,542,True,Total Amount
+81749056_9057,train,AREA REGION:,state,1/ 20,1/ 20,True,State
+82254638,train,DATE TO CORP:,date,7/11/97,7/11/97,True,Date
+82254638,train,QUANTITY REQUIRED,quantity,400,400,True,Quantity
+82254638,train,CUSTOMER SHIPPING NUMBER,full_name,198-820-0003,198-820-0003,True,Full Name
+87533049,train,Media Name,full_name,N/A,UNKNOWN,False,Full Name
+87533049,train,Coupon Issue Date,date,10 / 90,10 / 90,True,Date
+87672097,train,DATE RECEIVED,date,3/5/81,3/5/81,True,Date
+87672097,train,REFERENCE FOR CALCULATION,reference,"Weil, Carrol S., Biometrics, Vol. 8, No. 3., Sept. 1952,","Weil, Carrol S., Biometrics, Vol. 8, No. 3., Sept. 1952,",True,Reference Number
+88547278_88547279,train,Date:,date,"July 7, 1993","July 7, 1993",True,Date
+88547278_88547279,train,Qty:,quantity,"89,725","89,725",True,Quantity
+88547278_88547279,train,TEL:,phone,(212) 627 4111,(212) 627 4111,True,Phone Number
+88547278_88547279,train,Quantities and Description:,description,H/D 8 Pk. Wide Header 4 C/P + 2 Hits Day- Glo + Spot Varnish,H/D 8 Pk. Wide Header 4 C/P + 2 Hits Day- Glo + Spot Varnish,True,Description
+88547278_88547279,train,Authorized Signature:,signature,"Applied Graphics Technologies 50 West 23rd Street, N.Y.C. 10010","Applied Graphics Technologies 50 West 23rd Street, N.Y.C. 10010",True,Signature
+89368010,train,DATE,date,16/3/82,16/3/82,True,Date
+89368010,train,Study Name,full_name,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,True,Full Name
+89386032,train,Client Name,full_name,"Borriston Laboratories, Inc.","Borriston Laboratories, Inc.",True,Full Name
+89867723,train,DATE,date,"April 27, 1981","April 27, 1981",True,Date
+91104867,train,TOTAL YEAR,amount,"25,500","25,500",True,Total Amount
+91104867,train,ITEM,description,Consumer,Consumer,True,Description
+91104867,train,Department,department,Domestic Tax Free,UNKNOWN,False,Academic Department
+91161344_91161347,train,QUANTITY,quantity,"Varies by market, see attached list. Approx. 20% of the total # by state will receive product","Varies by market, see attached list. Approx. 20% of the total # by state will receive product",True,Quantity
+91161344_91161347,train,Today's Date,date,3/20/78,3/20/78,True,Date
+91355841,train,DATE:,date,"SEPT. 27, 1991","SEPT. 27, 1991",True,Date
+91356315,train,DATE:,date,4/ 26/ 91,4/ 26/ 91,True,Date
+91361993,train,DATE:,date,10 /5 /92,10 /5 /92,True,Date
+91361993,train,BRAND NAME:,full_name,CARDINAL CIGARETTES (11 PACKINGS),CARDINAL CIGARETTES (11 PACKINGS),True,Full Name
+91372360,train,DATE,date,11/4/93,11/4/93,True,Date
+91372360,train,NAME:,full_name,Mr. A. J. Giacoio,Mr. A. J. Giacoio,True,Full Name
+91372360,train,FAX PHONE NUMBER:,phone,212 545- 3299,212 545- 3299,True,Phone Number
+91391286,train,COUPON ISSUE DATE,date,5/19/93,5/19/93,True,Date
+91391310,train,COUPON ISSUE DATE,date,10/11/93,10/11/93,True,Date
+91391310,train,SIGNATURE OF INITIATOR,signature,Marine B,Marine B,True,Signature
+91581919,train,Date,date,1/31/88,1/31/88,True,Date
+91581919,train,State of,state,Indiana ),Indiana,True,State
+91856041_6049,train,EVENT NAME:,full_name,The USO Spring Festival,The USO Spring Festival,True,Full Name
+91856041_6049,train,PHONE NUMBER,phone,(201) 923-9208,(201) 923-9208,True,Phone Number
+91914407,train,DATE:,date,6- 29- 94,6- 29- 94,True,Date
+91914407,train,NAME:,full_name,Mr. Al Giacoio,Mr. Al Giacoio,True,Full Name
+91914407,train,TOTAL PAGES,amount,14,14,True,Total Amount
+91914407,train,FAX TELEPHONE NUMBER:,phone,(904) 464- 0744,(904) 464- 0744,True,Phone Number
+91939637,train,DATE:,date,FROM,UNKNOWN,False,Date
+91974562,train,COUPON ISSUE DATE,date,10/ 13/ 95,10/ 13/ 95,True,Date
+92081358_1359,train,% TOTAL =,amount,100%,100%,True,Total Amount
+92091873,train,Date Ordered,date,Unknown,UNKNOWN,False,Date
+92091873,train,#Customers Invited,full_name,40,40,True,Full Name
+92094746,train,DATE,date,9 /8 /95,9 /8 /95,True,Date
+92094746,train,AREA/ REGION/ DIVISION,state,2 13,2 13,True,State
+92094746,train,ITEM/ BRAND:,description,Sunglasses / Newport,Sunglasses / Newport,True,Description
+92094751,train,DATE,date,9/ 8 /95,9/ 8 /95,True,Date
+92094751,train,AREA REGION DIVISION,state,03/ 07/ 415415 & 418418,03/ 07,True,State
+92094751,train,ITEM/ BRAND,description,Newport Sunglasses,Newport Sunglasses,True,Description
+92298125,train,DATE:,date,JAN 19. 1995,JAN 19. 1995,True,Date
+92314414,train,(Date),date,1 November 1991,1 November 1991,True,Date
+92314414,train,1. Full Name,full_name,Andrew H. Tisch (Print or type),Andrew H. Tisch (Print or type),True,Full Name
+92314414,train,2. Residence Address,address,"26 East 63rd Street, New York, N. Y. 10021 (Include state and zip code)","26 East 63rd Street, New York, N. Y. 10021 (Include state and zip code)",True,Current Address
+92327794,train,DATE:,date,"July 22, 1993","July 22, 1993",True,Date
+92433599_92433601,train,Name,full_name,"BRAYTON, GISVOLD. & HARLEY","BRAYTON, GISVOLD. & HARLEY",True,Full Name
+92433599_92433601,train,Address,address,"999 Grant Avenue, P. O. Box 2109","999 Grant Avenue, P. O. Box 2109",True,Current Address
+92433599_92433601,train,City,city,Novato,Novato,True,City
+92433599_92433601,train,State,state,CA,CA,True,State
+92433599_92433601,train,Telephone,phone,(415) 898- 1555,(415) 898- 1555,True,Phone Number
+92433599_92433601,train,Zip Code,zip_code,94948,94948,True,ZIP Code
+92433599_92433601,train,3. Date of claimant's birth:,date,"June 19, 1921","June 19, 1921",True,Date
+92586242,train,EVENT NAME:,full_name,Upper Madisor Avenue Festival,Upper Madisor Avenue Festival,True,Full Name
+92586242,train,PHONE NUMBER,phone,(201) 923 -9208,(201) 923 -9208,True,Phone Number
+92657391,train,DATE:,date,12/ 28/ 94,12/ 28/ 94,True,Date
+92657391,train,NAME:,full_name,R. H. Orcutt,R. H. Orcutt,True,Full Name
+92657391,train,FAX PHONE NUMBER:,phone,(212) 545- 3299,(212) 545- 3299,True,Phone Number
+93213298,train,# Customers Invited,full_name,8,8,True,Full Name
+93213298,train,Date (s),date,"June 11, 1995","June 11, 1995",True,Date
+93329540,train,DATE:,date,8/ 13/ 93,8/ 13/ 93,True,Date
+93329540,train,BRAND NAME:,full_name,SPECIAL 10' s,SPECIAL 10' s,True,Full Name
+93351929_93351931,train,COUPON ISSUE DATE,date,"September 1, 1992","September 1, 1992",True,Date
+93380187,train,- COUPON ISSUE DATE,date,MAY 1992,MAY 1992,True,Date
+93380187,train,- SIGNATURE OF INITIATOR,signature,Michell,Michell,True,Signature
+93455715,train,DATE:,date,4/7/88,4/7/88,True,Date
+82092117,test,DATE:,date,12 /10 /98,12 /10 /98,True,Date
+82092117,test,PHONE NUMBER:,phone,(336) 335- 7363,(336) 335- 7363,True,Phone Number
+82200067_0069,test,REGION:,state,(ONLY IF PARTIAL REGION CONTINUE WITH DIVISION (S) SCOPE),UNKNOWN,False,State
+82200067_0069,test,NAME OF ACCOUNT,full_name,Texaco Seattle,Texaco Seattle,True,Full Name
+82250337_0338,test,DATE:,date,2- Dec- 97,2- Dec- 97,True,Date
+82251504,test,Region:,state,17,17,True,State
+82252956_2958,test,DIVISION NAME:,full_name,Milw. South,UNKNOWN,False,Full Name
+82253058_3059,test,DATE:,date,12/ 10/ 96,12/ 10/ 96,True,Date
+82253245_3247,test,NAME OF ACCOUNT,full_name,Sheetz,Sheetz,True,Full Name
+82253362_3364,test,NAME OF ACCOUNT,full_name,Chevron,Chevron,True,Full Name
+82254765,test,DATE TO NYO:,date,1/24/97,1/24/97,True,Date
+82254765,test,QUANTITY REQUIRED,quantity,1500,1500,True,Quantity
+82254765,test,DIV. NAME/ NO:,full_name,Nassau/ 107,Nassau/ 107,True,Full Name
+82491256,test,CASE NAME:,full_name,"Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.","Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.",True,Full Name
+82491256,test,DATE FILED:,date,"July 23, 1998","July 23, 1998",True,Date
+82504862,test,CASE NAME:,full_name,Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,True,Full Name
+82504862,test,DATE SERVED,date,"August 3, 1998","August 3, 1998",True,Date
+82562350,test,Date:,date,"May 1, 2000","May 1, 2000",True,Date
+82562350,test,Telephone:,phone,(952) 694-2238,(952) 694-2238,True,Phone Number
+82573104,test,Date:,date,"December 9, 1999","December 9, 1999",True,Date
+82837252,test,DATE:,date,8/ 10/ 90,8/ 10/ 90,True,Date
+82837252,test,BRAND NAME:,full_name,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,True,Full Name
+83443897,test,DATE:,date,"January 11, 1999","January 11, 1999",True,Date
+83443897,test,COMPANY:,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,True,Current Employer
+83443897,test,PHONE:,phone,336/ 373- 6750,336/ 373- 6750,True,Phone Number
+83553333_3334,test,Date,date,November,November,True,Date
+83553333_3334,test,Reference,reference,17555 002,17555 002,True,Reference Number
+83553333_3334,test,Company,employer,Brown Rudnick Freed & Gesmer,Brown Rudnick Freed & Gesmer,True,Current Employer
+83553333_3334,test,Recipient Phone Number,phone,617- 330- 9000,617- 330- 9000,True,Phone Number
+83573282,test,Date:,date,"January 14, 1999","January 14, 1999",True,Date
+83573282,test,Company:,employer,"Wachtell, Lipton, Rosen & Katz","Wachtell, Lipton, Rosen & Katz",True,Current Employer
+83573282,test,Phone No.:,phone,(312) 861- 2000,(312) 861- 2000,True,Phone Number
+83594639,test,Date:,date,"September 22, 1997","September 22, 1997",True,Date
+83594639,test,Company:,employer,Lorillard,Lorillard,True,Current Employer
+83624198,test,DATE:,date,"February 25, 1998","February 25, 1998",True,Date
+83624198,test,COMPANY:,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,True,Current Employer
+83624198,test,PHONE:,phone,910 /335 -7718,910 /335 -7718,True,Phone Number
+83635935,test,DATE:,date,"June 4, 1997","June 4, 1997",True,Date
+83641919_1921,test,DIVISION NAME:,full_name,Flint,UNKNOWN,False,Full Name
+83772145,test,DATE:,date,"JANUARY 31, 1997","JANUARY 31, 1997",True,Date
+83772145,test,TELECOPY NO:,phone,212/ 545- 3297,212/ 545- 3297,True,Phone Number
+83823750,test,Date,date,"November 11, 1997","November 11, 1997",True,Date
+83823750,test,Company,employer,Lorillard Tobacco Company,Lorillard Tobacco Company,True,Current Employer
+83823750,test,Reference,reference,17560 -188,17560 -188,True,Reference Number
+83996357,test,COUPON ISSUE DATE,date,10/ 4/ 99,10/ 4/ 99,True,Date
+85240939,test,NAME:,full_name,GEORGE R. TELFORD,GEORGE R. TELFORD,True,Full Name
+85240939,test,COMPANY:,employer,Lorillard,Lorillard,True,Current Employer
+85240939,test,ADDRESS:,address,"666 Fifth Avenue, New York, NY 10019","666 Fifth Avenue, New York, NY 10019",True,Current Address
+85240939,test,PHONE:,phone,(212) 841- 8787,(212) 841- 8787,True,Phone Number
+85240939,test,ARRIVAL DATE AND TIME:,date,2/18/80 7:00 P. M.,2/18/80 7:00 P. M.,True,Date
+86075409_5410,test,Media Name,full_name,Competitive 21- 34 years,Competitive 21- 34 years,True,Full Name
+86075409_5410,test,Coupon Issue Date,date,4/ 14/ 00,4/ 14/ 00,True,Date
+86075409_5410,test,Signature of Initiator,signature,21- Jan 00,21- Jan 00,True,Signature
+86079776_9777,test,Date/ Time:,date,10/30/98 1:46 PM,10/30/98,True,Date
+86220490,test,Date:,date,8/ 31/ 98,8/ 31/ 98,True,Date
+86220490,test,Phone #:,phone,335- 7150,335- 7150,True,Phone Number
+86230203_0206,test,NAME OF ACCOUNT,full_name,Seyle,Seyle,True,Full Name
+86263525,test,DATE,date,2 /15 /90,2 /15 /90,True,Date
+86263525,test,DEPARTMENT NAME,full_name,SCIENCE & TECHNOLOGY,UNKNOWN,False,Full Name
+86328049_8050,test,Name:,full_name,Ken Forrest,Ken Forrest,True,Full Name
+86328049_8050,test,Telecopier Nos.,phone,(804) 788- 8218 (804) 788- 8219 (804) 788- 8669,(804) 788- 8218 (804) 788- 8219 (804) 788- 8669,True,Phone Number
+87086073,test,DATE,date,"August 14, 1990","August 14, 1990",True,Date
+87086073,test,COMPOUND NAME,full_name,Vanitrope,Vanitrope,True,Full Name
+87093315_87093318,test,Date:,date,3/14/90,3/14/90,True,Date
+87125460,test,DATE,date,8/ 7/ 87,8/ 7/ 87,True,Date
+87125460,test,STUDY NAME,full_name,Induction of Hepatic Enzymes in rats (B202),Induction of Hepatic Enzymes in rats (B202),True,Full Name
+87137840,test,DATE:,date,03 /02 /90,03 /02 /90,True,Date
+87137840,test,SPONSOR'S NAME:,full_name,Lorillard,Lorillard,True,Full Name
+87137840,test,PHYSICAL DESCRIPTION:,description,Clear brown liquid,Clear brown liquid,True,Description
+87137840,test,STUDY DIRECTOR /DEPARTMENT,department,Ray David,UNKNOWN,False,Academic Department
+87147607,test,DESCRIPTION,description,"This is your authorization to prepare cigarette smoke condensate according to the protocol ""Standard Operating Procedure før the Preparation of Smoke Condensate for Mouse Skin Bioassay,"" for the period April 1, 1988 through December 31, 1988. Condensate will be prepared acording to a time schedule provided by Lorillard. The fixed price for condensate collection will be at a rate of $1, 750/10, 000 cigarettes smoked. Piedmont will pay the cost of consumable supplies. This work is to be conducted in accordance with the December 10, 1984 formal agreement between Piedmont Reseach Laboratories and Lorillard. All work is to be coordinated with our Mr. Neil Thaggard (919) 373-6628","This is your authorization to prepare cigarette smoke condensate according to the protocol ""Standard Operating Procedure før the Preparation of Smoke Condensate for Mouse Skin Bioassay,"" for the period April 1, 1988 through December 31, 1988. Condensate will be prepared acording to a time schedule provided by Lorillard. The fixed price for condensate collection",True,Description
+87147607,test,DATE,date,"April 19, 1988","April 19, 1988",True,Date
+87332450,test,Telephone:,phone,(615) ) 638- 5532,(615) ) 638- 5532,True,Phone Number
+87428306,test,PHYSICAL STATE,state,A crystalline solid at room temperature which melts at > 56 C.,A crystalline solid at room temperature which melts at > 56 C.,True,State
+87528321,test,Date,date,B-17-88,B-17-88,True,Date
+87528321,test,ORIGINATOR Name:,full_name,Dan Straka,Dan Straka,True,Full Name
+87528380,test,DATE,date,"October 16, 1987","October 16, 1987",True,Date
+87528380,test,ADDRESS,address,666 Fifth Avenue,666 Fifth Avenue,True,Current Address
+87528380,test,CITY,city,New York,New York,True,City
+87528380,test,STATE,state,New York 10103,New York 10103,True,State
+87528380,test,ITEM:,description,Harley Davidson Metal Plaque,Harley Davidson Metal Plaque,True,Description
+87528380,test,SHIP IMMEDIATELY,phone,☑,UNKNOWN,False,Phone Number
+87594142_87594144,test,(C) City,city,Baltimore,Baltimore,True,City
+87594142_87594144,test,(G) STATE/ZIP,state,21205,21205,True,State
+87594142_87594144,test,INCLUSIVE DATE,date,01/01/94,01/01/94,True,Date
+87594142_87594144,test,"1. PRINCIPAL INVESTIGATOR NAME, TITLE, TELEPHONE # AND MAILING ADDRESS.",full_name,"Steven R. Kleeberger, Ph. D.","Steven R. Kleeberger, Ph. D.",True,Full Name
+87594142_87594144,test,(c) TELEPHONE,phone,(410) 955-3515/955-0299,(c) TELEPHONE,False,Phone Number
+87594142_87594144,test,(E) INSTITUTION,university,"Johns Hopkins University, School of Hyg. & Pub. Hlth.","Johns Hopkins University, School of Hyg. & Pub. Hlth.",True,University
+87594142_87594144,test,(D) DEPARTMENT,department,Environmental Health Sciences,Environmental Health Sciences,True,Academic Department
+87594142_87594144,test,(F) MAILING,address,"615 North Wolfe Street, Baltimore, Maryland","615 North Wolfe Street, Baltimore, Maryland",True,Current Address
+87594142_87594144,test,TOTAL COST,amount,"210, 910","210, 910",True,Total Amount
+89856243,test,Date,date,"October 17, 1979","October 17, 1979",True,Date
+91814768_91814769,test,Address,address,"P. O. B03 5979 Boston, MA 0212","P. O. B03 5979 Boston, MA 0212",True,Current Address
+91814768_91814769,test,Date,date,"March 30, 1993","March 30, 1993",True,Date
+91814768_91814769,test,1. Name of Treasurer,full_name,M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,True,Full Name
+91814768_91814769,test,Amount or Value**,amount,"28, 482. 00","28, 482. 00",True,Total Amount
+92380595,test,DATE:,date,12- 13- 89,12- 13- 89,True,Date
+92380595,test,Phone,phone,512/478- 4873,512/478- 4873,True,Phone Number
+93106788,test,DATE:,date,"MARCH 17, 1995","MARCH 17, 1995",True,Date

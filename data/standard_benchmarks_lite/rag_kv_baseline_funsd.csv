@@ -1,0 +1,411 @@
+doc_id,split,question,expected_prop,expected_value,rag_predicted,is_unknown,ok
+0000971160,train,Date:,date,9/ 3/ 92,May 2018,False,False
+0000971160,train,Name / Phone Ext. :,full_name,"M. Hamann P. Harper, P. Martinez",Alex Johnson,False,False
+0000971160,train,Supervisor / Manager,advisor,J. S. Wigand,UNKNOWN,True,False
+0000989556,train,Company:,employer,B. A. T. CYPRUS,UNKNOWN,True,False
+0000989556,train,Country:,country,CYPRUS,United States,False,False
+0000989556,train,Date:,date,"May 1, 1985",May 2018,False,False
+0000989556,train,Total Pressure Drop (unencap.),amount,90 mm,UNKNOWN,True,False
+0000989556,train,Print Position (from filter end),job_title,27 mm,UNKNOWN,True,False
+0000989556,train,Print Description,description,Brown on yellow,Alex J.,False,False
+0000990274,train,DATE:,date,"March 27, 1984",May 2018,False,False
+0000990274,train,COUNTRY:,country,BELGIUM,United States,False,False
+0000999294,train,Total (205),amount,39,UNKNOWN,True,False
+0000999294,train,No Preference,reference,8,UNKNOWN,True,False
+0000999294,train,FIELD DATE:,date,"September 13, 1982",May 2018,False,False
+0001118259,train,Standard Grade Mark,gpa,PCFS Flue cured fines,UNKNOWN,True,False
+0001123541,train,DATE:,date,"June 21, 1993",May 2018,False,False
+0001123541,train,DEPARTMENT:,department,R&D Library,Computer Science,False,False
+0001129658,train,DATE:,date,10/ 13/ 99,May 2018,False,False
+0001129658,train,COMPANY,employer,Philip Morris,UNKNOWN,True,False
+0001129658,train,PHONE No.,phone,917- 663 3056,555-123-4567,False,False
+0001209043,train,Total Sample,amount,214,UNKNOWN,True,False
+0001209043,train,Date Sent,date,4/19/74,May 2018,False,False
+0001209043,train,Sample Description,description,MALE AND FEMALE MENTHOL SMOKERS,UNKNOWN,True,False
+0001239897,train,REFERENCE,reference,(#627/ 647,UNKNOWN,True,False
+0001438955,train,Total Sample,amount,285,UNKNOWN,True,False
+0001438955,train,Newspaper (Date),date,Pittsburgh Pittsburgh PUTSBURGH PRESS (4 /23 /72,May 2018,False,False
+0001456787,train,Total Pressure Drop (unencap.),amount,mm,UNKNOWN,True,False
+0001456787,train,Print Description,description,N/A,Alex Johnson,False,False
+0001456787,train,Print Position (from filter end),job_title,35 mm,UNKNOWN,True,False
+0001463282,train,Description:,description,Y- 1 Ultra 100' s vs. Winston Ultra 100' s,Alex J.,False,False
+0001463282,train,Original Budgeted Amount,amount,23.3,UNKNOWN,True,False
+0001463282,train,Date,date,5/ 2/ 90,May 2018,False,False
+0001463282,train,Account Name,full_name,BARCLAY,Alex Johnson,False,False
+0001476912,train,CITY,city,Chicago,San Francisco,False,False
+0001477983,train,Amount earned but not received:,amount,$,UNKNOWN,True,False
+0001477983,train,Organization/ Employer Name:,full_name,R. J. Reynolds Tobacco,TechCorp Inc.,False,False
+0001485288,train,"Quantity, Cartons of 200 each",quantity,20,UNKNOWN,True,False
+0001485288,train,Date of Request,date,6/ 25/ 81,UNKNOWN,True,False
+0001485288,train,Cigarette Description,description,KS 1 mg grooved product using 4. 3/ 37 filter material. Cigarette code 244131,UNKNOWN,True,False
+0001485288,train,Completion Date,graduation_date,6/ 25/ 81,May 2018,False,False
+00040534,train,DATE RECEIVED,date,Unk.,May 2018,False,False
+00040534,train,REFERENCE FOR CALCULATION,reference,"Litchfield, J. T. and Wilcoxin F. , J. of Pharmacol",UNKNOWN,True,False
+00070353,train,Date,date,"March 18, 1968",May 2018,False,False
+00093726,train,Date:,date,"September 21, 1976",May 2018,False,False
+0011505151,train,DESCRIPTION:,description,CAPRI EXPANSION A&U - CALIFORNIA - WAVE 4.,Alex J.,False,False
+0011505151,train,Ext. Autho. Date,date,11- 16- 87,May 2018,False,False
+0011838621,train,Date:,date,6/ 21/ 90,May 2018,False,False
+0011838621,train,Description:,description,Hong Kong: Cigarette Market Monitor,Alex J.,False,False
+0011838621,train,Adjusted Total Cost of Project:,amount,.08,UNKNOWN,True,False
+0011838621,train,Account Name,full_name,International.,Alex Johnson,False,False
+0011845203,train,DATE REQUESTED:,date,2/ 22 by courier,May 2018,False,False
+0011856542,train,DATE,date,1/4/90,May 2018,False,False
+0011856542,train,PROJECT NAME,full_name,BULL DURHAM Full Flavor King Size Cigarettes,UNKNOWN,True,False
+0011859695,train,Date:,date,"September 25, 1969",May 2018,False,False
+0011859695,train,Address:,address,"575 Lexington Avenue, New York, New York 10022","123 Main Street, Apt 4B",False,False
+0011899960,train,Department,department,CORPORATE AFFAIRS,Computer Science,False,False
+0011899960,train,Date,date,7/ 9/ 84,May 2018,False,False
+0011906503,train,TOTAL,amount,80,UNKNOWN,True,False
+0011906503,train,PROJECT DESCRIPTION,description,"The Cigarette Test Station (CTS400) combines many of the stand- alone instruments that R&D currently uses to measure cigarette weight, pressure drop, ventilation, and hardness into one compact module. The CTS400 has the additional measurement of cigarette hardness in comparison with the CTS300. With this added, measurement R&D will be able to replace the Firmness Integrator that measures cigarette firmness in addition to other measurements that are mentioned above. The Firmness Integrator is no longer manufactured and parts are becoming difficult to obtain. Lastly, purchase of this instrument would provide similar capability as the Macon Plant and help facilitate comparisions between laboratories.",UNKNOWN,True,False
+0011973451,train,Date:,date,6/ 24/ 94,May 2018,False,False
+0011973451,train,Major Competitive Brands:,degree,TBD,UNKNOWN,True,False
+0011973451,train,Qty In Units,quantity,500,UNKNOWN,True,False
+0011973451,train,BRAND/PROJECT NAME:,full_name,RICHLAND Kings (Soft Pack) -Duty Free (Phoenix),Alex J.,False,False
+0011974919,train,Date:,date,"September 10, 1996",May 2018,False,False
+0011974919,train,Description:,description,Record of confirmation calls for sneak preview appointments,Alex J.,False,False
+0011974919,train,Circulation Quantity:,quantity,300,UNKNOWN,True,False
+0011974919,train,PPS Program #,degree,602399,UNKNOWN,True,False
+0011976929,train,City/ Town:,city,Dundee,San Francisco,False,False
+0011976929,train,State:,state,Illinois,California,False,False
+0011976929,train,Name of Event:,full_name,Mrs. Illinois Beauty Pageant,UNKNOWN,True,False
+0012178355,train,Description:,description,"ELI CUTTER KS, for test market, using AMELIA ""B"" Blend (XLF -680G)",Alex J.,False,False
+0012178355,train,Date,date,10/ 10/ 84,May 2018,False,False
+0012199830,train,Customer,full_name,B&W,Alex J.,False,False
+0012199830,train,Total Solids,amount,Toluene,UNKNOWN,True,False
+0012529284,train,Date:,date,12- -4 -87,May 2018,False,False
+0012529284,train,Description:,description,"CAPRI A&U EXPANSION - CALIFORNIA: WAVE 2 (87 -113) ,",Alex J.,False,False
+0012529284,train,Adjusted Total Cost of Project:,amount,"$ 212, 475 + 10%",UNKNOWN,True,False
+0012529295,train,Date:,date,10/ /9 87,May 2018,False,False
+0012529295,train,Account Name,full_name,CAPRI,Alex Johnson,False,False
+0012529295,train,Description: CAPRI Expansion:,description,California- A&U Wave II,Alex J.,False,False
+0012529295,train,Total Cost,amount,$112 000 +/ - 10%,UNKNOWN,True,False
+0012602424,train,DATE:,date,11/ 28/ 84,May 2018,False,False
+0012602424,train,PROJECT NAME:,full_name,GEMINI AWARENESS ATTITUDE & USAGE MONITOR. - PORTLAND,UNKNOWN,True,False
+0012602424,train,AMOUNT OF CHANGE INCREASE ): (CIRCLE ONE),amount,"+1 ,000 (0 .5% CHANGE)",UNKNOWN,True,False
+0012947358,train,DATE:,date,1- -27 -69,May 2018,False,False
+00283813,train,Date:,date,7/ 16/ 68,May 2018,False,False
+0030041455,train,Section Sales Manager's Name,full_name,Peter Hatch,Alex Johnson,False,False
+0060000813,train,Date Received,date,1 /25 /91,May 2018,False,False
+0060007216,train,DATE,date,"April 30, 1985",May 2018,False,False
+0060007216,train,PROJECT NAME,full_name,PALL MALL Regular Menthol,UNKNOWN,True,False
+0060024314,train,DESCRIPTION:,description,Liquid Adhesive,Alex J.,False,False
+0060024314,train,PRODUCT (CHEMICAL) NAME:,full_name,Fuller G2315 DC,UNKNOWN,True,False
+0060029036,train,Company,employer,"SPEVCO, INC.",UNKNOWN,True,False
+0060029036,train,DATE,date,1-11-94,May 2018,False,False
+0060029036,train,SIGNATURE,signature,B J. Powell,Alex J.,False,False
+0060029036,train,NAME,full_name,Michael Wright,Alex Johnson,False,False
+0060029036,train,Total Contract Cost,amount,"$ 1,340,000.00",UNKNOWN,True,False
+0060029036,train,Brief Description,description,"2 Joe's Place Exhibits for use at Winston Cup, Winston Drag and Camel Super Bike Events.",Software Engineer,False,False
+0060068489,train,DATE,date,3/17/82,May 2018,False,False
+0060068489,train,DESCRIPTION,description,30 sheet Posters (White Background),UNKNOWN,True,False
+0060068489,train,TOTAL,amount,"$ 28,880.00",UNKNOWN,True,False
+0060077689,train,DESCRIPTION,description,"CARLTON ""Free"" Carton"" Direct Mail Piece",UNKNOWN,True,False
+0060077689,train,DATE,date,"January 3, 1995",May 2018,False,False
+0060077689,train,DEPARTMENT CHARGED,department,Brand Operations,Computer Science,False,False
+0060080406,train,DESCRIPTION,description,COLLATERAL MERCHANDISING MATERIALS,UNKNOWN,True,False
+0060094595,train,-Went out immediately,phone,12,UNKNOWN,True,False
+0060136394,train,DATE,date,"APRIL 1,1957",May 2018,False,False
+0060136394,train,TOTAL:,amount,$ 6.600.00,UNKNOWN,True,False
+0060136394,train,PROGRAM,degree,1/2 HOUR PROGRAMES,UNKNOWN,True,False
+0060165115,train,DATE:,date,28 Apr. 98,May 2018,False,False
+0060165115,train,ADDRESS:,address,Philip Morris Europe Fabriques de Tabac Reunies S. A.,"123 Main Street, Apt 4B",False,False
+0060165115,train,Telephone,phone,(0 22 03) 303 -1,UNKNOWN,True,False
+0060173256,train,Description,description,Displays,UNKNOWN,True,False
+0060173256,train,Amount,amount,"31,000.00",UNKNOWN,True,False
+0060173256,train,Date,date,5/5,May 2018,False,False
+0060207528,train,TOTAL,amount,54,UNKNOWN,True,False
+0060207528,train,DATE,date,2/ 25/ 89,May 2018,False,False
+0060207528,train,BRAND NAME:,full_name,PALL MALL RED LIGHTS,UNKNOWN,True,False
+0060214859,train,Date,date,10- NOV- 1986,May 2018,False,False
+0060214859,train,Telephone#,phone,6926,UNKNOWN,True,False
+0060214859,train,Quantity Received,quantity,2 ROLLS,UNKNOWN,True,False
+0060255888,train,Date:,date,"October 9, 1968",May 2018,False,False
+0060255888,train,Address:,address,383 Madison Avenue New York 10017,"123 Main Street, Apt 4B",False,False
+0060255888,train,Phone Booth :,phone,20,555-123-4567,False,False
+0060262650,train,Telephone:,phone,(202) 842- 9530,UNKNOWN,True,False
+0060262650,train,Position,job_title,Director - Genetics Centers,UNKNOWN,True,False
+0060262650,train,"CITY STATE,",city,Washington DC 20006,"San Francisco, California",False,False
+0060270727,train,BRAND FAMILY NAME:,full_name,MALIBU,Johnson,False,False
+0060270727,train,TOTAL REPORTABLE EXPENDITURES FOR VARIETYI:,amount,94,UNKNOWN,True,False
+0060270727,train,VARIETY DESCRIPTION:,description,"King Size, Filter",Alex J.,False,False
+0060270727,train,FIRST SALES DATE:,date,10/ 26/ 87,May 2018,False,False
+0060302201,train,NAME:,full_name,Ronald. W Davis,Alex Johnson,False,False
+0060302201,train,"IF SO, GIVE DATE AND TITLE:",date,MBTH- reagent for analysis of aliphatic aldehydes 7 / 5 / 67,"May 2018, Senior Software Engineer",False,False
+0060308251,train,Date,date,7/ 24/ 90,May 2018,False,False
+0060308461,train,(26) TOTAL REPORTABLE EXPENDITURES FOR VARIETY:,amount,"1,221,771",UNKNOWN,True,False
+0060308461,train,(2) BRAND FAMILY NAME:,full_name,LUCKY STRIKE,Johnson,False,False
+0060308461,train,(3) VARIETY DESCRIPTION,description,"Low tar, king size, filter, hard pack",UNKNOWN,True,False
+0071032790,train,DATE:,date,"September 16, 1980",May 2018,False,False
+0071032790,train,PROJECT NAME:,full_name,-,UNKNOWN,True,False
+0071032807,train,Date,date,"November 15, 1968",May 2018,False,False
+0071032807,train,Project Name,full_name,Charcoal Smoking Tobacco,UNKNOWN,True,False
+00836244,train,DATE RECEIVED,date,9 /3 /80,May 2018,False,False
+00836816,train,DATE,date,8/ 10/ 82,May 2018,False,False
+00836816,train,PHYSICAL STATE,state,Clear Colorless liquid,California,False,False
+00837285,train,SIGNATURE,signature,Johnson,Alex J.,False,False
+00837285,train,DATE,date,11/1381,May 2018,False,False
+00837285,train,AMOUNT,amount,g100ml,UNKNOWN,True,False
+00838511_00838525,train,NAME,full_name,"Paul Schickedantz, Jack Reid",Alex Johnson,False,False
+00838511_00838525,train,DATE,date,12- 4- 80,May 2018,False,False
+00851772_1780,train,NAME,full_name,Jimmy Bell,Alex Johnson,False,False
+00851772_1780,train,DATE,date,"May 27, 1982",May 2018,False,False
+00851879,train,Date,date,5-13-81,May 2018,False,False
+00860012_00860014,train,DATE ISSUED,date,"December 13, 1983",May 2018,False,False
+00860012_00860014,train,PERFORMING DEPARTMENTS,department,Acute/ Dermal Toxicology,UNKNOWN,True,False
+00865872,train,Reference:,reference,BC20- 48,Alex Johnson,False,False
+00865872,train,DATE,date,8/22/83,May 2018,False,False
+00865872,train,PHYSICAL STATE,state,Brownish- gray powder,California,False,False
+00866042,train,SIGNATURE:,signature,D.,Alex J.,False,False
+00866042,train,RECEIPT DATE(s),date,9/28/83,UNKNOWN,True,False
+00866042,train,FOLLOW DEPARTMENT AND COMPANY SAFETY MANUALS,department,☑,Computer Science,False,False
+00920222,train,DATE,date,"March 27, 1984",May 2018,False,False
+00920222,train,DESCRIPTION,description,"This is your authorization to perform the ""Acute Oral Toxicity Study in the Rat"" tests on materials D13 and D23 supplied by Lorillard. The fixed price for each test is $2050 for each material, for a total price of $4100. Studies are to be conducted in accordance with the October 17, 1980 formal agreement between Borriston and Lorillard. All work is to be coordinated with our Dr. Connie Stone (919) 373- 6663.",UNKNOWN,True,False
+00920222,train,FOR PURCHASING DEPARTMENT USE ONLY,department,"Borriston Laboratories, INC. , 5050 Beech Place Temple Hills, MD 20748",Computer Science,False,False
+00920294,train,Date:,date,3/ 7/ 97,May 2018,False,False
+00920294,train,Mailfile Description,description,Mail Order- Indy Responders,UNKNOWN,True,False
+00920294,train,Quantity:,quantity,273,UNKNOWN,True,False
+00920294,train,Program#:,degree,700418,UNKNOWN,True,False
+00920294,train,Mailfile Cells,phone,HD home delivery,UNKNOWN,True,False
+00922237,train,DESCRIPTION,description,"This is your authorization to provide the ""1601.013: The Effect of Inhalation of Reference and Test (D3 and D4) Cigarette Smoke on Two Cytogenetic Endpoints in Mice: Chromosome Aberrations and Sister Chromatid Exchange"" test for a fixed price of $19,750 Tests will be performed in accordance with the December 21, 1981 formal agreement between Microbiological Associates and Lorillard. All work is to be coordinated with our Dr. Harry Minnemeyer (919) 373-6603",UNKNOWN,True,False
+00922237,train,DATE WANTED,date,As required,May 2018,False,False
+01073843,train,DATE RECEIVED,date,unknown,May 2018,False,False
+01122115,train,DATE,date,11 /2 /61,May 2018,False,False
+01122115,train,Ref. Paper,reference,#450,UNKNOWN,True,False
+01122115,train,Total Denier as Marked,amount,"58 ,000",UNKNOWN,True,False
+01150773_01150774,train,Date:,date,"January 15, 1997",May 2018,False,False
+01150773_01150774,train,TELEPHONE:,phone,44 71 495 5655,UNKNOWN,True,False
+01191071_1072,train,TEL NO.,phone,SHB,UNKNOWN,True,False
+01191071_1072,train,Date:,date,11/12/96,May 2018,False,False
+01191071_1072,train,Company:,employer,Philip Morris Management Corp.,UNKNOWN,True,False
+01197604,train,DESCRIPTION:,description,OLD GOLD Straights + 3% KNO3,Alex J.,False,False
+01197604,train,DATE SHIPPED:,date,"November 2, 1965",May 2018,False,False
+01408099_01408101,train,DATE,date,"March 1, 1978",May 2018,False,False
+01408099_01408101,train,PROJECT NAME,full_name,True 100's (R&M),UNKNOWN,True,False
+01408099_01408101,train,GENERAL PROJECT DESCRIPTION,description,"True 100's, Regular and Menthol tar",UNKNOWN,True,False
+11508234,train,Date:,date,"March3, 1995",May 2018,False,False
+11508234,train,Description:,description,LUCKY STRIKE QUALITATIVE ADVERTISING RESEARCH - GATEWAY CITIES,Alex J.,False,False
+11508234,train,Total Cost,amount,"29,500",UNKNOWN,True,False
+11875011,train,DATE REQUESTED:,date,1-23-95,May 2018,False,False
+12052385,train,DESCRIPTION:,description,KMDP ANALYSIS UTILIZING BLACK SWITCHING STUDY DATA,Alex J.,False,False
+12603270,train,Date:,date,"June 21, 1985",May 2018,False,False
+12603270,train,Description:,description,Amelia 100's Candidates: (NM-FT and NM- Lights),Alex J.,False,False
+12603270,train,Total Area Budget:,amount,"3,669,000",UNKNOWN,True,False
+12603270,train,Brand Name:,full_name,RICHLAND 100's,UNKNOWN,True,False
+13149651,train,Date,date,2-2-83,May 2018,False,False
+660978,train,DATE:,date,1/ 19/ 82,May 2018,False,False
+71108371,train,Department:,department,BD & SS,Computer Science,False,False
+71108371,train,Phone Number:,phone,7970,555-123-4567,False,False
+71108371,train,Date Required:,date,4/20/98,May 2018,False,False
+71108371,train,Description of Request:,description,"Please run job FRMRXUM2 for GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst. Please place output in the same directory.",UNKNOWN,True,False
+71190280,train,Signature,signature,LKelly,Alex J.,False,False
+71190280,train,Department,department,production AE,Computer Science,False,False
+71190280,train,Date,date,10/22/98 10/22/98,May 2018,False,False
+71190280,train,DESCRIPTION,description,Passport Winter Program Ad- EMRO,UNKNOWN,True,False
+71202511,train,Date:,date,2/ 26/ 98,May 2018,False,False
+71202511,train,Description:,description,KOOL Natural Lights Packaging - Round I,Alex J.,False,False
+71202511,train,Total Cost,amount,"58,500",UNKNOWN,True,False
+71206427,train,ITEM:,description,Package Fixture Circle-K Convenient Stores,Alex J.,False,False
+71206427,train,DATE:,date,"June 1, 1990",May 2018,False,False
+71341634,train,Address:,address,395 DYSTER POINT BLVD SUITE 415 S. SAN FRANCISCO,"123 Main Street, Apt 4B",False,False
+71341634,train,Quantity,quantity,6. 382,UNKNOWN,True,False
+71341634,train,Amount,amount,$12 784 00,UNKNOWN,True,False
+71341634,train,Date,date,03/ 24/ 99,May 2018,False,False
+71341634,train,Promotion Name,full_name,Section 18 Narl Chain Walgreens,UNKNOWN,True,False
+71366499,train,DESCRIPTION,description,CMS Amerada Hess Dispenser Sign,UNKNOWN,True,False
+71366499,train,DATE,date,12/ 15/ 97,May 2018,False,False
+71563825,train,Date:,date,02/ 12/ 98,May 2018,False,False
+71563825,train,Project Name/ Description,full_name,K001 vs. Marlboro Menthol Lights,UNKNOWN,True,False
+71601299,train,Date,date,15. 03. 2000,May 2018,False,False
+71601299,train,Project Name/ Description:,full_name,"Dunhill Lights, CPT",UNKNOWN,True,False
+716552,train,DESCRIPTION,description,VICEROY Rich Lights 100' s 20' s Label,UNKNOWN,True,False
+716552,train,DATE:,date,9/ 17/ 8181,May 2018,False,False
+80707440_7443,train,DATE:,date,8/ 8/ 69,May 2018,False,False
+80718412_8413,train,Date:,date,October 3rd,May 2018,False,False
+80718412_8413,train,NUMBER OF SUPERVISORS:,advisor,3,UNKNOWN,True,False
+80728670,train,DATE:,date,2 /28 /84,May 2018,False,False
+80728670,train,Hotel /Motel reservations needed,phone,XX,UNKNOWN,True,False
+81310636,train,Compound Name,full_name,Proprietary Mixture,Alex Johnson,False,False
+81574683,train,Date:,date,3/27/84,May 2018,False,False
+81619486_9488,train,DIVISION NAME:,full_name,Detroit North,UNKNOWN,True,False
+81619511_9513,train,NAME OF ACCOUNT,full_name,Chatham Oil (311- 01),Alex Johnson,False,False
+81749056_9057,train,NAME OF ACCOUNT,full_name,None,Alex Johnson,False,False
+81749056_9057,train,TOTAL # OF SP EMPHASIS OUTLEIS WITH DISTRIBUTION,amount,542,UNKNOWN,True,False
+81749056_9057,train,AREA REGION:,state,1/ 20,UNKNOWN,True,False
+82254638,train,DATE TO CORP:,date,7/11/97,May 2018,False,False
+82254638,train,QUANTITY REQUIRED,quantity,400,UNKNOWN,True,False
+82254638,train,CUSTOMER SHIPPING NUMBER,full_name,198-820-0003,UNKNOWN,True,False
+87533049,train,Media Name,full_name,N/A,Alex J.,False,False
+87533049,train,Coupon Issue Date,date,10 / 90,UNKNOWN,True,False
+87672097,train,DATE RECEIVED,date,3/5/81,May 2018,False,False
+87672097,train,REFERENCE FOR CALCULATION,reference,"Weil, Carrol S., Biometrics, Vol. 8, No. 3., Sept. 1952,",UNKNOWN,True,False
+88547278_88547279,train,Date:,date,"July 7, 1993",May 2018,False,False
+88547278_88547279,train,Qty:,quantity,"89,725",UNKNOWN,True,False
+88547278_88547279,train,TEL:,phone,(212) 627 4111,UNKNOWN,True,False
+88547278_88547279,train,Quantities and Description:,description,H/D 8 Pk. Wide Header 4 C/P + 2 Hits Day- Glo + Spot Varnish,UNKNOWN,True,False
+88547278_88547279,train,Authorized Signature:,signature,"Applied Graphics Technologies 50 West 23rd Street, N.Y.C. 10010",Alex J.,False,False
+89368010,train,DATE,date,16/3/82,May 2018,False,False
+89368010,train,Study Name,full_name,Acute Toxicity of Reference Cigarette Smoke lafter Inhalation in Mice.,UNKNOWN,True,False
+89386032,train,Client Name,full_name,"Borriston Laboratories, Inc.",Alex Johnson,False,False
+89867723,train,DATE,date,"April 27, 1981",May 2018,False,False
+91104867,train,TOTAL YEAR,amount,"25,500",UNKNOWN,True,False
+91104867,train,ITEM,description,Consumer,UNKNOWN,True,False
+91104867,train,Department,department,Domestic Tax Free,Computer Science,False,False
+91161344_91161347,train,QUANTITY,quantity,"Varies by market, see attached list. Approx. 20% of the total # by state will receive product",UNKNOWN,True,False
+91161344_91161347,train,Today's Date,date,3/20/78,UNKNOWN,True,False
+91355841,train,DATE:,date,"SEPT. 27, 1991",May 2018,False,False
+91356315,train,DATE:,date,4/ 26/ 91,May 2018,False,False
+91361993,train,DATE:,date,10 /5 /92,May 2018,False,False
+91361993,train,BRAND NAME:,full_name,CARDINAL CIGARETTES (11 PACKINGS),UNKNOWN,True,False
+91372360,train,DATE,date,11/4/93,May 2018,False,False
+91372360,train,NAME:,full_name,Mr. A. J. Giacoio,Alex Johnson,False,False
+91372360,train,FAX PHONE NUMBER:,phone,212 545- 3299,UNKNOWN,True,False
+91391286,train,COUPON ISSUE DATE,date,5/19/93,UNKNOWN,True,False
+91391310,train,COUPON ISSUE DATE,date,10/11/93,UNKNOWN,True,False
+91391310,train,SIGNATURE OF INITIATOR,signature,Marine B,Alex J.,False,False
+91581919,train,Date,date,1/31/88,May 2018,False,False
+91581919,train,State of,state,Indiana ),California,False,False
+91856041_6049,train,EVENT NAME:,full_name,The USO Spring Festival,Alex J.,False,False
+91856041_6049,train,PHONE NUMBER,phone,(201) 923-9208,555-123-4567,False,False
+91914407,train,DATE:,date,6- 29- 94,May 2018,False,False
+91914407,train,NAME:,full_name,Mr. Al Giacoio,Alex Johnson,False,False
+91914407,train,TOTAL PAGES,amount,14,UNKNOWN,True,False
+91914407,train,FAX TELEPHONE NUMBER:,phone,(904) 464- 0744,UNKNOWN,True,False
+91939637,train,DATE:,date,FROM,May 2018,False,False
+91974562,train,COUPON ISSUE DATE,date,10/ 13/ 95,UNKNOWN,True,False
+92081358_1359,train,% TOTAL =,amount,100%,UNKNOWN,True,False
+92091873,train,Date Ordered,date,Unknown,UNKNOWN,True,False
+92091873,train,#Customers Invited,full_name,40,UNKNOWN,True,False
+92094746,train,DATE,date,9 /8 /95,May 2018,False,False
+92094746,train,AREA/ REGION/ DIVISION,state,2 13,UNKNOWN,True,False
+92094746,train,ITEM/ BRAND:,description,Sunglasses / Newport,UNKNOWN,True,False
+92094751,train,DATE,date,9/ 8 /95,May 2018,False,False
+92094751,train,AREA REGION DIVISION,state,03/ 07/ 415415 & 418418,UNKNOWN,True,False
+92094751,train,ITEM/ BRAND,description,Newport Sunglasses,UNKNOWN,True,False
+92298125,train,DATE:,date,JAN 19. 1995,May 2018,False,False
+92314414,train,(Date),date,1 November 1991,May 2018,False,False
+92314414,train,1. Full Name,full_name,Andrew H. Tisch (Print or type),Alex Johnson,False,False
+92314414,train,2. Residence Address,address,"26 East 63rd Street, New York, N. Y. 10021 (Include state and zip code)","123 Main Street, Apt 4B",False,False
+92327794,train,DATE:,date,"July 22, 1993",May 2018,False,False
+92433599_92433601,train,Name,full_name,"BRAYTON, GISVOLD. & HARLEY",Alex Johnson,False,False
+92433599_92433601,train,Address,address,"999 Grant Avenue, P. O. Box 2109","123 Main Street, Apt 4B",False,False
+92433599_92433601,train,City,city,Novato,San Francisco,False,False
+92433599_92433601,train,State,state,CA,California,False,True
+92433599_92433601,train,Telephone,phone,(415) 898- 1555,UNKNOWN,True,False
+92433599_92433601,train,Zip Code,zip_code,94948,94105,False,False
+92433599_92433601,train,3. Date of claimant's birth:,date,"June 19, 1921",UNKNOWN,True,False
+92586242,train,EVENT NAME:,full_name,Upper Madisor Avenue Festival,Alex J.,False,False
+92586242,train,PHONE NUMBER,phone,(201) 923 -9208,555-123-4567,False,False
+92657391,train,DATE:,date,12/ 28/ 94,May 2018,False,False
+92657391,train,NAME:,full_name,R. H. Orcutt,Alex Johnson,False,False
+92657391,train,FAX PHONE NUMBER:,phone,(212) 545- 3299,UNKNOWN,True,False
+93213298,train,# Customers Invited,full_name,8,UNKNOWN,True,False
+93213298,train,Date (s),date,"June 11, 1995",May 2018,False,False
+93329540,train,DATE:,date,8/ 13/ 93,May 2018,False,False
+93329540,train,BRAND NAME:,full_name,SPECIAL 10' s,UNKNOWN,True,False
+93351929_93351931,train,COUPON ISSUE DATE,date,"September 1, 1992",UNKNOWN,True,False
+93380187,train,- COUPON ISSUE DATE,date,MAY 1992,May 2018,False,False
+93380187,train,- SIGNATURE OF INITIATOR,signature,Michell,Alex J.,False,False
+93455715,train,DATE:,date,4/7/88,May 2018,False,False
+82092117,test,DATE:,date,12 /10 /98,May 2018,False,False
+82092117,test,PHONE NUMBER:,phone,(336) 335- 7363,555-123-4567,False,False
+82200067_0069,test,REGION:,state,(ONLY IF PARTIAL REGION CONTINUE WITH DIVISION (S) SCOPE),UNKNOWN,True,False
+82200067_0069,test,NAME OF ACCOUNT,full_name,Texaco Seattle,Alex Johnson,False,False
+82250337_0338,test,DATE:,date,2- Dec- 97,May 2018,False,False
+82251504,test,Region:,state,17,UNKNOWN,True,False
+82252956_2958,test,DIVISION NAME:,full_name,Milw. South,UNKNOWN,True,False
+82253058_3059,test,DATE:,date,12/ 10/ 96,May 2018,False,False
+82253245_3247,test,NAME OF ACCOUNT,full_name,Sheetz,Alex Johnson,False,False
+82253362_3364,test,NAME OF ACCOUNT,full_name,Chevron,Alex Johnson,False,False
+82254765,test,DATE TO NYO:,date,1/24/97,May 2018,False,False
+82254765,test,QUANTITY REQUIRED,quantity,1500,UNKNOWN,True,False
+82254765,test,DIV. NAME/ NO:,full_name,Nassau/ 107,Alex J.,False,False
+82491256,test,CASE NAME:,full_name,"Wanda G. Robinson and Carroll Robinson v Raybestos- Manhattan, et al.",Alex Johnson,False,False
+82491256,test,DATE FILED:,date,"July 23, 1998",May 2018,False,False
+82504862,test,CASE NAME:,full_name,Donald D. Sellers and Robin J. Sellers v. Raybestos Manhattan et al.,Alex Johnson,False,False
+82504862,test,DATE SERVED,date,"August 3, 1998",UNKNOWN,True,False
+82562350,test,Date:,date,"May 1, 2000",May 2018,False,False
+82562350,test,Telephone:,phone,(952) 694-2238,UNKNOWN,True,False
+82573104,test,Date:,date,"December 9, 1999",May 2018,False,False
+82837252,test,DATE:,date,8/ 10/ 90,May 2018,False,False
+82837252,test,BRAND NAME:,full_name,VICEROY KING BOX AND VICEROY LIGHTS KING BOX,UNKNOWN,True,False
+83443897,test,DATE:,date,"January 11, 1999",May 2018,False,False
+83443897,test,COMPANY:,employer,Lorillard Tobacco Company,UNKNOWN,True,False
+83443897,test,PHONE:,phone,336/ 373- 6750,555-123-4567,False,False
+83553333_3334,test,Date,date,November,May 2018,False,False
+83553333_3334,test,Reference,reference,17555 002,UNKNOWN,True,False
+83553333_3334,test,Company,employer,Brown Rudnick Freed & Gesmer,UNKNOWN,True,False
+83553333_3334,test,Recipient Phone Number,phone,617- 330- 9000,555-123-4567,False,False
+83573282,test,Date:,date,"January 14, 1999",May 2018,False,False
+83573282,test,Company:,employer,"Wachtell, Lipton, Rosen & Katz",UNKNOWN,True,False
+83573282,test,Phone No.:,phone,(312) 861- 2000,555-123-4567,False,False
+83594639,test,Date:,date,"September 22, 1997",May 2018,False,False
+83594639,test,Company:,employer,Lorillard,UNKNOWN,True,False
+83624198,test,DATE:,date,"February 25, 1998",May 2018,False,False
+83624198,test,COMPANY:,employer,Lorillard Tobacco Company,UNKNOWN,True,False
+83624198,test,PHONE:,phone,910 /335 -7718,555-123-4567,False,False
+83635935,test,DATE:,date,"June 4, 1997",May 2018,False,False
+83641919_1921,test,DIVISION NAME:,full_name,Flint,UNKNOWN,True,False
+83772145,test,DATE:,date,"JANUARY 31, 1997",May 2018,False,False
+83772145,test,TELECOPY NO:,phone,212/ 545- 3297,UNKNOWN,True,False
+83823750,test,Date,date,"November 11, 1997",May 2018,False,False
+83823750,test,Company,employer,Lorillard Tobacco Company,UNKNOWN,True,False
+83823750,test,Reference,reference,17560 -188,UNKNOWN,True,False
+83996357,test,COUPON ISSUE DATE,date,10/ 4/ 99,UNKNOWN,True,False
+85240939,test,NAME:,full_name,GEORGE R. TELFORD,Alex Johnson,False,False
+85240939,test,COMPANY:,employer,Lorillard,UNKNOWN,True,False
+85240939,test,ADDRESS:,address,"666 Fifth Avenue, New York, NY 10019","123 Main Street, Apt 4B",False,False
+85240939,test,PHONE:,phone,(212) 841- 8787,555-123-4567,False,False
+85240939,test,ARRIVAL DATE AND TIME:,date,2/18/80 7:00 P. M.,UNKNOWN,True,False
+86075409_5410,test,Media Name,full_name,Competitive 21- 34 years,Alex J.,False,False
+86075409_5410,test,Coupon Issue Date,date,4/ 14/ 00,May 2018,False,False
+86075409_5410,test,Signature of Initiator,signature,21- Jan 00,Alex J.,False,False
+86079776_9777,test,Date/ Time:,date,10/30/98 1:46 PM,May 2018,False,False
+86220490,test,Date:,date,8/ 31/ 98,May 2018,False,False
+86220490,test,Phone #:,phone,335- 7150,555-123-4567,False,False
+86230203_0206,test,NAME OF ACCOUNT,full_name,Seyle,Alex Johnson,False,False
+86263525,test,DATE,date,2 /15 /90,May 2018,False,False
+86263525,test,DEPARTMENT NAME,full_name,SCIENCE & TECHNOLOGY,Computer Science,False,False
+86328049_8050,test,Name:,full_name,Ken Forrest,Alex Johnson,False,False
+86328049_8050,test,Telecopier Nos.,phone,(804) 788- 8218 (804) 788- 8219 (804) 788- 8669,UNKNOWN,True,False
+87086073,test,DATE,date,"August 14, 1990",May 2018,False,False
+87086073,test,COMPOUND NAME,full_name,Vanitrope,Alex Johnson,False,False
+87093315_87093318,test,Date:,date,3/14/90,May 2018,False,False
+87125460,test,DATE,date,8/ 7/ 87,May 2018,False,False
+87125460,test,STUDY NAME,full_name,Induction of Hepatic Enzymes in rats (B202),UNKNOWN,True,False
+87137840,test,DATE:,date,03 /02 /90,May 2018,False,False
+87137840,test,SPONSOR'S NAME:,full_name,Lorillard,First National Bank,False,False
+87137840,test,PHYSICAL DESCRIPTION:,description,Clear brown liquid,UNKNOWN,True,False
+87137840,test,STUDY DIRECTOR /DEPARTMENT,department,Ray David,Computer Science,False,False
+87147607,test,DESCRIPTION,description,"This is your authorization to prepare cigarette smoke condensate according to the protocol ""Standard Operating Procedure før the Preparation of Smoke Condensate for Mouse Skin Bioassay,"" for the period April 1, 1988 through December 31, 1988. Condensate will be prepared acording to a time schedule provided by Lorillard. The fixed price for condensate collection will be at a rate of $1, 750/10, 000 cigarettes smoked. Piedmont will pay the cost of consumable supplies. This work is to be conducted in accordance with the December 10, 1984 formal agreement between Piedmont Reseach Laboratories and Lorillard. All work is to be coordinated with our Mr. Neil Thaggard (919) 373-6628",UNKNOWN,True,False
+87147607,test,DATE,date,"April 19, 1988",May 2018,False,False
+87332450,test,Telephone:,phone,(615) ) 638- 5532,UNKNOWN,True,False
+87428306,test,PHYSICAL STATE,state,A crystalline solid at room temperature which melts at > 56 C.,California,False,False
+87528321,test,Date,date,B-17-88,May 2018,False,False
+87528321,test,ORIGINATOR Name:,full_name,Dan Straka,Alex Johnson,False,False
+87528380,test,DATE,date,"October 16, 1987",May 2018,False,False
+87528380,test,ADDRESS,address,666 Fifth Avenue,"123 Main Street, Apt 4B",False,False
+87528380,test,CITY,city,New York,San Francisco,False,False
+87528380,test,STATE,state,New York 10103,California,False,False
+87528380,test,ITEM:,description,Harley Davidson Metal Plaque,Alex J.,False,False
+87528380,test,SHIP IMMEDIATELY,phone,☑,UNKNOWN,True,False
+87594142_87594144,test,(C) City,city,Baltimore,San Francisco,False,False
+87594142_87594144,test,(G) STATE/ZIP,state,21205,California 94105,False,False
+87594142_87594144,test,INCLUSIVE DATE,date,01/01/94,May 2018,False,False
+87594142_87594144,test,"1. PRINCIPAL INVESTIGATOR NAME, TITLE, TELEPHONE # AND MAILING ADDRESS.",full_name,"Steven R. Kleeberger, Ph. D.","Alex Johnson
+UNKNOWN
+UNKNOWN
+123 Main Street, Apt 4B",False,False
+87594142_87594144,test,(c) TELEPHONE,phone,(410) 955-3515/955-0299,UNKNOWN,True,False
+87594142_87594144,test,(E) INSTITUTION,university,"Johns Hopkins University, School of Hyg. & Pub. Hlth.",UNKNOWN,True,False
+87594142_87594144,test,(D) DEPARTMENT,department,Environmental Health Sciences,Computer Science,False,False
+87594142_87594144,test,(F) MAILING,address,"615 North Wolfe Street, Baltimore, Maryland",alex.johnson@email.com,False,False
+87594142_87594144,test,TOTAL COST,amount,"210, 910",UNKNOWN,True,False
+89856243,test,Date,date,"October 17, 1979",May 2018,False,False
+91814768_91814769,test,Address,address,"P. O. B03 5979 Boston, MA 0212","123 Main Street, Apt 4B",False,False
+91814768_91814769,test,Date,date,"March 30, 1993",May 2018,False,False
+91814768_91814769,test,1. Name of Treasurer,full_name,M. Alfred Peterson; Assistant Treasurer Peter J. Marzullo,Alex Johnson,False,False
+91814768_91814769,test,Amount or Value**,amount,"28, 482. 00",UNKNOWN,True,False
+92380595,test,DATE:,date,12- 13- 89,May 2018,False,False
+92380595,test,Phone,phone,512/478- 4873,555-123-4567,False,False
+93106788,test,DATE:,date,"MARCH 17, 1995",May 2018,False,False

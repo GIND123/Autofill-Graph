@@ -1,0 +1,480 @@
+[
+  {
+    "form_id": "ds160_p1",
+    "form_name": "DS-160 Nonimmigrant Visa Application \u2014 Personal Info",
+    "category": "visa",
+    "fields": [
+      {
+        "label": "Surname",
+        "expected_prop": "last_name"
+      },
+      {
+        "label": "Given Name",
+        "expected_prop": "first_name"
+      },
+      {
+        "label": "Full Name as on Passport",
+        "expected_prop": "full_name"
+      },
+      {
+        "label": "Date of Birth",
+        "expected_prop": "date_of_birth",
+        "unknown": true
+      },
+      {
+        "label": "City of Birth",
+        "expected_prop": "city_of_birth",
+        "unknown": true
+      },
+      {
+        "label": "Country of Birth",
+        "expected_prop": "country"
+      },
+      {
+        "label": "Country of Citizenship",
+        "expected_prop": "citizenship"
+      },
+      {
+        "label": "U.S. Social Security Number",
+        "expected_prop": "ssn"
+      },
+      {
+        "label": "Passport Number",
+        "expected_prop": "passport_number"
+      },
+      {
+        "label": "Passport Issuance Date",
+        "expected_prop": "passport_issue_date",
+        "unknown": true
+      }
+    ]
+  },
+  {
+    "form_id": "ds160_p2",
+    "form_name": "DS-160 \u2014 Contact Info",
+    "category": "visa",
+    "fields": [
+      {
+        "label": "Home Address: Street",
+        "expected_prop": "address"
+      },
+      {
+        "label": "Home Address: City",
+        "expected_prop": "city"
+      },
+      {
+        "label": "Home Address: State",
+        "expected_prop": "state"
+      },
+      {
+        "label": "Home Address: ZIP Code",
+        "expected_prop": "zip_code"
+      },
+      {
+        "label": "Primary Phone Number",
+        "expected_prop": "phone"
+      },
+      {
+        "label": "Email Address",
+        "expected_prop": "email"
+      }
+    ]
+  },
+  {
+    "form_id": "ds160_p3",
+    "form_name": "DS-160 \u2014 Travel Companions / Work",
+    "category": "visa",
+    "fields": [
+      {
+        "label": "Present Employer",
+        "expected_prop": "employer"
+      },
+      {
+        "label": "Employer Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "Job Title",
+        "expected_prop": "job_title"
+      },
+      {
+        "label": "Monthly Salary",
+        "expected_prop": "annual_income"
+      },
+      {
+        "label": "Work Phone Number",
+        "expected_prop": "phone"
+      }
+    ]
+  },
+  {
+    "form_id": "fafsa_p1",
+    "form_name": "FAFSA \u2014 Student Personal Information",
+    "category": "financial_aid",
+    "fields": [
+      {
+        "label": "Student's Last Name",
+        "expected_prop": "last_name"
+      },
+      {
+        "label": "Student's First Name",
+        "expected_prop": "first_name"
+      },
+      {
+        "label": "Social Security Number",
+        "expected_prop": "ssn"
+      },
+      {
+        "label": "Date of Birth",
+        "expected_prop": "date_of_birth",
+        "unknown": true
+      },
+      {
+        "label": "Permanent Mailing Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "City",
+        "expected_prop": "city"
+      },
+      {
+        "label": "State",
+        "expected_prop": "state"
+      },
+      {
+        "label": "ZIP Code",
+        "expected_prop": "zip_code"
+      },
+      {
+        "label": "Phone Number",
+        "expected_prop": "phone"
+      },
+      {
+        "label": "Email Address",
+        "expected_prop": "email"
+      },
+      {
+        "label": "U.S. Citizen or Eligible Non-Citizen",
+        "expected_prop": "citizenship"
+      }
+    ]
+  },
+  {
+    "form_id": "fafsa_p2",
+    "form_name": "FAFSA \u2014 Financial Information",
+    "category": "financial_aid",
+    "fields": [
+      {
+        "label": "Adjusted Gross Income",
+        "expected_prop": "annual_income"
+      },
+      {
+        "label": "U.S. Income Tax Paid",
+        "expected_prop": "tax_id"
+      },
+      {
+        "label": "Bank Account Balance",
+        "expected_prop": "bank_name"
+      },
+      {
+        "label": "College/University",
+        "expected_prop": "university"
+      },
+      {
+        "label": "Degree/Certificate",
+        "expected_prop": "degree"
+      },
+      {
+        "label": "Expected Graduation Date",
+        "expected_prop": "graduation_date"
+      }
+    ]
+  },
+  {
+    "form_id": "job_app_p1",
+    "form_name": "Job Application \u2014 Personal Details",
+    "category": "employment",
+    "fields": [
+      {
+        "label": "Full Legal Name",
+        "expected_prop": "full_name"
+      },
+      {
+        "label": "Email Address",
+        "expected_prop": "email"
+      },
+      {
+        "label": "Phone",
+        "expected_prop": "phone"
+      },
+      {
+        "label": "Current Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "City",
+        "expected_prop": "city"
+      },
+      {
+        "label": "State",
+        "expected_prop": "state"
+      },
+      {
+        "label": "Zip",
+        "expected_prop": "zip_code"
+      },
+      {
+        "label": "LinkedIn Profile",
+        "expected_prop": "linkedin"
+      },
+      {
+        "label": "Portfolio URL",
+        "expected_prop": "portfolio"
+      }
+    ]
+  },
+  {
+    "form_id": "job_app_p2",
+    "form_name": "Job Application \u2014 Education",
+    "category": "employment",
+    "fields": [
+      {
+        "label": "University / College",
+        "expected_prop": "university"
+      },
+      {
+        "label": "Major / Field of Study",
+        "expected_prop": "department"
+      },
+      {
+        "label": "Degree Earned",
+        "expected_prop": "degree"
+      },
+      {
+        "label": "GPA",
+        "expected_prop": "gpa"
+      },
+      {
+        "label": "Graduation Year",
+        "expected_prop": "graduation_date"
+      },
+      {
+        "label": "Thesis Title",
+        "expected_prop": "thesis"
+      }
+    ]
+  },
+  {
+    "form_id": "job_app_p3",
+    "form_name": "Job Application \u2014 Work Experience",
+    "category": "employment",
+    "fields": [
+      {
+        "label": "Most Recent Employer",
+        "expected_prop": "employer"
+      },
+      {
+        "label": "Job Title / Position",
+        "expected_prop": "job_title"
+      },
+      {
+        "label": "Years of Experience",
+        "expected_prop": "years_experience"
+      },
+      {
+        "label": "Key Skills",
+        "expected_prop": "skills"
+      },
+      {
+        "label": "Professional Bio",
+        "expected_prop": "bio"
+      },
+      {
+        "label": "Research Statement",
+        "expected_prop": "research_statement"
+      }
+    ]
+  },
+  {
+    "form_id": "medical_intake_p1",
+    "form_name": "Medical Intake \u2014 Patient Information",
+    "category": "medical",
+    "fields": [
+      {
+        "label": "Patient Full Name",
+        "expected_prop": "full_name"
+      },
+      {
+        "label": "Date of Birth",
+        "expected_prop": "date_of_birth",
+        "unknown": true
+      },
+      {
+        "label": "Phone Number",
+        "expected_prop": "phone"
+      },
+      {
+        "label": "Home Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "Insurance ID",
+        "expected_prop": "insurance_id"
+      },
+      {
+        "label": "Primary Care Physician",
+        "expected_prop": "primary_care"
+      },
+      {
+        "label": "Known Allergies",
+        "expected_prop": "allergies"
+      },
+      {
+        "label": "Current Medications",
+        "expected_prop": "medications"
+      },
+      {
+        "label": "Medical Conditions",
+        "expected_prop": "conditions"
+      },
+      {
+        "label": "Blood Type",
+        "expected_prop": "blood_type"
+      }
+    ]
+  },
+  {
+    "form_id": "uni_enroll",
+    "form_name": "University Graduate Enrollment",
+    "category": "academic",
+    "fields": [
+      {
+        "label": "Legal Name",
+        "expected_prop": "full_name"
+      },
+      {
+        "label": "Preferred Name",
+        "expected_prop": "display_name"
+      },
+      {
+        "label": "Personal Email",
+        "expected_prop": "email"
+      },
+      {
+        "label": "Phone",
+        "expected_prop": "phone"
+      },
+      {
+        "label": "Mailing Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "Undergraduate University",
+        "expected_prop": "university"
+      },
+      {
+        "label": "Undergraduate GPA",
+        "expected_prop": "gpa"
+      },
+      {
+        "label": "Graduate Program",
+        "expected_prop": "department"
+      },
+      {
+        "label": "Thesis Advisor",
+        "expected_prop": "advisor"
+      },
+      {
+        "label": "Research Area",
+        "expected_prop": "research_interests"
+      },
+      {
+        "label": "Citizenship Status",
+        "expected_prop": "citizenship"
+      }
+    ]
+  },
+  {
+    "form_id": "address_change",
+    "form_name": "USPS Change of Address",
+    "category": "government",
+    "fields": [
+      {
+        "label": "First Name",
+        "expected_prop": "first_name"
+      },
+      {
+        "label": "Last Name",
+        "expected_prop": "last_name"
+      },
+      {
+        "label": "New Street Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "New City",
+        "expected_prop": "city"
+      },
+      {
+        "label": "New State",
+        "expected_prop": "state"
+      },
+      {
+        "label": "New ZIP+4",
+        "expected_prop": "zip_code"
+      },
+      {
+        "label": "Phone Number",
+        "expected_prop": "phone"
+      }
+    ]
+  },
+  {
+    "form_id": "insurance_app",
+    "form_name": "Health Insurance Application",
+    "category": "insurance",
+    "fields": [
+      {
+        "label": "Full Name",
+        "expected_prop": "full_name"
+      },
+      {
+        "label": "Social Security Number",
+        "expected_prop": "ssn"
+      },
+      {
+        "label": "Date of Birth",
+        "expected_prop": "date_of_birth",
+        "unknown": true
+      },
+      {
+        "label": "Street Address",
+        "expected_prop": "address"
+      },
+      {
+        "label": "City",
+        "expected_prop": "city"
+      },
+      {
+        "label": "State",
+        "expected_prop": "state"
+      },
+      {
+        "label": "ZIP",
+        "expected_prop": "zip_code"
+      },
+      {
+        "label": "Annual Income",
+        "expected_prop": "annual_income"
+      },
+      {
+        "label": "Employer Name",
+        "expected_prop": "employer"
+      },
+      {
+        "label": "Current Coverage ID",
+        "expected_prop": "insurance_id"
+      }
+    ]
+  }
+]
