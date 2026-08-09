@@ -14,3 +14,42 @@ data/standard_benchmarks_lite/xfund/de/de.val.zip
 data/standard_benchmarks_lite/xfund/de/train_images/
 data/standard_benchmarks_lite/xfund/de/val_images/
 data/standard_benchmarks_lite/xfund/de/*.json
+
+# ---------------------------------------------------------------------------
+# Manuscript / paper submission (kept out of the code repo)
+# The paper is authored in Overleaf; this repo holds code + experiments only.
+# ---------------------------------------------------------------------------
+
+# Submission archives (uploaded/downloaded from Overleaf by hand)
+Autofill_NeurIPS.zip
+*_NeurIPS.zip
+Autofill*.zip
+
+# Extracted / working manuscript tree - never commit, never sync to Overleaf
+paper/
+manuscript/
+Autofill_NeurIPS/
+
+# Stray LaTeX sources at repo root (the paper lives in paper/, not here)
+/*.tex
+/*.bib
+/*.sty
+/*.cls
+
+# LaTeX build artifacts (in case anything is compiled locally)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.log
+!**/npm-debug.log
+
+# Python bytecode from paper/make_figures.py importing the experiment scripts
+__pycache__/
+*.pyc
